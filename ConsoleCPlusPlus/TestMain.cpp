@@ -11,6 +11,8 @@
 
 PMMENU_DECLARE( Menu );
 PMMENU_DECLARE( Trace );
+PMMENU_DECLARE( Input );
+PMMENU_DECLARE( Mem );
 PMMENU_DECLARE( Test2 );
 PMMENU_DECLARE( Cplusplus );
 
@@ -24,6 +26,8 @@ void NT_TestMain(void)
 
    PMMENU_USE( Menu );
    PMMENU_USE( Trace );
+   PMMENU_USE( Input );
+   PMMENU_USE( Mem );
    PMMENU_USE( Cplusplus );
    PMMENU_USE( Test2 );
 

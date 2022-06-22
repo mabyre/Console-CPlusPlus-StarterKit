@@ -105,19 +105,21 @@
 
    void c_trace_init( void *anInstance ) ;
    void c_trace_close( void ) ;
+
+   /* TODO: add "const" in common file for PMLiteC */
    
-   void c__trace_T(char* aFormat, ...);
-   void c__trace_VT(char* aFormat, va_list* anArgs);
-   void c__trace_VTL(char* aFormat, va_list* anArgs);
-   void c__trace_TL(char* aFormat, ...);
-   void c__trace_B(pmbyte* aBuffer, size_t aBufferLen);
+   void c__trace_T( const char* aFormat, ...);
+   void c__trace_VT( const char* aFormat, va_list* anArgs);
+   void c__trace_VTL( const char* aFormat, va_list* anArgs);
+   void c__trace_TL( const char* aFormat, ...);
+   void c__trace_B( pmbyte* aBuffer, size_t aBufferLen);
 
 #  define c_trace0(X)   c__trace_ ## X
 
-   void c_trace_VT(pmuint16 aModule, char* aFormat, va_list* anArgs);
-   void c_trace_T(pmuint16 aModule, char* aFormat, ...);
-   void c_trace_VTL(pmuint16 aModule, char* aFormat, va_list* anArgs);
-   void c_trace_TL(pmuint16 aModule, char* aFormat, ...);
+   void c_trace_VT(pmuint16 aModule, const char* aFormat, va_list* anArgs);
+   void c_trace_T(pmuint16 aModule, const char* aFormat, ...);
+   void c_trace_VTL(pmuint16 aModule, const char* aFormat, va_list* anArgs);
+   void c_trace_TL(pmuint16 aModule, const char* aFormat, ...);
    void c_trace_B(pmuint16 aModule, pmbyte* aBuffer, size_t aBufferLen);
 
 #  define c_trace(X) c_trace_ ## X

@@ -38,7 +38,7 @@ stack measurement before c_stack_reset_usage_imp is called.
 TStackInfo* c_xstack_get_info_imp(void);
 
 void     c_xstack_reset_usage_imp(void);
-void     c_xstack_update_usage_imp(char* aProcName);
+void     c_xstack_update_usage_imp( const char* aProcName );
 void     c_xstack_dump_usage_imp(void);
 
 #endif   /* PMLITE_STACK_DEBUG */

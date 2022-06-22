@@ -74,7 +74,7 @@ static void DoSousMenuItem3( void )
  * Menu principal
 \*---------------------------------------------------------------------------*/
 
-PMMENU_BEGIN( Menu, "Menu Test" )
+PMMENU_BEGIN( Menu, "Menu" )
    PMMENU_ITEM_EX( 1, "Item 1", DoItem1 )
    PMMENU_ITEM_SEPARATOR( "-----------------" )
    PMMENU_ITEM( 2, "Item 2" )

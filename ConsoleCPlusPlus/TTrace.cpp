@@ -7,12 +7,20 @@
 #include "cMenu.h"
 #include "cInput.h"
 
+#include "cXTrace.h"
 #include "cCore.h"
 
 #include "pmTrace.h"
 #include "pmXError.h"
 #include "pmXTrace.h"
 #include "pmXDebug.h"
+
+/*--------------------------------------------------------------------------*/
+
+static void DoTrace( void )
+{
+    c_trace( TL( pmT_Core, "Verify you add message from PMLite Core"));
+}
 
 /*--------------------------------------------------------------------------*/
 
@@ -38,53 +46,30 @@ static void DoTraceTrace(void)
 
 static void DoTraceDebug(void)
 {
+    size_t      i;
+    pmbyte      theBuffer[ 256 ];
+
     PM_DEBUG0(TL("DEBUG 0 - Error tres grave"));
     PM_DEBUG1(TL("DEBUG 1 - Error grave"));
     PM_DEBUG2(TL("DEBUG 2 - Error faible"));
     PM_DEBUG3(TL("DEBUG 3 - Error tres faible"));
+
+    for ( i = 0; i < 256; i++ )
+        theBuffer[ i ] = (pmbyte)i;
+    
+    PM_DEBUG3(TL( "This is a buffer:" ));
+    PM_DEBUG3(B(theBuffer, (size_t) 256));
+
 }
 
 /*--------------------------------------------------------------------------*/
 
-static void DoSetMaxMem(void)
+static void DoTestPM_CODE( void )
 {
-    pmuint32 theValue;
-
-    if (Input_UInt32("Enter max memory", &theValue, pmfalse, 0, pmtrue))
-        c_xmemdbg_set_max(theValue);
-}
-
-/*--------------------------------------------------------------------------*/
-
-static void DoAllocBlock(void)
-{
-    pmuint32 theValue;
-
-    if ( Input_UInt32("Enter block size", &theValue, pmfalse, 0, pmtrue) )
-    {
-        if (c_malloc(theValue) == 0)
-            c_printf("Allocation failed.\n");
-    }
-}
-
-/*--------------------------------------------------------------------------*/
-
-static void DoTestCheckMem(void)
-{
-    char* theStr = (char*) c_malloc(100);
-
-    if (theStr != 0)
-    {
-            /*  Write after the block end.  */
-        theStr[100] = 0;
-        
-            /*  Check memory status.    */
-        c_xmemdbg_check();
-
-        c_free(theStr);
-    }
-    else
-        c_printf("Not enough memory to perform the test\n");
+    /* Macro pour inserer ou retirer du code de debug */
+    PM_CODE0( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 0" ) ); );
+    PM_CODE1( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 1" ) ); );
+    PM_CODE2( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 2" ) ); );
 }
 
 /*--------------------------------------------------------------------------*/
@@ -95,10 +80,7 @@ static void DoTestTrace(void)
     pmuint32    theUInt32 = 0xFEDC1234;
     pmuint16    theUInt16 = 0xFE12;
     int         theInt = (int) 0xFE12FE12;
-    pmbyte      theBuffer[256];
-    size_t      i;
     
-    // !!! some not supported
     pm_trace0("This is an int32:");
     pm_trace0("  unsigned [4275835444]=[%lu]", theUInt32);
     pm_trace0("  signed   [-19131852]=[%ld]", theUInt32);
@@ -141,12 +123,32 @@ static void DoTestTrace(void)
     pm_trace0("This is a line");
     pm_trace0("break");
     
-    pm_trace0("This is a percent sign [%%]=[%%]");
-    
-    for (i = 0 ; i < 256 ; i++)
-        theBuffer[i] = (pmbyte) i;
-    pm_trace0("This is a buffer:");
-    //pm_trace0(theBuffer, (size_t) 256); not suppoted !!!
+    pm_trace0("This is a percent sign [%%]=[%%]"); 
+}
+
+/*---------------------------------------------------------------------------*/
+
+static void DoTestTraceFloat( void )
+{
+    double theDouble;
+
+    theDouble = 3.14159265358979;
+
+    pm_trace0( 0, 356.3, 0 );
+    pm_trace0( "%1.5f", theDouble, 0 );
+    pm_trace0( "", theDouble, 1 );
+    pm_trace0( "", -2.1, 0 );
+    pm_trace0( "%1.1f", -3.0, 1 );
+    pm_trace0( "", -theDouble, 1 );
+    pm_trace0( "%020.10f", -theDouble, 1 );
+
+    /* Affichage :
+    356.3000003.141593.141593
+    -2.100000-3.0
+    -3.141593
+    -00000003.1415926536
+     */
+
 }
 
 /*--------------------------------------------------------------------------*/
@@ -246,18 +248,18 @@ static void DoTestIToA(void)
 
 /*--------------------------------------------------------------------------*/
 
-PMMENU_BEGIN(Trace, "Trace - Tests")
-    PMMENU_ITEM_EX(1, "Test du module Error", DoTraceError )
-    PMMENU_ITEM_EX(2, "Test du module Trace", DoTraceTrace )
-    PMMENU_ITEM_EX(3, "Test du module Debug", DoTraceDebug )
-    PMMENU_ITEM_SEPARATOR("-----------------")
-    PMMENU_ITEM_EX(4, "Set max mem", DoSetMaxMem)
-    PMMENU_ITEM_EX(5, "Allocate block", DoAllocBlock)
-    PMMENU_ITEM_EX(6, "Test CheckMem", DoTestCheckMem)
-    PMMENU_ITEM_SEPARATOR("-----------------")
-    PMMENU_ITEM_EX(7, "Traces test", DoTestTrace)
-    PMMENU_ITEM_EX(8, "Strings", DoTestStrings)
-    PMMENU_ITEM_EX(9, "itoa", DoTestIToA)
+PMMENU_BEGIN( Trace, "Trace - Tests" )
+PMMENU_ITEM_EX( 1, "c_trace", DoTrace )
+PMMENU_ITEM_EX( 2, "module Error", DoTraceError )
+PMMENU_ITEM_EX( 3, "module Trace", DoTraceTrace )
+PMMENU_ITEM_EX( 4, "module Debug", DoTraceDebug )
+PMMENU_ITEM_SEPARATOR( "-----------------" )
+PMMENU_ITEM_EX( 5, "trace a float", DoTestTraceFloat )
+PMMENU_ITEM_EX( 6, "PM CODE", DoTestPM_CODE )
+PMMENU_ITEM_SEPARATOR( "-----------------" )
+PMMENU_ITEM_EX( 7, "Formated traces test", DoTestTrace )
+PMMENU_ITEM_EX( 8, "Strings", DoTestStrings )
+PMMENU_ITEM_EX( 9, "itoa", DoTestIToA )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/

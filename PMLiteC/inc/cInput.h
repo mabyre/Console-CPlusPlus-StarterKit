@@ -60,9 +60,9 @@ char    Input_Char(char* aPrompt, char* anAllowed);
 \*---------------------------------------------------------------------------*/
 pmbool  Input_String
 (
-    char* aPrompt, 
+    const char* aPrompt, 
     char* aBuffer, 
-    char* aDefaultValue, 
+    const char* aDefaultValue, 
     pmbool afCancel, 
     pmbool afEmpty
 );
@@ -71,7 +71,7 @@ pmbool  Input_String
  * La fonction ci-dessus possede certaines caracteristiques mais cela ne 
  * suffisait pas. Cette fonction affiche la valeur et la conserve par defaut
 \*---------------------------------------------------------------------------*/
-pmbool  Input_NewString( char* aPrompt, char* aBuffer, pmbool afEmpty );
+pmbool  Input_NewString( const char* aPrompt, char* aBuffer, pmbool afEmpty );
 
 /*---------------------------------------------------------------------------*\
  * Displays the prompt (if not null) and asks the user for a pmuint16.

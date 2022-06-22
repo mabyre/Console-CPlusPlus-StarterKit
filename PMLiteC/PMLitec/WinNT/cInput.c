@@ -314,9 +314,9 @@ pmbool Input_UInt16(char* aPrompt, pmuint16* aValue, pmbool afDefault, pmuint16 
 
 pmbool Input_String
 (
-    char* aPrompt, 
+    const char* aPrompt, 
     char* aBuffer, 
-    char* aDefault, 
+    const char* aDefault, 
     pmbool afCancel, 
     pmbool afAllowEmpty
 )
@@ -381,9 +381,9 @@ pmbool Input_String
 
 pmbool Input_NewString
 (
-    char    *aPrompt, 
-    char    *aBuffer, 
-    pmbool   afAllowEmpty
+    const char *aPrompt, 
+    char       *aBuffer, 
+    pmbool     afAllowEmpty
 )
 {
     char  theString[256];
