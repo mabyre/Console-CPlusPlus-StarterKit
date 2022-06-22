@@ -1,0 +1,234 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [fr] (Win98; I) [Netscape]">
+   <title>Reporter protocol</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<h1>
+Reporter Protocol Description</h1>
+
+<h4>
+Version 1.0</h4>
+
+<h3>
+Table of Contents</h3>
+
+<ul>
+<li>
+<b>1.0 <a href="#foreword">Foreword</a></b></li>
+
+<ul>
+<li>
+1.1 <a href="#context">Context</a></li>
+
+<li>
+1.2 <a href="#overview">Protocol overview</a></li>
+</ul>
+
+<li>
+<b>2.0 <a href="#msgfmt">Message Format</a></b></li>
+
+<ul>
+<li>
+2.1 <a href="#msgstruct">Message structure</a></li>
+
+<li>
+2.2 <a href="#msgheader">Message header</a></li>
+
+<li>
+2.3 <a href="#paramheader">Parameter header</a></li>
+
+<li>
+2.4 <a href="#parambody">Parameter body</a></li>
+</ul>
+
+<li>
+<b>3.0 <a href="#advanced">Advanced Considerations</a></b></li>
+
+<ul>
+<li>
+3.1 <a href="#design">Design choices</a></li>
+
+<li>
+3.2 <a href="#limits">Limits</a></li>
+</ul>
+</ul>
+
+<hr>
+<h3>
+<a NAME="foreword"></a>1 Foreword</h3>
+
+<h4>
+<a NAME="context"></a>1.1 Context</h4>
+This document describes the protocol that is used to send data from the
+User Application to the Reporter, which is described in another document
+(see Reporter Guide.html). This protocol is implemented above TCP/IP. The
+sender side is implemented as a shared library that the User Application
+will load dynamically when it needs it. Today that library is only available
+for Windows and is called ASTrace.dll. This protocol is recognized by the
+version 2.x of the Reporter. You don't need to know how the User Application
+communicates with the Reporter in order to use these tools.
+<h4>
+<a NAME="overview"></a>1.2 Protocol overview</h4>
+The data flows unidirectionally from ASTrace to the Reporter. The connection
+/ disconnection is initiated by the User Application through ASTrace's
+exported functions. Each trace corresponds to a single packet (message).
+TCP guarantees the reliable and ordered data transfer of these packets.
+<p>
+<hr>
+<h3>
+<a NAME="msgfmt"></a>2 Message Format</h3>
+
+<h4>
+<a NAME="msgstruct"></a>2.1 Message structure</h4>
+Each message begins with a fixed size header. The message body is a set
+of "parameters". Each parameter has a fixed size header. The parameter
+body structure varies, according to the type located in the parameter header.
+A special parameter type is used to mark the end of the message.
+<h4>
+<a NAME="msgheader"></a>2.2 Message header</h4>
+vvXXXXXXXXXXXXXX
+<p>vv Version of trace protocol (2 bytes: Major, Minor)
+<p>Version matching is done on the major only. It will be incremented whenever
+a change renders it incompatible with the Reporter. The current protocol
+version number is 1.0.
+<p>For this version, XX...XX = NNNNp0p1...pn
+<p>NNNN : total size of the message (including vvNNNN) (4 bytes)
+<p>pi : Message parameters
+<p>NNNN, as all 16 bits and 32 bits integer values are transmitted in network
+order (big-endian).
+<h4>
+<a NAME="paramheader"></a>2.3 Parameter header</h4>
+cnndd..dd
+<p>c : Parameter opcode (1 byte)
+<p>n : nn parameter data len (excluding cnn)
+<p>d..d: parameter data
+<p>User or platform-dependant parameters must be >=128 (bit 7 set). This
+will prevent collision with future parameters.
+<p>Each message must include at least parameters of types 1, 5 and 0, in
+this order.
+<h4>
+<a NAME="parambody"></a>2.4 Parameter body</h4>
+
+<center><table BORDER WIDTH="953" >
+<tr>
+<td VALIGN=TOP WIDTH="16%"><b>Parameter type</b></td>
+
+<td VALIGN=TOP WIDTH="67%">
+<center><b>Body data structure</b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center><b>Data length (bytes)</b></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">0 : End of message</td>
+
+<td VALIGN=TOP WIDTH="67%">None</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>0</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">1 : Attributes</td>
+
+<td VALIGN=TOP WIDTH="67%">XXRRK, with XX = module, RR= reserved, K = kind
+(0=text,1= text with line break,2=binary)</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>5</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">2 : Indentation level</td>
+
+<td VALIGN=TOP WIDTH="67%">X</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>1</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">3 : Process ID</td>
+
+<td VALIGN=TOP WIDTH="67%">XXXX</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>4</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">4 : Thread ID</td>
+
+<td VALIGN=TOP WIDTH="67%">XXXX</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>4</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">5 : Trace Data</td>
+
+<td VALIGN=TOP WIDTH="67%">Either Formatted text or binary data, depending
+on the message attributes</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>Variable</center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="16%">6 : Time stamp</td>
+
+<td VALIGN=TOP WIDTH="67%">XXXX</td>
+
+<td VALIGN=TOP WIDTH="17%">
+<center>4</center>
+</td>
+</tr>
+</table></center>
+
+<p>There can be several type 5 parameters (they will be concatenated upon
+reception), but restrictions apply: only the last can be of kind 1, and
+if the first parameter is of kind 2, all parameters in the message must
+be of the same type.
+<p>
+<hr>
+<h3>
+<a NAME="advanced"></a>3.0 Advanced Considerations</h3>
+
+<h4>
+<a NAME="design"></a>3.1 Design choices</h4>
+
+<ul>
+<li>
+text strings are transmitted without their trailing 0 byte</li>
+
+<li>
+CR ('\r'), LF ('\n') and CR-LF are not recognized as line terminators and
+should not be used in the traces. This prevents portability problems related
+to traces.</li>
+</ul>
+
+<h4>
+<a NAME="limits"></a>3.2 Limits</h4>
+
+<ul>
+<li>
+Text strings will be truncated to 1024 characters in the current implementation
+of ASTrace.</li>
+</ul>
+
+</body>
+</html>

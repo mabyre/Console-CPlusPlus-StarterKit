@@ -1,0 +1,27 @@
+**** Manipuler la version du produit :
+La version qui est affichee dans la boite de dlg "About" se trouve dans :
+Onglet : "ResourceView" - ASTarget resources - Version - VS_VERSION_INFO
+
+La construction de la string se fait dans :
+CAboutDlg.cpp
+qui accede a : PRODUCTVERSION
+depuis la version 3.0.1
+
+Le titre de l'application qui est affichee dans la boite de dlg "About" se trouve dans :
+Onglet : "ResourceView" - ASTarget resources - String Table - a la fin on trouve :
+AFX_IDS_APP_TITLE
+
+**** Mainipuler les clefs de registres :
+Fait par :
+OSReport.cpp
+La construction de la clef de registre se fait par les chaines :
+AFX_IDS_COMPANY_NAME\AFX_IDS_APP_TITLE
+Ce qui donne dans le Registry :
+HKEY_CURRENT_USER\Software\SoDevLog\Reporter
+
+**** Rerporter
+dans PMW32Hlp.cpp mais aussi dans d'autres on trouve un compile conditionnelle :
+#ifndef PMFinalRelease
+
+Elle permet de penser que par la suite en finale release il aurait une utilisation
+pour le Reporter de certaines clefs non utilisees aujourd'hui...

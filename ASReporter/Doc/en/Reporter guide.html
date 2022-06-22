@@ -1,0 +1,737 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [fr] (Win98; I) [Netscape]">
+   <title>Reporter guide</title>
+</head>
+<body link="#0000FF" vlink="#800080">
+
+<h1>
+Reporter User's Manual</h1>
+
+<h4>
+Version 1.1</h4>
+
+<h3>
+Table of Contents</h3>
+
+<ul>
+<li>
+<b>1.0 <a href="#reporter">Reporter</a></b></li>
+
+<ul>
+<li>
+1.1 <a href="#whatis">What is the Reporter?</a></li>
+
+<li>
+1.2 <a href="#features">Reporter features</a></li>
+
+<li>
+1.3 <a href="#package">The Reporter Package</a></li>
+
+<li>
+1.4 <a href="#running">Running the Reporter</a></li>
+</ul>
+
+<li>
+<b>2.0 <a href="#using">Using the Reporter</a></b></li>
+
+<ul>
+<li>
+2.1 <a href="#generation">Trace generation</a></li>
+
+<li>
+2.2 <a href="#formatspec">Format specification</a></li>
+
+<li>
+2.3 <a href="#display">The Reporter display</a></li>
+
+<li>
+2.4 <a href="#filtering">Filtering</a></li>
+
+<li>
+2.5 <a href="#menu">Menu bar</a></li>
+
+<li>
+2.6 <a href="#errors">Error messages</a></li>
+
+<li>
+2.7 <a href="#trouble">Troubleshooting</a></li>
+
+<li>
+2.8 <a href="#sample">Sample code</a></li>
+</ul>
+
+<li>
+<b>3.0 <a href="#advanced">Advanced considerations</a></b></li>
+
+<ul>
+<li>
+3.1 <a href="#parameters">Parameters</a></li>
+
+<li>
+3.2 <a href="#design">Design choices</a></li>
+
+<li>
+3.3 <a href="#protocol">Protocol</a></li>
+
+<li>
+3.4 <a href="#limits">Limits</a></li>
+</ul>
+</ul>
+
+<hr>
+<h3>
+<a NAME="reporter"></a>1 Reporter</h3>
+
+<h4>
+<a NAME="whatis"></a>1.1 What is the Reporter?</h4>
+The Reporter is a trace utility that can be used together with the User
+Application. Applications that run can send information in real-time to
+the Reporter. This information can help to pinpoint problems that would
+be hard to troubleshoot executing code step by step or setting breakpoints.
+To observe traces, simply run your application and the Reporter at the
+same time.
+<h4>
+<a NAME="features"></a>1.2 Reporter features</h4>
+The Reporter has a number of features that make it useful:
+<ul>
+<li>
+high throughput (several hundred of Kb/s)</li>
+
+<li>
+filtering</li>
+
+<li>
+text searching, saving, printing, copying</li>
+
+<li>
+ability to display traces sent trough a TCP/IP connection</li>
+</ul>
+
+<h4>
+<a NAME="package"></a>1.3 The Reporter package</h4>
+The Reporter package includes the following files:
+<center><table BORDER CELLPADDING=3 WIDTH="580" >
+<tr>
+<td VALIGN=CENTER WIDTH="30%"><b>File&nbsp;</b></td>
+
+<td VALIGN=CENTER WIDTH="70%"><b>Description&nbsp;</b></td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="30%">Reporter.exe (Windows)</td>
+
+<td VALIGN=CENTER WIDTH="70%">Main Reporter program.&nbsp;</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="30%">ASTrace.dll (Windows)</td>
+
+<td VALIGN=CENTER WIDTH="70%">Add-on that relay traces to the Reporter.</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="30%">Reporter guide.html&nbsp;</td>
+
+<td VALIGN=CENTER WIDTH="70%">Reporter documentation (this file).&nbsp;</td>
+</tr>
+
+<tr>
+<td VALIGN=CENTER WIDTH="30%">Reporter protocol.html</td>
+
+<td VALIGN=CENTER WIDTH="70%">Description of the protocol recognized by
+the Reporter.</td>
+</tr>
+</table></center>
+
+<p>The Reporter requires either Windows 95 or Windows NT to run (it is
+a multithreaded Win32 program). The Reporter will not run on Windows 3.1,
+even with Win32s installed.
+<h4>
+<a NAME="running"></a>1.4 Running the Reporter</h4>
+The Reporter may be started from any folder, and does not need to be stored
+in the same folder as POSE. This is not true for ASTrace.dll, which should
+be located in the same directory as the User Application. The User Application
+will <i>not</i> be able to send traces to the Reporter if it can't find
+and load ASTrace.dll, and it will fail silently if this happens.
+<p>
+<hr>
+<h3>
+<a NAME="using"></a>2 Using the Reporter</h3>
+
+<h4>
+<a NAME="generation"></a>2.1 Trace generation</h4>
+Traces are generated from a PRC using special system calls that are recognized
+by POSE but ignored by actual devices. These calls are listed in hostcontrol.h,
+which is part of the&nbsp; OS SDK. This file is also shipped with POSE,
+which is updated more frequently than the SDK. Only the Win32 version of
+POSE can handle traces at this time however. The system calls pertinent
+to tracing are:
+<center><table BORDER CELLPADDING=7 WIDTH="955" >
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceInit(void)&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="50%">Initiate a connection to the "tracing port"
+(by default that's the Reporter)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceOutputT(UInt16 mod, const char*
+fmt, …)&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="50%">Output a string to the Reporter (printf-like)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceOutputTL(UInt16 mod, const char*
+fmt, …)</td>
+
+<td VALIGN=TOP WIDTH="50%">Same as HostTraceOutputT with an additional
+line break</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceOutputB(UInt16 mod, const char*
+buff, UInt32 len)&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="50%">Send binary data to the Reporter</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceOutputVT(UInt16 mod, const char*
+fmt, va_list vargs)&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="50%">vprintf-like variant of HostTraceOutputT</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceOutputVTL(UInt16 mod, const char*
+fmt, va_list vargs)&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="50%">vprintf-like variant of HostTraceOutputTL</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="50%">void HostTraceClose(void)</td>
+
+<td VALIGN=TOP WIDTH="50%">Close the current connection</td>
+</tr>
+</table></center>
+
+<p><font face="TIMES">All HostTraceOutput functions take an error class
+identifier as their first parameter. This parameter allows filtering out
+traces according to their origin. Recognized error classes are listed in
+SystemMgr.h. For example, applications should specify appErrorClass.</font>
+<h4>
+<a NAME="formatspec"></a>2.2 Format specification</h4>
+The format string is as follows: % <i>flags</i> <i>width</i> type
+<p>Supported <i>flags</i> are:
+<center><table BORDER CELLPADDING=7 WIDTH="624" >
+<tr>
+<td VALIGN=TOP WIDTH="15%">-</td>
+
+<td VALIGN=TOP WIDTH="85%">Left justified display (default is right justified)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">+</td>
+
+<td VALIGN=TOP WIDTH="85%">Always displays the sign symbol (default is
+to display it for negative values only)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">space</td>
+
+<td VALIGN=TOP WIDTH="85%">Displays a space (when the value is positive)
+instead of a '+' symbol</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">#</td>
+
+<td VALIGN=TOP WIDTH="85%">Alternate form specifier</td>
+</tr>
+</table></center>
+
+<p><i>width</i> should be a strictly positive number
+<br>&nbsp;
+<br>&nbsp;
+<p>Supported types are:
+<center><table BORDER CELLPADDING=7 WIDTH="627" >
+<tr>
+<td VALIGN=TOP WIDTH="15%">%&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display the % character</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">s</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a 0 terminated string</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">c</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a character</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">ld</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a Int32</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">lu</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a UInt32</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">lX or lx</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a UInt32 in hexadecimal</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">hd</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a Int16</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">hu&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a UInt16</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">hX or hx</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a Int16 (or UInt16) in hexadecimal</td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<p>Unsupported types are:
+<center><table BORDER CELLPADDING=7 WIDTH="627" >
+<tr>
+<td VALIGN=TOP WIDTH="15%">o&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display an unsigned int in octal</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">e</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%"><font face="TIMES">E</font></td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">f</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">F</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">g</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">G</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a double</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">p&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a pointer to void</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">l</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a long</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">n</td>
+
+<td VALIGN=TOP WIDTH="85%">Display a pointer to integer</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">d</td>
+
+<td VALIGN=TOP WIDTH="85%">Display an int (type size not guaranteed)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">i&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display an int (type size not guaranteed)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">u&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="85%">Display an unsigned int (type size not guaranteed)</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="15%">X or x</td>
+
+<td VALIGN=TOP WIDTH="85%">Display an int (or unsigned int) in hexadecimal
+(type size not guaranteed)</td>
+</tr>
+</table></center>
+
+<div ALIGN=right>
+<h4>
+&nbsp;</h4></div>
+
+<h4>
+<a NAME="display"></a>2.3 The Reporter display</h4>
+After launching the Reporter, you should see an empty window. This window
+will serve as a container for other windows into which traces will be displayed.
+A new <i>trace window</i> is created for each HostTraceInit … HostTraceClose
+sequence. HostTraceOutput calls will send information into the current
+trace window. They will fail if there is no active trace window, which
+can happen if the Reporter was not running when HostTraceInit was called.
+A reset in POSE will close any pending connection - i.e. call HostTraceClose
+for you if you had called HostTraceInit before.
+<h4>
+<a NAME="filtering"></a>2.4 Filtering</h4>
+The Reporter is able to filter the types of traces that it displays. You
+may control filters either <i>globally</i> or just for the <i>current window</i>
+by using the appropriate options under the View menu or by clicking on
+the appropriate icons. By enabling or disabling filters, you may choose
+to view traces sent by the corresponding modules. Global settings are saved
+when the Reporter exits.
+<h4>
+<a NAME="menu"></a>2.5 Menu bar</h4>
+
+<center><table BORDER WIDTH="622" >
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image1.gif" height=16 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Save the content of the Reporter window to a
+file</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image2.gif" height=16 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Print the content of the Reporter window</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image3.gif" height=16 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Select all of the text in the Reporter window</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image4.gif" height=15 width=18></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Copy the selected text into the Windows clipboard</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image5.gif" height=16 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Clear the Reporter window</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image6.gif" height=15 width=19></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Draw a horizontal line across the Reporter window</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image7.gif" height=16 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Search the Reporter window for specified text</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image8.gif" height=17 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Search for the next occurrence of specified
+text</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image9.gif" height=17 width=16></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Search for the preceding occurrence of specified
+text</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image10.gif" height=17 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Set "on top" mode - keep the Reporter always
+visible on the screen</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image11.gif" height=17 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Set filters for the current window only</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image12.gif" height=17 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Set font for the current window only</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image13.gif" height=17 width=15></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Set filters for all new windows</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="5%">
+<center><img SRC="Image14.gif" height=17 width=17></center>
+</td>
+
+<td VALIGN=TOP WIDTH="95%">Sets font for all new windows</td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<h4>
+<a NAME="errors"></a>2.6 Error messages</h4>
+You might encounter a few error messages related to traces. Here are their
+descriptions:
+<center><table BORDER WIDTH="954" >
+<tr>
+<td VALIGN=TOP WIDTH="38%">
+<center><b>Error message</b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="24%">
+<center><b>Problem</b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="38%">
+<center><b>Possible solution</b></center>
+</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">An error occurred while trying to listen for
+traces</td>
+
+<td VALIGN=TOP WIDTH="24%">Default reception port in use</td>
+
+<td VALIGN=TOP WIDTH="38%">Check that no other instance of the Reporter
+is running</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">An error occurred while initializing ObjectSet</td>
+
+<td VALIGN=TOP WIDTH="24%">Framework initialization failed</td>
+
+<td VALIGN=TOP WIDTH="38%">Contact us</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">An error occured while ObjectSet was initializing
+TCP/IP</td>
+
+<td VALIGN=TOP WIDTH="24%">TCP/IP related failure</td>
+
+<td VALIGN=TOP WIDTH="38%">Check that TCP/IP networking is correctly set
+up</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">Cannot load filters description</td>
+
+<td VALIGN=TOP WIDTH="24%">Reporter executable was altered</td>
+
+<td VALIGN=TOP WIDTH="38%">Contact us</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">Unable to start a reader thread</td>
+
+<td VALIGN=TOP WIDTH="24%">Could not create receiver thread</td>
+
+<td VALIGN=TOP WIDTH="38%">Free up system ressources</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="38%">Unable to start a format thread</td>
+
+<td VALIGN=TOP WIDTH="24%">Could not create displayer thread</td>
+
+<td VALIGN=TOP WIDTH="38%">Free up system ressources</td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<h4>
+<a NAME="trouble"></a>2.7 Troubleshooting</h4>
+&nbsp;If the ASTrace.dll doesn't appear in the folder where you decompressed
+the Reporter's archive:
+<ul>
+<li>
+the Windows shell is probably configured to hide system files</li>
+</ul>
+&nbsp;If nothing appears where you would expect traces, check that:
+<ul>
+<li>
+ASTrace.dll is in POSE's directory</li>
+
+<li>
+filters are correctly set, and traces are emitted with the right modules</li>
+
+<li>
+your code calls HostTraceInit</li>
+
+<li>
+you are using POSE v3.0a4 or later</li>
+
+<li>
+the Tracing Options settings are correctly set in POSE</li>
+</ul>
+&nbsp;The Reporter requires some OLE related DLLs as well as Winsock2.
+The following system updates may be necessary on Windows 95 (not 98, NT
+or 2000):
+<ul><a href="ftp://ftp.microsoft.com/Softlib/Mslfiles/VBRun60.exe">OLE
+DLLs referenced by the Reporter</a>
+<br><a href="http://www.microsoft.com/windows/downloads/bin/W95ws2setup.exe">Winsock
+2.0 update</a></ul>
+
+<hr>
+<h4>
+<a NAME="sample"></a>2.8 Sample code</h4>
+void f(void)
+<br>{
+<br>unsigned char theBuffer[256];
+<br>unsigned long theUInt32 = 0xFEDC1234;
+<br>unsigned short theUInt16 = 0xFE12;
+<br>int i;
+<p>HostTraceInit();
+<p>HostTraceOutputTL(appErrorClass, "This is an Int32:");
+<br>HostTraceOutputTL(appErrorClass, " unsigned (lu) [4275835444]=[%lu]",
+theUInt32);
+<br>HostTraceOutputTL(appErrorClass, " signed (ld) [-19131852]=[%ld]",
+theUInt32);
+<br>HostTraceOutputTL(appErrorClass, " hexa (lx) [fedc1234]=[%lx]", theUInt32);
+<p>HostTraceOutputTL(appErrorClass, "This is an Int16:");
+<br>HostTraceOutputTL(appErrorClass, " unsigned (hu) [65042]=[%hu]", theUInt16);
+<br>HostTraceOutputTL(appErrorClass, " signed (hd) [-494]=[%hd]", theUInt16);
+<br>HostTraceOutputTL(appErrorClass, " hexa (hX) [FE12]=[%hX]", theUInt16);
+<p>HostTraceOutputTL(appErrorClass, "This is a string (s) [Hello world]=[%s]",
+"Hello world");
+<br>HostTraceOutputTL(appErrorClass, "This is a char (c) [A]=[%c]", 'A');
+<p>HostTraceOutputTL(appErrorClass, "This is a buffer:");
+<p>for (i = 0 ; i &lt; 256 ; i++) theBuffer[i] = (unsigned char) i;
+<p>HostTraceOutputB(appErrorClass, theBuffer, 256);
+<p>HostTraceClose();
+<br>}
+<h3>
+<a NAME="advanced"></a>3.0 Advanced Considerations</h3>
+
+<h4>
+<a NAME="parameters"></a>3.1 Parameters</h4>
+There is Tracing Options dialog in POSE that controls the location where
+POSE sends traces. The default output is set to none, so traces are simply
+discarded unless otherwise specified. This dialog box enables sending traces
+to a remote computer, which can be useful for remote troubleshooting.
+<h4>
+<a NAME="design"></a>3.2 Design choices</h4>
+
+<ul>
+<li>
+CR ('\r'), LF ('\n') and CR-LF are not recognized as line terminators for
+portability reasons. Do not embed them in traces. The additional line break
+will be added by HostTrace*TL calls.</li>
+
+<li>
+Filtering is performed at the receiver level. Doing so costs bandwidth
+but guarantees that the emitter will always have the same behavior independently
+of the active filters. Even if the current Reporter just discards incoming
+traces that don't match active filters, this choice enables the receiver
+to apply filters to all traces having been received, not just new ones.
+This is not done today however.</li>
+
+<li>
+Each Reporter window corresponds to a TCP connection.</li>
+
+<li>
+The timestamp unit is device-dependant. Timestamps are set upon emission,
+and are guaranteed to grow monotically.</li>
+
+<li>
+Several threads can emit traces concurrently.</li>
+
+<li>
+Automatic scrolling will occur when a new trace is received - except if
+the caret has been explicitly moved.</li>
+</ul>
+
+<h4>
+<a NAME="protocol"></a>3.3 Protocol</h4>
+One packet (message) is emitted for each trace. See Reporter Protocol.html
+for details. The Reporter expects connections on localhost:25999.
+<h4>
+<a NAME="limits"></a>3.4 Limits</h4>
+Incoming data is stored in a circular list of buffers. Only the last few
+thousands traces are kept. If traces have been discarded, it will be signaled
+by a [...] at the top of the trace window.
+</body>
+</html>

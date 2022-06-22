@@ -1,0 +1,14 @@
+Message de verification du chargement des DLL par l'executable sous debogue :
+
+Loaded symbols for 'F:\Bruno\Developpement\Visual C++ 6.0\ASDLLTrace\ASDLLTraceSources\Debug\astrace.dll'
+Loaded 'ntdll.dll', no matching symbolic information found.
+Loaded 'C:\WINDOWS\system32\kernel32.dll', no matching symbolic information found.
+Loaded 'C:\WINDOWS\system32\user32.dll', no matching symbolic information found.
+Loaded 'C:\WINDOWS\system32\gdi32.dll', no matching symbolic information found.
+Loaded 'C:\WINDOWS\system32\advapi32.dll', no matching symbolic information found.
+Loaded 'C:\WINDOWS\system32\rpcrt4.dll', no matching symbolic information found.
+Preloaded symbols may not match 'C:\WINDOWS\cmd\astrace.dll'.
+Loaded 'C:\WINDOWS\system32\winmm.dll', no matching symbolic information found.
+
+* Attention un message concerne :
+'C:\WINDOWS\cmd\astrace.dll'

@@ -1,0 +1,714 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""Reporter.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "Toolbar.bmp"
+IDB_LIGHTBULB           BITMAP  DISCARDABLE     "litebulb.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_EDIT_SELECT_ALL
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_CLEAR_ALL
+    BUTTON      ID_LINE
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_FIND_NEXT
+    BUTTON      ID_EDIT_FIND_PREV
+    SEPARATOR
+    BUTTON      ID_ONTOP
+    SEPARATOR
+    BUTTON      ID_FILTERS
+    BUTTON      ID_FONT
+    SEPARATOR
+    BUTTON      ID_FILTERS_GLOBAL
+    BUTTON      ID_FONT_GLOBAL
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_ONTOP2
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Global font...",              ID_FONT_GLOBAL
+        MENUITEM "Global filters...",           ID_FILTERS_GLOBAL
+        MENUITEM "Always on top",               ID_ONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help",                       ID_HELP_INDEX
+        MENUITEM "&Search for Help on...",      ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "Ti&p of the Day...",          ID_HELP_TIPDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About Reporter...",          ID_APP_ABOUT
+    END
+END
+
+IDR_OSREPOTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM "&Clear All\tCtrl+X",          ID_EDIT_CLEAR_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F3",              ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_FIND_NEXT
+        MENUITEM "Find &Prev\tShift+F3",        ID_EDIT_FIND_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "Draw &Line\tCtrl+L",          ID_LINE
+        MENUITEM SEPARATOR
+        MENUITEM "&Go To Line\tCtrl+G",         ID_EDIT_GOTO
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Global font...",              ID_FONT_GLOBAL
+        MENUITEM "Global filters...",           ID_FILTERS_GLOBAL
+        MENUITEM "Always on top",               ID_ONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "Active view font...",         ID_FONT
+        MENUITEM "Active view filters...",      ID_FILTERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Close &all",                  ID_WINDOW_CLOSE_ALL
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help",                       ID_HELP_INDEX
+        MENUITEM "&Search for Help on...",      ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "Ti&p of the Day...",          ID_HELP_TIPDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About Reporter...",          ID_APP_ABOUT
+    END
+END
+
+IDM_CONTEXT_EDIT MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM "&Clear All\tCtrl+X",          ID_EDIT_CLEAR_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F3",              ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_FIND_NEXT
+        MENUITEM "Find &Prev\tShift+F3",        ID_EDIT_FIND_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Go To Line\tCtrl+G",         ID_EDIT_GOTO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTO,           VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_LINE,                VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FIND_NEXT,      VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_EDIT_FIND_PREV,      VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CLEAR_ALL,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 212, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About %s"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            128,IDC_ABOUT_ICON,10,10,20,20,SS_NOTIFY
+    CTEXT           "%s Version %d.%d.%d@Bold;FontSize=10;",IDC_ABOUT_TEXT,
+                    36,17,144,8,SS_NOPREFIX
+    CTEXT           "Copyright (c) 1998 SoDevLog",IDC_STATIC,36,33,143,8
+    DEFPUSHBUTTON   "OK",IDOK,89,56,50,14,WS_GROUP
+END
+
+IDD_FILTER_PAGE DIALOG DISCARDABLE  0, 0, 182, 146
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Test"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_FILTER_LIST,4,3,172,112,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Select all@dynsize=50,100,0,0;",IDC_FP_ALL,35,125,50,
+                    14
+    PUSHBUTTON      "&Clear all@dynsize=50,100,0,0;",IDC_FP_NONE,99,125,50,
+                    14
+END
+
+IDD_FILTERS DIALOG DISCARDABLE  0, 0, 202, 274
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Trace Filters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_FILTERS_TAB,"SysTabControl32",WS_GROUP | 
+                    WS_TABSTOP,7,7,188,163
+    LTEXT           "Ignore filters and display :",IDC_FILTERS_STATIC1,7,177,
+                    80,8
+    CONTROL         "&All traces",IDC_FILTERS_ALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,94,177,45,10
+    CONTROL         "&No traces",IDC_FILTERS_NONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,142,177,47,10
+    CONTROL         "Special c&haracters",IDC_DISPLAY_SPECIALS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,193,75,10
+    CONTROL         "&Filter Names",IDC_FILTERS_DISPLAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,84,194,55,10
+    CONTROL         "&Timestamps",IDC_DISPLAY_TS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,140,193,55,9
+    COMBOBOX        IDC_FILTERS_TID,73,206,57,46,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_FILTERS_SEPARATOR,181,206,11,13,ES_AUTOHSCROLL
+    CONTROL         "Display &Offsets in binary dumps",IDC_DISPLAY_BADDR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,220,113,10
+    CONTROL         "&Use these settings for global filters",
+                    IDC_FILTERS_FUTURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,7,240,123,10
+    DEFPUSHBUTTON   "OK@dynsize=50,100,0,0;",IDOK,45,253,50,14
+    PUSHBUTTON      "Cancel@dynsize=50,100,0,0;",IDCANCEL,107,253,50,14
+    LTEXT           "Display Thread &ID :",IDC_FILTERS_STATIC2,7,208,63,8
+    LTEXT           "&Separator :",IDC_FILTERS_STATIC3,142,208,36,8
+    CONTROL         "@class=LHLine;dynsize=0,100,100,0;",IDC_FILTERS_LINE1,
+                    "OVControl",0x0,7,189,50,6
+    CONTROL         "@class=LHLine;dynsize=0,100,100,0;",IDC_FILTERS_LINE2,
+                    "OVControl",0x0,7,233,50,6
+END
+
+IDD_TIP DIALOG DISCARDABLE  0, 0, 207, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Next Tip",IDC_TIP_NEXT,95,91,50,14
+    DEFPUSHBUTTON   "&Close",IDOK,150,91,50,14
+    CONTROL         "&Show Tips on Startup",IDC_TIP_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,95,84,10
+    CONTROL         "@class=LBitmap;colorbits=4;transcolor=255,0,255;image=102,1;autosize;noframe;",
+                    IDC_TIP_BMP,"OVControl",0x0,7,7,35,24
+    PUSHBUTTON      "Cancel",IDCANCEL,150,7,50,14,NOT WS_VISIBLE
+    LTEXT           "Did you know...@bold;fontsize=12",IDC_STATIC,48,16,109,
+                    15
+    LTEXT           "",IDC_TIP_TEXT,7,39,193,47
+END
+
+IDD_GOTO DIALOG DISCARDABLE  0, 0, 145, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To Line"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_GOTO_LINE,7,20,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "&Go To",IDOK,88,7,50,14
+    PUSHBUTTON      "Close",IDCANCEL,88,24,50,14
+    LTEXT           "Enter line number:",IDC_STATIC,7,7,58,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_FILTER_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 174
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_FILTERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_GOTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// OV_ATTRIBUTES
+//
+
+IDC_FILTER_LIST OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x4e40, 0x436f, 0x7070, 0x443b, 0x6e79, 0x6953, 0x657a, 0x303d, 0x302c, 
+    0x312c, 0x3030, 0x312c, 0x3030, 0x003b
+END
+
+IDC_FILTERS_ALL OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_DISPLAY OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_NONE OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_TAB OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x5340, 0x7a69, 0x5465, 0x506f, 0x6761, 0x3b65, 0x6543, 0x746e, 0x7265, 
+    0x6150, 0x6567, 0x3b73, 0x7944, 0x536e, 0x7a69, 0x3d65, 0x2c30, 0x2c30, 
+    0x3031, 0x2c30, 0x3031, 0x3b30, "\000" 
+END
+
+IDC_FILTERS_FUTURE OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_TID OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_STATIC1 OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_STATIC2 OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_STATIC3 OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+IDC_FILTERS_SEPARATOR OV_ATTRIBUTES DISCARDABLE 
+BEGIN
+    0x6440, 0x6e79, 0x6973, 0x657a, 0x303d, 0x312c, 0x3030, 0x302c, 0x302c, 
+    0x003b
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_URL          CURSOR  DISCARDABLE     "lurl.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FILTERS DLGINIT
+BEGIN
+    IDC_FILTERS_TID, 0x403, 3, 0
+0x6f4e, "\000" 
+    IDC_FILTERS_TID, 0x403, 13, 0
+0x2034, 0x6568, 0x2078, 0x6964, 0x6967, 0x7374, "\000" 
+    IDC_FILTERS_TID, 0x403, 13, 0
+0x2038, 0x6568, 0x2078, 0x6964, 0x6967, 0x7374, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_OSREPOTYPE          "\n\n\nTrace Files (*.txt)\n.txt\n\n"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "List Help topics\nHelp Index"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the entire document\nErase All"
+    ID_EDIT_CLEAR_ALL       "Erase the entire document\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_OSINIT_PM     "An error occured while initializing ObjectSet. Can not continue."
+    IDS_ERROR_OSINIT_TCP    "An error occured while ObjectSet was initializing TCP/IP. Can not continue."
+    IDS_CANNOT_LOAD_FILTERS "Cannot load filters description. Unable to run."
+    IDS_ERROR_LISTEN        "An error occurred while trying to listen for traces."
+    IDS_ERROR_READ          "Unable to start a reader thread."
+    IDS_ERROR_FORMAT        "Unable to start a format thread."
+    IDS_ERROR_LINE_NUMBER   "Line number %lu does not exist (less lines)."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DEFAULT_DOC_TITLE   "Unknown application."
+    IDS_DOC_TITLE           "Application [%1]  (PID = %2!lu!)."
+    IDS_DOC_TITLE_NO_PID    "Application [%1]"
+    IDS_COPYRIGHT           "Welcome to %s (C) 1998 SoDevLog\r\n\r\n"
+    IDS_DEFAULT_DOC_NAME    "Traces.txt"
+    IDS_CLOSED              " --- Closed ---"
+    IDS_LINE                "----------------------------------------------------------\r\n"
+    IDS_TRACES_FILTERS      "Using filters"
+    IDS_TRACES_ALL          "All traces"
+    IDS_TRACES_NONE         "No traces"
+    IDS_TRACES_NA           "N/A"
+    IDS_LINE_NUMBER         "Line: %lu"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILTERS_GLOBAL       "Display filters selection to use for future windows\nGlobal filters"
+    ID_ONTOP                "Toggle always on top mode\nAlways on top"
+    ID_LINE                 "Draw a line in the active window\nLine"
+    ID_FONT                 "Choose the font for the active window\nCurrent font"
+    ID_FILTERS              "Display filters selection for this connection\nCurrent filters"
+    ID_FONT_GLOBAL          "Choose the font to use for future windows\n Global font"
+    ID_LARGEFONT            "Select large font display mode\nLarge font"
+    ID_WINDOW_CLOSE_ALL     "Close all windows\nClose All"
+    ID_EDIT_FIND_NEXT       "Find the next occurence of the specified text\nFind next"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_FIND_PREV       "Find the previous occurence of the specified text\nFind previous"
+    ID_HELP_TIPDAY          "Display a Tip of the Day\nTip of the Day"
+    ID_EDIT_GOTO            "Go To Line\nGo To Line"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FORMAT_FONT          "Select font\nFont"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TIP_COUNT           "8"
+    IDS_TIP_STRING0         "This application allows you to see and manage traces sent by under test applications using astrace.dll."
+    IDS_TIP_STRING1         "You can use the filter selection dialog to select which kind of traces you want to see."
+    IDS_TIP_STRING2         "When you change global filter selection or global font, all the future windows will use these settings but not the currently opened windows. To change settings for the later, you have to use the ""Active view ..."" settings."
+    IDS_TIP_STRING3         "You can use ""Always on top"" option to force the Reporter window to stay on top of the other windows."
+    IDS_TIP_STRING4         "A new window will be opened for each new application sending traces."
+    IDS_TIP_STRING5         "As the trace mechanism is based on TCP-IP you can run Reporter on one machine and receive traces from another machine. Read advanced documentation to know how to configure the trace mechanism."
+    IDS_TIP_STRING6         "The Reporter can also receive traces from applications developed on MAC or UNIX that uses the trace mechanism."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TIP_STRING7         "The Reporter can also receive on your desktop traces emited by your application running at one of your client Office during Beta-Testing stage. This improves greatly bugs tracking."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PANE_LINE            "Not used but must exist"
+    ID_PANE_FILTERS         "Not used but must exist"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILTERS_ID          "10001"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9999                    "; Resource 10000 points to the filters block."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "Reporter.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

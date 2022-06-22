@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{BC2C8FC7-914E-4AE8-9E11-785BC6314A7B}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\..\..\PMLiteC\Common;..\..\..\PMLiteC\WinNT;..\..\..\PMLiteC\Common\Stream;..;..\..\WinNT;..\..\..\PMLiteC\Common\Serial;..\..\..\PMLiteC\Common\Socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\PMLiteC.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\PMLiteC.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\PMLiteC.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\..\PMLiteC\Common;..\..\..\PMLiteC\WinNT;..\..\..\PMLiteC\Common\Stream;..;..\..\WinNT;..\..\..\PMLiteC\Common\Serial;..\..\..\PMLiteC\Common\Socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\PMLiteC.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\PMLiteC.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\PMLiteC.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\cCore.c" />
+    <ClCompile Include="..\..\Common\cMemory.c" />
+    <ClCompile Include="..\..\Common\cXBorder.c" />
+    <ClCompile Include="..\..\Common\cXCore.c" />
+    <ClCompile Include="..\..\Common\cXDLList.c" />
+    <ClCompile Include="..\..\Common\cXMemDbg.c" />
+    <ClCompile Include="..\..\Common\cXStack.c" />
+    <ClCompile Include="..\..\Common\Serial\cSerial.c" />
+    <ClCompile Include="..\..\Common\Stream\cB64Dec.c" />
+    <ClCompile Include="..\..\Common\Stream\cB64Enc.c" />
+    <ClCompile Include="..\..\Common\Stream\cBaseSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cConcSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cCountSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cCRLFSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cDotSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cEndPt.c" />
+    <ClCompile Include="..\..\Common\Stream\cFileSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cGenSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cMemSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cPartSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cQPDec.c" />
+    <ClCompile Include="..\..\Common\Stream\cQPEnc.c" />
+    <ClCompile Include="..\..\Common\Stream\cSerSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cSockSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cStopSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cUndotSt.c" />
+    <ClCompile Include="..\..\Common\Stream\cUnfSt.c" />
+    <ClCompile Include="..\..\WinNT\cConsole.c" />
+    <ClCompile Include="..\..\WinNT\cInput.c" />
+    <ClCompile Include="..\..\WinNT\cMenu.c" />
+    <ClCompile Include="..\..\WinNT\cMenuDis.c" />
+    <ClCompile Include="..\..\WinNT\cXCoreP.c" />
+    <ClCompile Include="..\..\WinNT\cXStackP.c" />
+    <ClCompile Include="..\..\WinNT\cXThread.c" />
+    <ClCompile Include="..\..\WinNT\cXTrace.c" />
+    <ClCompile Include="..\..\WinNT\pmDebug.c" />
+    <ClCompile Include="..\..\WinNT\pmTrace.c" />
+    <ClCompile Include="..\..\WinNT\pmXDebug.c" />
+    <ClCompile Include="..\..\WinNT\pmXError.c" />
+    <ClCompile Include="..\..\WinNT\pmXTrace.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\cCore.h" />
+    <ClInclude Include="..\..\Common\cMemory.h" />
+    <ClInclude Include="..\..\Common\cTrace.h" />
+    <ClInclude Include="..\..\Common\cTypes.h" />
+    <ClInclude Include="..\..\Common\cXBorder.h" />
+    <ClInclude Include="..\..\Common\cXCore.h" />
+    <ClInclude Include="..\..\Common\cXDLList.h" />
+    <ClInclude Include="..\..\Common\cXMem.h" />
+    <ClInclude Include="..\..\Common\cXStack.h" />
+    <ClInclude Include="..\..\Common\cXTrace.h" />
+    <ClInclude Include="..\..\Common\cXTypes.h" />
+    <ClInclude Include="..\..\Common\pmDebug.h" />
+    <ClInclude Include="..\..\Common\pmTrace.h" />
+    <ClInclude Include="..\..\Common\pmXDebug.h" />
+    <ClInclude Include="..\..\Common\pmXError.h" />
+    <ClInclude Include="..\..\Common\pmXTrace.h" />
+    <ClInclude Include="..\..\Common\Serial\cSerial.h" />
+    <ClInclude Include="..\..\Common\Socket\cEnvPPP.h" />
+    <ClInclude Include="..\..\Common\Socket\cEnvSock.h" />
+    <ClInclude Include="..\..\Common\Socket\cPPP.h" />
+    <ClInclude Include="..\..\Common\Socket\cPPPDef.h" />
+    <ClInclude Include="..\..\Common\Socket\cSockDef.h" />
+    <ClInclude Include="..\..\Common\Socket\cSocket.h" />
+    <ClInclude Include="..\..\Common\Stream\cB64Dec.h" />
+    <ClInclude Include="..\..\Common\Stream\cB64Enc.h" />
+    <ClInclude Include="..\..\Common\Stream\cBaseSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cConcSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cCountSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cCRLFSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cDotSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cEndPt.h" />
+    <ClInclude Include="..\..\Common\Stream\cFileSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cGenSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cMemSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cPartSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cQPDec.h" />
+    <ClInclude Include="..\..\Common\Stream\cQPEnc.h" />
+    <ClInclude Include="..\..\Common\Stream\cSerSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cSockSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cStopSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cStream.h" />
+    <ClInclude Include="..\..\Common\Stream\cUndotSt.h" />
+    <ClInclude Include="..\..\Common\Stream\cUnfSt.h" />
+    <ClInclude Include="..\..\WinNT\ASTrace.h" />
+    <ClInclude Include="..\..\WinNT\cConsole.h" />
+    <ClInclude Include="..\..\WinNT\cEnv.h" />
+    <ClInclude Include="..\..\WinNT\cInput.h" />
+    <ClInclude Include="..\..\WinNT\cMenu.h" />
+    <ClInclude Include="..\..\WinNT\cMenuDis.h" />
+    <ClInclude Include="..\..\WinNT\cStdArg.h" />
+    <ClInclude Include="..\..\WinNT\cXEnv.h" />
+    <ClInclude Include="..\..\WinNT\cXThread.h" />
+    <ClInclude Include="..\..\WinNT\OSWinInc.h" />
+    <ClInclude Include="..\..\WinNT\pmTypes.h" />
+    <ClInclude Include="..\..\WinNT\pmXEnv.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,18 @@
+Win32 stub initialized.
+Creating entry [ERROR0] for code [0100ffff]
+Creating group [Error] for code [0100ffff]
+Creating entry [ERROR1] for code [0101ffff]
+Creating entry [ERROR2] for code [0102ffff]
+Creating entry [ERROR3] for code [0103ffff]
+Creating entry [DEBUG0] for code [2000ffff]
+Creating group [Debug] for code [2000ffff]
+Creating entry [DEBUG1] for code [2001ffff]
+Creating entry [DEBUG2] for code [2002ffff]
+Creating entry [DEBUG3] for code [2003ffff]
+Creating entry [TRACE0] for code [1000ffff]
+Creating group [Trace] for code [1000ffff]
+Creating entry [TRACE1] for code [1001ffff]
+Creating entry [TRACE2] for code [1002ffff]
+Creating entry [TRACE3] for code [1003ffff]
+Listening thread started successfully.
+PMWinSock11::PumpMessages(): Waiting...

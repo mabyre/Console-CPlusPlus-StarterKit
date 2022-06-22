@@ -1,0 +1,98 @@
+------------------------------------------------------------------------------
+ASTrace.txt
+Copyright (C) 1990 - 1996 AbyreSoft - All rights reserved. Revised 2004
+------------------------------------------------------------------------------
+
+Cette version v2.0 de la DLL de trace communique avec le Reporter v2.0
+La version v3.0 est définit par l'utilisation dans Visual.NET en C#
+
+------------------------------------------------------------------------------
+                          Utilisation des Traces en C
+------------------------------------------------------------------------------
+
+Pour utiliser les traces il faut :
+- inclure "ASTrace.h"
+- appeler une fois as_trace_init() au démarrage de l'application
+  avant d'appeler une fonction de trace
+- appeler as_trace_close() avant de fermer l'application
+- rendre accessible astrace.dll depuis l'application
+
+L'ecriture de ce code en C permet l'utilisation en C++
+
+------------------------------------------------------------------------------
+                          Utilisation des Traces en C#
+------------------------------------------------------------------------------
+
+Inclure dans son projet le fichier Reporter.cs qui definit l'interface avec la
+DLL, astrace.dll
+
+------------------------------------------------------------------------------
+                          Configuration des Traces 
+------------------------------------------------------------------------------
+La configuration des traces se fait par la base de registre.
+Lorsqu'une application utilise les traces, sa configuration est stockée dans
+la clef de registre suivante :
+HKEY_CURRENT_USER\Software\{Company Name}\{App name}\OSSettings
+
+{Company Name}
+Le nom de la compagnie est chargé par l'application dans ses resources
+a partir de : string table ID 0xE004.
+(ce qui est compatible avec les MFC). Si cette ressource n'est pas trouvée 
+dans l'application, AbyreSoft is used.
+
+{App name}
+Le nom de l'application est chargé est chargé à partir de la ressource
+string table ID 0xE000
+Si cette ressource n'est pas trouvée le nom de l'exécutable est utilisé.
+
+Under this key, you will find several value.
+You can create these values by hand or execute the application once
+resulting in these values to be created with default values.
+
+1- TracerType [STRING] = Type[:Params]
+Type may be one of AbyreSoft's standard tracer or a customized tracer
+Params is a string passed to tracer creator's function.
+AbyreSoft standard tracers are:
+A-  TCP Tracer configured by TracerType = "tcp[:host[:port]]"
+    Traces are sent to PMLite Reporter using a TCP socket
+    Default host is localhost and default port (on which Reporter listens) 
+    is 25999.
+B-  File tracer configured by TracerType = "file:[FileName]"
+    Traces are written to file FileName.
+    If FileName is not specified PMLite.log is used.
+C-  Standard error IO stream configured by TracerType = "stderr"
+    Traces are sent to stderr.
+
+2- DisplayTrace [DWORD] = 0 | 1
+Setting this value to 1 enables traces, to 0 disables them.
+
+3- TracerRetryMax [DWORD] = x
+   TracerRetryDelay [DWORD] = x
+If TCPTracerRetryMax > 1 then the tracer will try to open TCPTracerRetryMax
+times every TCPTracerRetryDelay milliseconds.
+If the tracer fails to open (Eg: TCP tracer but PMLite Reporter is closed), 
+the trace DLL will try to re-establish it if TCPTracerRetryMax is > 0.
+Use 1 if you do not want this feature to be enabled (the connection will 
+be tried only once when the app calls as_trace_init).
+
+4- TracerDLL [STRING] = [Tracer DLL Path]
+This allows you to provide your own tracer. See Customization for more 
+details. If this value does not exist AbyreSoft's standard tracers
+will be used (implemented in ASTrace.dll itself).
+
+------------------------------------------------------------------------------
+                          Traces Customization
+------------------------------------------------------------------------------
+PMReport traces provides a way to use your own tracer instead of using
+standard tracers.
+In order to do this, you must provide a DLL with 2 standard entry points:
+as_trace_create_instance and as_trace_destroy_instance.
+You then specify path of your DLL in astrace.DLL and specify the right tracer
+name in TracerType (your DLL must recognize this name and create the
+appropriate tracer).
+If the DLL is not found or fails to create the tracer a try will be done
+using any other standard tracers.
+This gives you opportunity to let TracerDLL to your DLL but use a standard
+tracer name to use it.
+A sample is provided. This sample is a custom tracer using OutputDebugString
+to send traces to the debugger.

@@ -1,0 +1,87 @@
+------------------------------------------------------------------------------
+ASTrace.txt
+Copyright (C) 1990 - 1996 AbyreSoft - All rights reserved.
+------------------------------------------------------------------------------
+
+This is the new version 2.0 of Traces.
+
+------------------------------------------------------------------------------
+                          Traces Utilisation
+------------------------------------------------------------------------------
+
+In order to use ASTrace mechanism from an application, you have to:
+- Include "ASTrace.h"
+- Call once from main as_trace_init() during application startup and 
+  before using any other trace function
+- Call as_trace_T, as_trace_VT, as_trace_TL, as_trace_VTL, as_trace_B
+- Call as_trace_close before leaving the application.
+- You need to have ASTrace.dll accessible from your application.
+
+------------------------------------------------------------------------------
+                          Traces Configuration
+------------------------------------------------------------------------------
+Traces configuration is done through the registry.
+
+When an application is using traces, its configuration is stored under
+the following key:
+HKEY_CURRENT_USER\Software\{Company Name}\{App name}\OSSettings
+
+Company Name is loaded from application resource string table ID 0xE004
+(which is compatible with MFC). If it is not found, AbyreSoft is
+used.
+
+AppName is loaded from from application resource string table ID 0xE000
+If it is not found, the application executable name is used.
+
+
+Under this key, you will find several value.
+You can create these values by hand or execute the application once
+resulting in these values to be created with default values.
+
+1- TracerType [STRING] = Type[:Params]
+Type may be one of AbyreSoft's standard tracer or a customized tracer
+Params is a string passed to tracer creator's function.
+AbyreSoft standard tracers are:
+A-  TCP Tracer configured by TracerType = "tcp[:host[:port]]"
+    Traces are sent to PMLite Reporter using a TCP socket
+    Default host is localhost and default port (on which Reporter listens) 
+    is 25999.
+B-  File tracer configured by TracerType = "file:[FileName]"
+    Traces are written to file FileName.
+    If FileName is not specified PMLite.log is used.
+C-  Standard error IO stream configured by TracerType = "stderr"
+    Traces are sent to stderr.
+
+2- DisplayTrace [DWORD] = 0 | 1
+Setting this value to 1 enables traces, to 0 disables them.
+
+3- TracerRetryMax [DWORD] = x
+   TracerRetryDelay [DWORD] = x
+If TCPTracerRetryMax > 1 then the tracer will try to open TCPTracerRetryMax
+times every TCPTracerRetryDelay milliseconds.
+If the tracer fails to open (Eg: TCP tracer but PMLite Reporter is closed), 
+the trace DLL will try to re-establish it if TCPTracerRetryMax is > 0.
+Use 1 if you do not want this feature to be enabled (the connection will 
+be tried only once when the app calls as_trace_init).
+
+4- TracerDLL [STRING] = [Tracer DLL Path]
+This allows you to provide your own tracer. See Customization for more 
+details. If this value does not exist AbyreSoft's standard tracers
+will be used (implemented in ASTrace.dll itself).
+
+------------------------------------------------------------------------------
+                          Traces Customization
+------------------------------------------------------------------------------
+PMReport traces provides a way to use your own tracer instead of using
+standard tracers.
+In order to do this, you must provide a DLL with 2 standard entry points:
+as_trace_create_instance and as_trace_destroy_instance.
+You then specify path of your DLL in ASTrace.DLL and specify the right tracer
+name in TracerType (your DLL must recognize this name and create the
+appropriate tracer).
+If the DLL is not found or fails to create the tracer a try will be done
+using any other standard tracers.
+This gives you opportunity to let TracerDLL to your DLL but use a standard
+tracer name to use it.
+A sample is provided. This sample is a custom tracer using OutputDebugString
+to send traces to the debugger.

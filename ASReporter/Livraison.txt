@@ -1,0 +1,15 @@
+**** Processus de livraison :
+Le Repertoire de developpement du Reporter est :
+F:\Bruno\Developpement\Visual C++ 6.0\ASReporter\ASReporterSources
+
+Pour livrer une version du Reporter il faut copier le fichier executable : Reporter.exe
+genere dans :
+F:\Bruno\Developpement\Visual C++ 6.0\ASReporter\ASReporterSources\Release
+
+Dans le dossier de livraison :
+F:\Bruno\Developpement\Visual C++ 6.0\ASReporter\Release
+
+Tous les racourcis installes sur le systeme doivent faire le lien avec ce fichier
+
+Cela permet de garder une tracabilité sur les exécutables générés.
+en renommant l'exécutable avec les nom de sa version dans le nom

@@ -1,0 +1,5 @@
+**** en
+C'est une veille version anglaise  
+
+**** fr
+Version francaise qui traite du C#

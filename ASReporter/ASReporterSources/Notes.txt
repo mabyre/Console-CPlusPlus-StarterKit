@@ -1,0 +1,9 @@
+* Génération du Rerporter en Debug :
+Récupérer le fichier dans VC98/CRT/SRC/dbgint.h sur le CD Wisual 6.0
+car il n'est pas forcément installé sur le DD
+et copier dans le répertoire courant
+
+* Mise à true de la checkbox trace all par défaut
+
+* Pour des informations concernant l'utilisation et la configuration
+  du reporter cf. : ASTrace.txt

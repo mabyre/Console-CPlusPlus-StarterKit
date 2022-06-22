@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "reptarget.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#ifdef APSTUDIO_INVOKED
+#include "..\resource.h"
+#else
+#include "resource.h"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "Reporter.ico"
+IDR_OSREPOTYPE          ICON    DISCARDABLE     "ReportDoc.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,1,1
+ PRODUCTVERSION 2,0,1,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Written by AbyreSoft\0"
+            VALUE "CompanyName", "AbyreSoft\0"
+            VALUE "FileDescription", "Trace Reporter 2.0\0"
+            VALUE "FileVersion", "2.0\0"
+            VALUE "InternalName", "ASReporter\0"
+            VALUE "LegalCopyright", "Copyright (C) 1990-2000 AbyreSoft\0"
+            VALUE "LegalTrademarks", "Copyright (C) 1990-2000 AbyreSoft\0"
+            VALUE "OriginalFilename", "Reporter.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Trace Reporter\0"
+            VALUE "ProductVersion", "2.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "reptarget.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#ifdef APSTUDIO_INVOKED\r\n"
+    "#include ""..\\resource.h""\r\n"
+    "#else\r\n"
+    "#include ""resource.h""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Trace Reporter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    999                     "*** Reporter IDs to change: STRINGS: IDR_MAIN_FRAME(128), AFX_IDS_APP_TITLE(57344), IDS_FILTERS_ID(10000), ICONS: IDR_MAINFRAME(128), IDR_OSREPOTYPE(129)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Trace Reporter"
+    AFX_IDS_COMPANY_NAME    "AbyreSoft"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11000                   "Mem,Core"
+    11001                   "0x0100ffff"
+    11002                   "DM,Core"
+    11003                   "0x0200ffff"
+    11004                   "Serial,Core"
+    11005                   "0x0300ffff"
+    11006                   "SLK,Core"
+    11007                   "0x0400ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11008                   "Sys,Core"
+    11009                   "0x0500ffff"
+    11010                   "FPL,Core"
+    11011                   "0x0600ffff"
+    11012                   "FLP,Core"
+    11013                   "0x0680ffff"
+    11014                   "Evt,Core"
+    11015                   "0x0700ffff"
+    11016                   "Snd,Core"
+    11017                   "0x0800ffff"
+    11018                   "Alm,Core"
+    11019                   "0x0900ffff"
+    11020                   "Tim,Core"
+    11021                   "0x0a00ffff"
+    11022                   "Pen,Core"
+    11023                   "0x0b00ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10001                   "Filter,+"
+    10002                   "11000,11002,11004,11006,11008,11010,11012,11014,11016,11018,+"
+    10003                   "11020,11022,11024,11026,11028,11030,11032,11034,11036,11038,+"
+    10004                   "11040,11042,11044,11046,11048,11050,11052,11054,11056,11058,+"
+    10005                   "11060,11062,11064,11066,11068,11070,11072,11074,11076,11078,+"
+    10006                   "12000,12002,12004,12006,12008,12010,12012,12014,12016,12018,+"
+    10007                   "12020,12022,12024,12026,12028,+"
+    10008                   "13000,13002"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11024                   "Ftr,Core"
+    11025                   "0x0c00ffff"
+    11026                   "Cmp,Core"
+    11027                   "0x0d00ffff"
+    11028                   "Dlk,Core"
+    11029                   "0x0e00ffff"
+    11030                   "PAD,Core"
+    11031                   "0x0f00ffff"
+    11032                   "Grf,Core"
+    11033                   "0x1000ffff"
+    11034                   "MDM,Core"
+    11035                   "0x1100ffff"
+    11036                   "Net,Core"
+    11037                   "0x1200ffff"
+    11038                   "HTAL,Core"
+    11039                   "0x1300ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11040                   "INet,Core"
+    11041                   "0x1400ffff"
+    11042                   "Exg,Core"
+    11043                   "0x1500ffff"
+    11044                   "File,Core"
+    11045                   "0x1600ffff"
+    11046                   "Rfut,Core"
+    11047                   "0x1700ffff"
+    11048                   "TXT,Core"
+    11049                   "0x1100ffff"
+    11050                   "TSM,Core"
+    11051                   "0x1200ffff"
+    11052                   "Web,Core"
+    11053                   "0x1a00ffff"
+    11054                   "SEC,Core"
+    11055                   "0x1b00ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11056                   "Emu,Core"
+    11057                   "0x1c00ffff"
+    11058                   "Flash,Core"
+    11059                   "0x1d00ffff"
+    11060                   "Power,Core"
+    11061                   "0x1e00ffff"
+    11062                   "CNC,Core"
+    11063                   "0x1f00ffff"
+    11064                   "Activation,Core"
+    11065                   "0x2000ffff"
+    11066                   "Radio,Core"
+    11067                   "0x2100ffff"
+    11068                   "Display,Core"
+    11069                   "0x2200ffff"
+    11070                   "Blitter,Core"
+    11071                   "0x2300ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11072                   "Window,Core"
+    11073                   "0x2400ffff"
+    11074                   "OM,Core"
+    11075                   "0x2500ffff"
+    11076                   "Menu,Core"
+    11077                   "0x2600ffff"
+    11078                   "Special,Core"
+    11079                   "0x7f00ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12000                   "OEM1,OEM"
+    12001                   "0x7000ffff"
+    12002                   "OEM2,OEM"
+    12003                   "0x7100ffff"
+    12004                   "OEM3,OEM"
+    12005                   "0x7200ffff"
+    12006                   "OEM4,OEM"
+    12007                   "0x7300ffff"
+    12008                   "OEM5,OEM"
+    12009                   "0x7400ffff"
+    12010                   "OEM6,OEM"
+    12011                   "0x7500ffff"
+    12012                   "OEM7,OEM"
+    12013                   "0x7600ffff"
+    12014                   "OEM8,OEM"
+    12015                   "0x7700ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12016                   "OEM9,OEM"
+    12017                   "0x7800ffff"
+    12018                   "OEM10,OEM"
+    12019                   "0x7900ffff"
+    12020                   "OEM11,OEM"
+    12021                   "0x7a00ffff"
+    12022                   "OEM12,OEM"
+    12023                   "0x7b00ffff"
+    12024                   "OEM13,OEM"
+    12025                   "0x7c00ffff"
+    12026                   "OEM14,OEM"
+    12027                   "0x7d00ffff"
+    12028                   "OEM15,OEM"
+    12029                   "0x7e00ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    13000                   "APP0,Apps"
+    13001                   "0x8000ffff"
+    13002                   "APP1,Apps"
+    13003                   "0x8100ffff"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a298ae0a-00b8-4362-b0eb-683d7947d8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Stream">
+      <UniqueIdentifier>{1e174bf7-fefc-4ce4-9e61-86aaae836dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Socket">
+      <UniqueIdentifier>{bc64608e-8700-4ae3-ba0d-fe485a8455ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Serial">
+      <UniqueIdentifier>{ae4c7fa8-50a5-482f-9818-5ffb2d2799ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinNT">
+      <UniqueIdentifier>{b4077965-890c-4a03-b441-0983cc590286}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\Stream\cB64Dec.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cB64Enc.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cBaseSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cConcSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cCountSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cCRLFSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cDotSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cEndPt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cFileSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cGenSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cMemSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cPartSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cQPDec.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cQPEnc.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cSerSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cSockSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cStopSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cUndotSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Stream\cUnfSt.c">
+      <Filter>Common\Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Serial\cSerial.c">
+      <Filter>Common\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cCore.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cMemory.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cXBorder.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cXCore.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cXDLList.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cXMemDbg.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\cXStack.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cConsole.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cInput.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cMenu.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cMenuDis.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cXCoreP.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cXStackP.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cXThread.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\cXTrace.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\pmDebug.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\pmTrace.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\pmXDebug.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\pmXError.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\WinNT\pmXTrace.c">
+      <Filter>WinNT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\Stream\cB64Dec.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cB64Enc.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cBaseSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cConcSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cCountSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cCRLFSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cDotSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cEndPt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cFileSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cGenSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cMemSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cPartSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cQPDec.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cQPEnc.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cSerSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cSockSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cStopSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cStream.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cUndotSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Stream\cUnfSt.h">
+      <Filter>Common\Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cEnvPPP.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cEnvSock.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cPPP.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cPPPDef.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cSockDef.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Socket\cSocket.h">
+      <Filter>Common\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Serial\cSerial.h">
+      <Filter>Common\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cCore.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cMemory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cTrace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXBorder.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXCore.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXDLList.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXMem.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXStack.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXTrace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\cXTypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\pmDebug.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\pmTrace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\pmXDebug.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\pmXError.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\pmXTrace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\ASTrace.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cConsole.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cEnv.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cInput.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cMenu.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cMenuDis.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cStdArg.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cXEnv.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\cXThread.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\OSWinInc.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\pmTypes.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\WinNT\pmXEnv.h">
+      <Filter>WinNT</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

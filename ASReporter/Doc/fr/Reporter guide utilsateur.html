@@ -1,0 +1,773 @@
+<html>
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+
+<head>
+<title>Reporter guide</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@import url("doc_reporter.css");
+-->
+</style>
+</head>
+
+<body lang=FR link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<h1>Reporter</h1>
+
+<h1>Guide de l&#8217;utilisateur</h1>
+
+<h4>Version 3.0 mise à jour le 22/04/2004 pour le langage C# de Visual.NET</h4>
+
+<h3>Table des matières</h3>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><b>1.0 <a href="#Reporter">Reporter</a></b>
+     </li>
+ <ul type=circle>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>1.1 <a href="#Questce">Qu&#8217;est-ce
+      que le Reporter ?</a> </li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>1.2 <a
+      href="#Caracteristiques">Principales caractéristiques </a><span
+      style='mso-spacerun:yes'> </span></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>1.3 <a href="#Package">Le
+      package du Reporter</a> </li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>1.4 <a href="#Lancer">Lancer
+      l'application</a></li>
+ </ul>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><b>2.0 <a href="#Utiliser">Utiliser
+     le Reporter</a></b></li>
+ <ul type=circle>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.1 <a
+      href="#generation">Génération des traces</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.2 <a href="#Format">Format
+      des traces</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.3 <a
+      href="#Affichage">Fenêtre d&#8217;affichage dans le Reporter</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.4 <a href="#Filtrer">Filtrer
+      les traces</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.5 <a href="#menu">Les
+      menus du Reporter</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.6 <a
+      href="#BarreOutils">La barre d'outils</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>2.7 <a
+      href="#Problemes">Résolution de Problèmes</a></li>
+ </ul>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list 36.0pt'><b>3.0 <a
+     href="#Considerations">Considérations avancées</a></b></li>
+ <ul type=circle>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>3.1 <a
+      href="#PlateForme"><span class=SpellE>Plates-Formes</span></a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>3.2 <a href="#Designe">Choix
+      du désigne</a></li>
+  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+      auto;mso-list:l0 level2 lfo3;tab-stops:list 72.0pt'>3.4 <a
+      href="#Limitations">Limitations</a></li>
+ </ul>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+  <h3><a name=Reporter></a>1 Reporter</h3>
+
+  <h4><a name=Questce></a>1.1 Qu&#8217;est-ce que le Reporter ?</h4>
+
+<p class=MsoNormal>L&#8217;application Reporter est un utilitaire de trace qui
+est utilisé par une <b style='mso-bidi-font-weight:normal'>application<span
+style='mso-spacerun:yes'>  </span>utilisateur sous test</b> pour envoyer des
+informations en temps réel (datée à la microseconde) au Reporter. </p>
+
+<p class=MsoNormal>Ces informations peuvent permettre de résoudre les bogues d&#8217;une
+l&#8217;application sous test. Ces bogues étant difficiles à résoudre en pas à
+pas ou en positionnant des <span class=SpellE>break-points</span> dans les
+outils de développement.</p>
+
+<p class=MsoNormal>L&#8217;application peut donc être ainsi déboguée sans l&#8217;utilisation
+des outils de développement.</p>
+
+<p class=MsoNormal>Pour visualiser les traces il faut simplement lancer le
+Reporter puis lancer l&#8217;application sous test.</p>
+
+<h4><a name=Caracteristiques></a>1.2 Principales caractéristiques du Reporter</h4>
+
+<p class=MsoNormal>Le Reporter possède de nombreuses caractéristiques
+intéressantes, entre autre&nbsp;:</p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l14 level1 lfo6;tab-stops:list 36.0pt'>une très grande capacité
+     d&#8217;entrée/sortie, le flot de traces peut-être de plusieurs centaines
+     de <span class=SpellE>Kbits</span>/s</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l14 level1 lfo6;tab-stops:list 36.0pt'>la possibilité de filtrer
+     les traces pour ne faire apparaître que les traces intéressantes pour le
+     problème à résoudre</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l14 level1 lfo6;tab-stops:list 36.0pt'>la possibilité de
+     manipuler les traces sous forme de texte en effectuant des recherches, des
+     sauvegardes, des impressions, des <span class=SpellE>copier-collers</span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l14 level1 lfo6;tab-stops:list 36.0pt'>la capacité de transmettre
+     les traces par connexion TCP/IP</li>
+</ul>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Une
+des caractéristique intéressante du Reporter est la capacité «&nbsp;temps réel&nbsp;»
+de dater les traces. En effet, le Reporter utilise un <span class=SpellE>timer</span>
+soft de Windows qui permet de dater les traces à la microseconde.</p>
+
+<h4><a name=Package></a>1.3 Le package du Reporter</h4>
+
+<p class=MsoNormal>Le package Reporter inclut les fichiers suivants : </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width=717 style='width:538.1pt;
+ mso-cellspacing:1.5pt;margin-left:-103.1pt;mso-padding-alt:2.25pt 2.25pt 2.25pt 2.25pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width="43%" style='width:43.16%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal><b>Fichier</b></p>
+  </td>
+  <td width="56%" style='width:56.02%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal><b>Description&nbsp;</b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="43%" style='width:43.16%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal>Reporter.exe (Windows Application)</p>
+  </td>
+  <td width="56%" style='width:56.02%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal>Main Reporter <span class=SpellE>program</span>.&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="43%" style='width:43.16%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal>astrace.dll (Windows DLL)</p>
+  </td>
+  <td width="56%" style='width:56.02%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal><span class=SpellE>Add</span>-on <span class=SpellE>that</span>
+  <span class=SpellE>relay</span> traces to <span class=SpellE>the</span>
+  Reporter.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width="43%" style='width:43.16%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal>Reporter guide utilisateur.html&nbsp;</p>
+  </td>
+  <td width="56%" style='width:56.02%;padding:2.25pt 2.25pt 2.25pt 2.25pt'>
+  <p class=MsoNormal>Documentation utilisateur sur le Reporter (ce
+  fichier)&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p>Le Reporter est une application multi-tâches Win32. Il ne fonctionne pas
+sous Windows 3.1 même si Win32s <span class=GramE>à</span> été installé.</p>
+
+<p>A ce jour l&#8217;application Reporter à été utilisé avec succès sur les
+plates-formes Windows suivantes&nbsp;: Windows 95, 98, Windows NT, Windows 2000
+et Windows <span class=SpellE>XP</span>.</p>
+
+<h4><a name=Lancer></a>1.4 Lancer l&#8217;application</h4>
+
+<p class=MsoNormal>Le Reporter peut résider dans n&#8217;importe quel
+répertoire et être lancer à partir de là ou, en double-cliquant sur l&#8217;exécutable.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Après l&#8217;installation&nbsp;:</p>
+
+<p class=MsoNormal>La DLL de trace <b style='mso-bidi-font-weight:normal'>astrace.dll</b>
+doit se trouver dans le répertoire de l&#8217;exécutable de l&#8217;application
+sous test ou dans un répertoire accessible à partir du <span class=SpellE>Path</span>.</p>
+
+<p class=MsoNormal>Les traces envoyées par l&#8217;application sous test ne
+pourront être affichées dans le Reporter que si l&#8217;application sous test
+parvient à charger la <span class=SpellE>DLL</span>.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h3><a name=Utiliser></a>2 Utiliser le Reporter</h3>
+
+<h4><a name=Generation></a>2.1 Génération des traces dans le code de l&#8217;application</h4>
+
+<p class=MsoNormal>L&#8217;interface entre l&#8217;application sous test et la
+DLL astrace.dll est écrite en C# dans le composant <span class=SpellE>Reporter.cs.</span></p>
+
+<p class=MsoNormal>Pour utiliser ce composant <span class=GramE>ajoutez</span>
+la directive&nbsp;:</p>
+
+<p class=MsoNormal style='text-indent:35.4pt'><span class=SpellE><span
+class=GramE>using</span></span> <span class=SpellE>TraceReporter</span>&nbsp;;</p>
+
+<p class=MsoNormal><span class=GramE>dans</span> le code de votre application
+sous test.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>La génération de traces consiste à appeler tout
+d&#8217;abord la fonction&nbsp;:</p>
+
+  <p class=MsoNormal><span style='mso-spacerun:yes'>            </span><span
+class=SpellE><span class=GramE>Reporter.TraceInit</span></span><span
+class=GramE>( appName </span>); // appName : nom de l'application qui s'affiche 
+    dans la barre de titre du Reporter</p>
+
+<p class=MsoNormal><span class=GramE>au</span> plus tôt lors du démarrage de
+l&#8217;application sous test.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Appelez ensuite l&#8217;une des fonctions de trace&nbsp;par
+exemple :</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span><span
+class=SpellE><span class=GramE>Reporter.Trace</span></span><span class=GramE>(</span>
+Report.DEBUG0, &quot;Hello World&quot;,);</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span><span
+class=SpellE><span class=GramE>Reporter.TraceObject</span></span><span
+class=GramE>(</span> Report. DEBUG0, &quot;Hello World<span class=GramE>&quot;
+)</span>;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Puis terminer la connexion avec le Reporter en <span
+class=SpellE>appellant</span> la fonction&nbsp;:</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>            </span><span
+class=SpellE><span class=GramE>Reporter.TraceClose</span></span><span
+class=GramE>(</span>);</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>L&#8217;utilisation des numéros de Report tels que
+Report.DEBUG0 est décrite au chapitre&nbsp;: Filtrer les traces</p>
+
+<h4><a name=Format></a>2.2 Format des traces</h4>
+
+<p class=MsoNormal>Le premier paramètre de la fonction <span class=SpellE><span
+class=GramE>Reporter.Trace</span></span><span class=GramE>(</span>) est un
+numéro de Report qui va permettre au Reporter de filtrer les traces <span
+style='mso-spacerun:yes'> </span>de l&#8217;application sous test voir par la
+suite&nbsp;: Filtrer les traces). </p>
+
+<p class=MsoNormal>Les autres paramètres de cette fonction sont à l&#8217;image
+des paramètres de la fonction <span class=SpellE><span class=GramE>Console.WriteLine</span></span><span
+class=GramE>(</span>), l&#8217;écriture du composant <span class=SpellE>Reporter.cs</span>
+rend cette fonction entièrement compatible avec les formats de la fonction du
+C#&nbsp;: <span class=SpellE>Console.WriteLine</span>().</p>
+
+<p class=MsoNormal><span class=GramE>pour</span> de l&#8217;aide sur les formats
+voir directement l&#8217;aide de <span class=SpellE>Visual</span> Studio.&nbsp;</p>
+
+<h4><a name=Affichage></a>2.3 Fenêtre d&#8217;affichage dans le Reporter</h4>
+
+<p class=MsoNormal>Le Reporter initialise une fenêtre de trace pour chaque
+application sous test dès que la fonction <span class=SpellE><span class=GramE>Reporter.TraceInit</span></span><span
+class=GramE>(</span>) est appelée.<span style='mso-spacerun:yes'>  </span></p>
+
+<p class=MsoNormal>Une nouvelle fenêtre de trace s&#8217;affiche dans le
+Reporter dès que la première fonction de trace est appelée.</p>
+
+  <h4><a name=Filtrer></a>2.4 Filtrer les traces</h4>
+
+<p class=MsoNormal>L&#8217;application Reporter peut filtrer les traces
+effectuées par l&#8217;application sous test afin de n&#8217;afficher que les
+traces nécessaires à la résolution du problème en cours.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Le Reporter filtre les traces à deux niveaux&nbsp;:</p>
+
+<ul style='margin-top:0cm' type=disc>
+    <li class=MsoNormal style='mso-list:l2 level1 lfo16;tab-stops:list 36.0pt'>pour 
+      l&#8217;application en cours à l&#8217;aide du bouton&nbsp;de la barre d&#8217;outils 
+      : <img border=0 width=17 height=17
+     src="Image11.gif" v:shapes="_x0000_i1042"></li>
+ <li class=MsoNormal style='mso-list:l2 level1 lfo16;tab-stops:list 36.0pt'>pour
+     toutes les applications sous test par l&#8217;article «&nbsp;Global <span
+     class=SpellE>filter</span>&nbsp;» du menu «&nbsp;<span class=SpellE>View</span>&nbsp;».</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Dans le premier cas, le filtrage s&#8217;applique à la
+connexion en cours avec l&#8217;application sous test.</p>
+
+<p class=MsoNormal>Dans le deuxième cas le filtrage s&#8217;appliquera pour
+toutes les futures connexions.</p>
+
+<p class=MsoNormal>C&#8217;est deux commandes appelle la boite de dialogue&nbsp;«&nbsp;Trace
+<span class=SpellE>Filters</span>&nbsp;»&nbsp;qui permet de configurer les
+traces :</p>
+
+  <p class=MsoNormal align=center style='text-align:center'> <img border=0 width=311 height=479
+src="dlg_trace_filters.jpg" v:shapes="_x0000_i1043"> </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Les trois onglets «&nbsp;<span class=SpellE>Error</span>&nbsp;»,
+«&nbsp;<span class=SpellE>Debug</span>&nbsp;» et «&nbsp;Trace&nbsp;»
+définissent trois catégories de traces.</p>
+
+<p class=MsoNormal>Dans chaque catégorie quatre niveaux de gravité ou quatre
+filtres sont définis.</p>
+
+<p class=MsoNormal>C&#8217;est a vous de définir une stratégie de test
+cohérente concernant l&#8217;utilisation de ces trois catégories de traces.</p>
+
+<p class=MsoNormal>Par exemple&nbsp;: </p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo17;tab-stops:list 36.0pt'>utiliser
+     la catégorie «&nbsp;<span class=SpellE>Error</span>&nbsp;» pour toutes les
+     erreurs générées par l&#8217;application les exceptions</li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo17;tab-stops:list 36.0pt'>utiliser
+     la catégorie «&nbsp;<span class=SpellE>Debug</span>&nbsp;» pour les
+     informations concernant le pistage du déroulement du programme </li>
+ <li class=MsoNormal style='mso-list:l1 level1 lfo17;tab-stops:list 36.0pt'>utiliser
+     la catégorie «&nbsp;Trace&nbsp;» pour afficher les informations «&nbsp;normale&nbsp;»
+     communiquées par l&#8217;application</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>C&#8217;est 12 filtres sont définis dans le composant <span
+class=SpellE>Reporter.cs</span> a inclure dans l&#8217;application sous test :</p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+ERROR0 = 0x0100;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+ERROR1 = 0x0101;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+ERROR2 = 0x0102;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+ERROR3 = 0x0103;<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+TRACE0 = 0x1000;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+TRACE1 = 0x1001;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+TRACE2 = 0x1002;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+TRACE3 = 0x1003;<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+DEBUG0 = 0x2000;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+DEBUG1 = 0x2001;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+DEBUG2 = 0x2002;<o:p></o:p></p>
+
+<p class=MsoNormal><span style='mso-spacerun:yes'>        </span><span
+class=GramE>public</span> <span class=SpellE>const</span> <span class=SpellE>uint</span>
+DEBUG3 = 0x2003;</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Si vous désirer ne pas tenir compte des filtres et afficher
+toutes les traces cochez la case&nbsp;: «&nbsp;All traces&nbsp;»</p>
+
+<p class=MsoNormal>Si vous cochez la case «&nbsp;<span class=SpellE>Special</span>
+<span class=SpellE>characters</span>&nbsp;» le Reporter affichera tous les
+caractères.</p>
+
+<p class=MsoNormal>Si vous cochez la case «&nbsp;<span class=SpellE>Timestamps</span>&nbsp;»
+les traces seront datées en microsecondes écoulées depuis la première trace
+effectuée.</p>
+
+<p class=MsoNormal>Vous pouvez modifier le séparateur entre les informations du
+Reporter et les traces en modifiant «&nbsp;<span class=SpellE>Separator</span>&nbsp;».</p>
+
+<p class=MsoNormal>Vous pouvez conserver cette configuration des filtres pour
+les futures connexions <span style='mso-spacerun:yes'> </span>avec les
+applications sous test en cochant «&nbsp;Use <span class=SpellE>these</span> <span
+class=SpellE>settings</span> for global <span class=SpellE>filters</span>&nbsp;»
+ce qui reviendrait à avoir modifier les filtres par l&#8217;article «&nbsp;Global
+<span class=SpellE>filters</span>&nbsp;» du menu «&nbsp;<span class=SpellE>View</span>&nbsp;».</p>
+
+<h4><a name=Menu></a>2.5 Les menus du Reporter</h4>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'>Le menu «&nbsp;File&nbsp;»</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;Close&nbsp;»&nbsp;:
+Ferme la fenêtre de traces</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;Save&nbsp;»&nbsp;:
+Sauvegarde du fichier de trace sous le nom par défaut&nbsp;: Trace.txt</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;text-indent:35.4pt'>«&nbsp;<span class=SpellE>Print</span>&nbsp;»
+«&nbsp;<span class=SpellE>Print</span> <span class=SpellE>Preview</span>&#8230;&nbsp;»
+«&nbsp;<span class=SpellE>Print</span> <span class=SpellE>Setup</span>&#8230;&nbsp;»&nbsp;:
+Configuration de l&#8217;imprimante et impression du fichier de traces</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm;text-indent:35.4pt'>«&nbsp;Exit&nbsp;»&nbsp;: Quitter le
+Reporter</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'>Le menu «&nbsp;Edit&nbsp;»</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;<span
+class=SpellE>Find</span>&nbsp;», «&nbsp;<span class=SpellE>Find</span> <span
+class=SpellE>Next</span>&nbsp;», «&nbsp;<span class=SpellE>Find</span> <span
+class=SpellE>Priev</span>&nbsp;»&nbsp;: Permettent de rechercher une chaîne dans
+la fenêtre de traces active</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;<span
+class=SpellE>Draw</span> Line&nbsp;»&nbsp;: Dessine une ligne dans la fenêtre
+de trace</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;<span
+class=SpellE>Goto</span> Line&nbsp;»&nbsp;: Permet de positionner le curseur
+sur une ligne rechercher par son numéro</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'>Le menu «&nbsp;<span class=SpellE>View</span>&nbsp;»</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;Global
+font&nbsp;»&nbsp;: Permet de modifier la font pour toutes les connexions</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;Global
+<span class=SpellE>filters</span>&nbsp;»&nbsp;: Affiche la boite de dialogue «&nbsp;Trace
+<span class=SpellE>Filters</span>&nbsp;» pour toutes les connexions</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;<span
+class=SpellE>Always</span> on top&nbsp;»&nbsp;: Permet de garder l&#8217;application
+Reporter devant la fenêtre active (pratique pour déboguer)</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'>Le menu «&nbsp;Windows&nbsp;»</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>Permet d&#8217;arranger
+les fenêtres ouvertes</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'>Le menu «&nbsp;Help&nbsp;»</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;<span
+class=SpellE>Tip</span> of <span class=SpellE>the</span> <span class=SpellE>Day</span>&#8230;&nbsp;»&nbsp;:
+Ouvre une boite de dialogue sur des petits conseils d&#8217;utilisation du
+Reporter</p>
+
+<p class=MsoNormal style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;
+margin-left:0cm'><span style='mso-tab-count:1'>            </span>«&nbsp;About
+Reporter&nbsp;»&nbsp;: Donne des informations sur la version du Reporter
+utilisée actuellement</p>
+
+<h4><a name=BarreOutils></a>2.6 La barre d&#8217;outils</h4>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width=622 style='width:466.5pt;
+ mso-cellspacing:1.5pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=16 id="_x0000_i1027" src=Image1.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Sauvegarder le contenu de la fenêtre de trace dans un fichier</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=16 id="_x0000_i1028" src=Image2.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Imprimer le contenu de la fenêtre de trace</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=16 id="_x0000_i1029" src=Image3.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Sélectionner la totalité du texte de la fenêtre de trace</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=18 height=15 id="_x0000_i1030" src=Image4.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Copier le texte sélectionner dans le <span class=SpellE>Clipboard</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=16 id="_x0000_i1031" src=Image5.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Effacer le contenu de la fenêtre de trace</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=19 height=15 id="_x0000_i1032" src=Image6.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Dessiner une ligne de séparation dans la fenêtre de trace</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=16 id="_x0000_i1033" src=Image7.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Rechercher une chaîne de caractère dans le texte de la fenêtre
+  de trace </p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=17 id="_x0000_i1034" src=Image8.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Rechercher l&#8217;occurrence suivante de la chaîne
+  spécifiée</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=16 height=17 id="_x0000_i1035" src=Image9.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Rechercher l&#8217;occurrence précédente de la chaîne
+  spécifiée</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=17 id="_x0000_i1036" src=Image10.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Garder la fenêtre de l&#8217;application Reporter toujours
+  visible, au dessus des autres applications</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=17 id="_x0000_i1037" src=Image11.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Configurer les filtres pour la connexion courante avec l&#8217;application
+  sous test</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=17 id="_x0000_i1038" src=Image12.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Modifier la <span class=GramE>font</span> du texte de la
+  fenêtre courante</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=15 height=17 id="_x0000_i1039" src=Image13.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Configurer les filtres pour toutes les futures connexions</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes'>
+  <td width="5%" valign=top style='width:5.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><img border=0
+  width=17 height=17 id="_x0000_i1040" src=Image14.gif></p>
+  </td>
+  <td width="95%" valign=top style='width:95.0%;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>Modifier la <span class=GramE>font</span> du texte pour
+  toutes les futures fenêtres</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h4><a name=Problemes></a>2.7 Résolution de Problèmes</h4>
+
+<p class=MsoNormal>Si la DLL de trace astrace.dll n&#8217;<span class=SpellE>aparait</span>
+pas dans le répertoire d&#8217;installation c&#8217;est peut-être parce que
+Windows est configuré pour ne pas afficher les fichiers caché.</p>
+
+<p class=MsoNormal>Modifier cette propriété</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Si les traces ne s&#8217;affichent pas dans le Reporter
+vérifiez que&nbsp;:</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo18;tab-stops:list 36.0pt'>La
+     DLL astrace.dll est bien chargée par votre application (elle est
+     accessible dans le répertoire de l&#8217;exécutable ou dans le <span
+     class=SpellE>Path</span>).</li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo18;tab-stops:list 36.0pt'>Les
+     filtres de la boite de dialogue «&nbsp;Trace <span class=SpellE>Filters</span>&nbsp;»
+     sont correctement configurés (en cas de doutes, cochez la case «&nbsp;All
+     traces&nbsp;»).</li>
+ <li class=MsoNormal style='mso-list:l4 level1 lfo18;tab-stops:list 36.0pt'>Votre
+     code sous test fait bien appel à <span class=SpellE><span class=GramE>Reporter.TraceInit</span></span><span
+     class=GramE>(</span>) avant d&#8217;utiliser les fonctions de trace.</li>
+</ul>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Pour fonctionner l&#8217;application Reporter utilise un
+certaines DLL de Windows comme OLE ou Winsock2,</p>
+
+<p class=MsoNormal><span class=GramE>des</span> mises à jour systèmes sont
+peut-être nécessaires sur d&#8217;anciens systèmes. </p>
+
+<p class=MsoNormal>Visitez les sites de MicroSoft&nbsp;:</p>
+
+<p class=MsoNormal><a
+href="ftp://ftp.microsoft.com/Softlib/Mslfiles/VBRun60.exe">OLE <span
+class=SpellE>DLLs</span> <span class=SpellE>referenced</span> by <span
+class=SpellE>the</span> Reporter</a> <br>
+<a href="http://www.microsoft.com/windows/downloads/bin/W95ws2setup.exe"><span
+class=SpellE>Winsock</span> 2.0 update</a></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<h3><a name=Considerations></a>3.0 Considérations avancées</h3>
+
+<h4><a name=PlateForme></a>3.1 Plates-formes</h4>
+
+<p class=MsoNormal>Le Reporter peut-être utilisé avec différentes plates-formes
+de développement. </p>
+
+<p class=MsoNormal>Le composant <span class=SpellE>Reporter.cs</span> a été
+écrit pour être utilisé par <span class=SpellE>Visual</span> Studio.NET mais d&#8217;autres
+implémentations existent.</p>
+
+<h4><a name=Designe></a>3.2 Choix du désigne</h4>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo20;tab-stops:list 36.0pt'>CR
+     ('\r'), LF ('\n') et <span class=SpellE>CR-LF</span> ne sont pas reconnus
+     comme délimiteurs pour des raisons de portabilité. Ne pas les utilisé dans
+     les traces.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo20;tab-stops:list 36.0pt'>Le
+     filtrage s&#8217;effectue dans le receveur, cela consomme de la bande
+     passante mais permet de garantir la stabilité du comportement de l&#8217;application
+     sous test quel que soit le filtrage effectué.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo20;tab-stops:list 36.0pt'><span
+     class=SpellE>Plusieures</span> tâches concurrentes peuvent émettre traces
+     ensemble.</li>
+ <li class=MsoNormal style='mso-list:l11 level1 lfo20;tab-stops:list 36.0pt'>La
+     fenêtre texte scrolle automatiquement sauf si le curseur a été déplacé par
+     l&#8217;utilisateur. Pour retrouver le scrolle automatique de la fenêtre,
+     replacez le curseur sur le dernier caractère.</li>
+</ul>
+
+<h4><a name=Limitations></a>3.4 Limitations</h4>
+
+<p class=MsoNormal>Les traces en entrée sont stockées dans un <span
+class=SpellE>buffer</span> circulaire dont on peut ajuster la taille, les
+dernières sont conservées. </p>
+
+<p class=MsoNormal>Si des traces ont été poubellisées, le Reporter le signalera
+par le symbole suivant [&#8230;] en haut de la fenêtre de trace.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

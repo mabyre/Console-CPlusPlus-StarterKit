@@ -1,0 +1,183 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "reptarget.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#ifdef APSTUDIO_INVOKED
+#include "..\resource.h"
+#else
+#include "resource.h"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "Reporter.ico"
+IDR_OSREPOTYPE          ICON    DISCARDABLE     "ReportDoc.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Written by AbyreSoft\0"
+            VALUE "CompanyName", "AbyreSoft\0"
+            VALUE "FileDescription", "Trace Reporter 3.0.1\0"
+            VALUE "FileVersion", "3.0.0\0"
+            VALUE "InternalName", "ASReporter\0"
+            VALUE "LegalCopyright", "Copyright (C) 1990-1996 AbyreSoft\0"
+            VALUE "LegalTrademarks", "Copyright (C) 1990-1996 AbyreSoft\0"
+            VALUE "OriginalFilename", "Reporter.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Trace Reporter\0"
+            VALUE "ProductVersion", "3.0.1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "reptarget.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#ifdef APSTUDIO_INVOKED\r\n"
+    "#include ""..\\resource.h""\r\n"
+    "#else\r\n"
+    "#include ""resource.h""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Trace Reporter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    999                     "*** Reporter IDs to change: STRINGS: IDR_MAIN_FRAME(128), AFX_IDS_APP_TITLE(57344), IDS_FILTERS_ID(10000), ICONS: IDR_MAINFRAME(128), IDR_OSREPOTYPE(129)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Reporter"
+    AFX_IDS_COMPANY_NAME    "SoDevLog"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    11000                   "ERROR0,Error"
+    11001                   "0x0100ffff"
+    11002                   "ERROR1,Error"
+    11003                   "0x0101ffff"
+    11004                   "ERROR2,Error"
+    11005                   "0x0102ffff"
+    11006                   "ERROR3,Error"
+    11007                   "0x0103ffff"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10001                   "Filter,+"
+    10002                   "11000,11002,11004,11006,+"
+    10003                   "12000,12002,12004,12006,+"
+    10004                   "13000,13002,13004,13006"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12000                   "DEBUG0,Debug"
+    12001                   "0x2000FFFF"
+    12002                   "DEBUG1,Debug"
+    12003                   "0x2001FFFF"
+    12004                   "DEBUG2,Debug"
+    12005                   "0x2002FFFF"
+    12006                   "DEBUG3,Debug"
+    12007                   "0x2003FFFF"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    13000                   "TRACE0,Trace"
+    13001                   "0x1000FFFF"
+    13002                   "TRACE1,Trace"
+    13003                   "0x1001FFFF"
+    13004                   "TRACE2,Trace"
+    13005                   "0x1002FFFF"
+    13006                   "TRACE3,Trace"
+    13007                   "0x1003FFFF"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

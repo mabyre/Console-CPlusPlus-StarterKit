@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Reporter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Reporter.res" /i "Res" /d "_DEBUG" /d "_AFXDLL" /d REP=Palm "F:\Bruno\Developpement\Visual C++ 6.0\ASReporter\ASReporterSources\Res\Reporter.rc"" 
+Creating temporary file "C:\DOCUME~1\RABY\LOCALS~1\Temp\RSP155.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Reporter.pdb" /debug /machine:I386 /out:"Debug/Reporter.exe" /pdbtype:sept 
+".\Debug\PMANSIFM.obj"
+".\Debug\PMArray.obj"
+".\Debug\PMBuffer.obj"
+".\Debug\PMCharS.obj"
+".\Debug\PMCriSec.obj"
+".\Debug\PMData.obj"
+".\Debug\PMDebug.obj"
+".\Debug\PMError.obj"
+".\Debug\PMFileTr.obj"
+".\Debug\PMHTbl.obj"
+".\Debug\PMMedia.obj"
+".\Debug\PMMemVC4.obj"
+".\Debug\PMMoniCB.obj"
+".\Debug\PMMonit.obj"
+".\Debug\PMOSHelp.obj"
+".\Debug\PMPrintf.obj"
+".\Debug\PMPushB.obj"
+".\Debug\PMRC.obj"
+".\Debug\PMScan.obj"
+".\Debug\PMSocket.obj"
+".\Debug\PMStr.obj"
+".\Debug\PMStream.obj"
+".\Debug\PMStub.obj"
+".\Debug\PMSVC4.obj"
+".\Debug\PMTCPSoc.obj"
+".\Debug\PMTLS.obj"
+".\Debug\PMTrace.obj"
+".\Debug\PMW32Hlp.obj"
+".\Debug\PMWFilTr.obj"
+".\Debug\PMWSoc11.obj"
+".\Debug\PMWTCPTr.obj"
+".\Debug\PMXTrace.obj"
+".\Debug\LBitmap.obj"
+".\Debug\LButton.obj"
+".\Debug\LContain.obj"
+".\Debug\LControl.obj"
+".\Debug\LDialog.obj"
+".\Debug\LDoc.obj"
+".\Debug\LFlatBar.obj"
+".\Debug\LHLine.obj"
+".\Debug\LImgList.obj"
+".\Debug\LMDICWnd.obj"
+".\Debug\LMSWnd.obj"
+".\Debug\LMultDoc.obj"
+".\Debug\LOVReg.obj"
+".\Debug\LOVUtils.obj"
+".\Debug\LPPage.obj"
+".\Debug\LSizable.obj"
+".\Debug\LStatic.obj"
+".\Debug\LTab.obj"
+".\Debug\LTipInfo.obj"
+".\Debug\LURL.obj"
+".\Debug\CAboutDlg.obj"
+".\Debug\CChildFrame.obj"
+".\Debug\CFiltersDlg.obj"
+".\Debug\CFiltersPP.obj"
+".\Debug\CGotoDlg.obj"
+".\Debug\CMainFrm.obj"
+".\Debug\COSReportDoc.obj"
+".\Debug\COSReportView.obj"
+".\Debug\COSRThreads.obj"
+".\Debug\CTipDlg.obj"
+".\Debug\CTrGroups.obj"
+".\Debug\OSReport.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Reporter.res"
+".\Version.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\RABY\LOCALS~1\Temp\RSP155.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Reporter.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

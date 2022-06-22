@@ -1,0 +1,13 @@
+**** 2.0 
+Utilise la nouvelle version de la PM
+
+**** 3.0.0
+Livree sur le net
+
+**** 3.0.1 
+Changement du format de version dans About Dlg Box on la veut sur : x.x.x
+Modificiation du "Compagny name" utiliser pour le registry
+Le nom de la section key "OSSettings" a ete remplace par "ReportSettings"
+mais faut pas le dire
+
+

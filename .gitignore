@@ -1,0 +1,11 @@
+﻿*.obj
+*.user
+*.def
+ASReporter/ASReporterSources/Debug/*
+ASReporter/ASReporterSources/Release/*
+ASDLLTrace/ASDLLTraceSources/Debug/*
+ASDLLTrace/ASDLLTraceSources/Release/*
+PMLiteC/PMLitec/Wrk6/TPMLiteC/Debug/*
+PMLiteC/PMLitec/Wrk6/TPMLiteC/Release/*
+PMLiteC/PMLitec/Wrk6/PMLiteC/Debug/*
+PMLiteC/PMLitec/Wrk6/PMLiteC/Release/*
