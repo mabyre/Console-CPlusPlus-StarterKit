@@ -1,0 +1,41 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:29f0:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000001:29f0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000002:29f0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000002:29f0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00014014:29f0:TRACE0:This is an int32:
+00014015:29f0:TRACE0:  unsigned [4275835444]=[4275835444]
+00014015:29f0:TRACE0:  signed   [-19131852]=[-19131852]
+00014015:29f0:TRACE0:  hexa     [fedc1234]=[fedc1234]
+00014015:29f0:TRACE0:This is an int16:
+00014015:29f0:TRACE0:  unsigned [65042]=[65042]
+00014015:29f0:TRACE0:  signed   [-494]=[-494]
+00014015:29f0:TRACE0:  hexa     [FE12]=[FE12]
+00014015:29f0:TRACE0:This is an int:
+00014015:29f0:TRACE0:  unsigned [4262657554]=[4262657554]
+00014015:29f0:TRACE0:  signed   [-32309742]=[-32309742]
+00014015:29f0:TRACE0:  hexa     [fe12fe12]=[fe12fe12]
+00014015:29f0:TRACE0:This is a string [Hello world]=[Hello world]
+00014015:29f0:TRACE0:This is a char [A]=[A]
+00014015:29f0:TRACE0:This is a string [Hello]=[Hello world]
+00014015:29f0:TRACE0:This is a int16  [    0x41]=[    0x41]
+00014015:29f0:TRACE0:This is an int32 [  0x4141]=[  0x4141]
+00014015:29f0:TRACE0:This is a int16  [0x41    ]=[0x41    ]
+00014015:29f0:TRACE0:This is an int32 [0x4141  ]=[0x4141  ]
+00014015:29f0:TRACE0:This is an int32 [+20000]=[+20000]
+00014015:29f0:TRACE0:These are strange characters [\t\b\n\r]=[\t\b\n\r]
+00014015:29f0:TRACE0:This is a line
+00014015:29f0:TRACE0:break
+00014015:29f0:TRACE0:This is a percent sign [%]=[%]
+00014016:29f0:TRACE0:This is a buffer:
+00038096:29f0:ERROR0:ERROR 0 - Error tres grave
+00038096:29f0:ERROR1:ERROR 1 - Error grave
+00038096:29f0:ERROR2:ERROR 2 - Error faible
+00038096:29f0:ERROR3:ERROR 3 - Error tres faible
+00064503:29f0:ERROR0:ERROR 0 - Error tres grave
+00066327:29f0:ERROR0:ERROR 0 - Error tres grave
+00067231:29f0:ERROR0:ERROR 0 - Error tres grave
+00068231:29f0:ERROR0:ERROR 0 - Error tres grave
+00079168:29f0:ERROR0:c_malloc_dbg_imp(): Out of memory when allocating [100] bytes in file [D:\Mabyre\Visual Studio\CPlusPlus\ConsoleCPlusPlusStarterKit\ConsoleCPlusPlus\TTrace.cpp], line [74]
+00095472:29f0:ERROR0:c_malloc_dbg_imp(): Out of memory when allocating [100] bytes in file [D:\Mabyre\Visual Studio\CPlusPlus\ConsoleCPlusPlusStarterKit\ConsoleCPlusPlus\TTrace.cpp], line [74]

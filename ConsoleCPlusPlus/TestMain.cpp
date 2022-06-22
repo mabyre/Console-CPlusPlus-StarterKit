@@ -10,6 +10,7 @@
 /*--------------------------------------------------------------------------*/
 
 PMMENU_DECLARE( Menu );
+PMMENU_DECLARE( Trace );
 PMMENU_DECLARE( Test2 );
 PMMENU_DECLARE( Cplusplus );
 
@@ -22,6 +23,7 @@ void NT_TestMain(void)
    PMMenu_InitializeMainMenu();
 
    PMMENU_USE( Menu );
+   PMMENU_USE( Trace );
    PMMENU_USE( Cplusplus );
    PMMENU_USE( Test2 );
 

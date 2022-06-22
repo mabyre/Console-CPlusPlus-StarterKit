@@ -28,10 +28,10 @@
 
 #  include "cStdArg.h"
 
-   void _pm_trace0( char* aFormat, ... );
-   void _pm_trace1( char* aFormat, ... );
-   void _pm_trace2( char* aFormat, ... );
-   void _pm_trace3( char* aFormat, ... );
+   void _pm_trace0( const char* aFormat, ... );
+   void _pm_trace1( const char* aFormat, ... );
+   void _pm_trace2( const char* aFormat, ... );
+   void _pm_trace3( const char* aFormat, ... );
 
 #  define pm_trace0 _pm_trace0
 #  define pm_trace1 _pm_trace1

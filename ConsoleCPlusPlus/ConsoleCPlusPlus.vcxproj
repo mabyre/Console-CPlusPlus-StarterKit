@@ -24,6 +24,7 @@
     <ClCompile Include="TestMain.cpp" />
     <ClCompile Include="TMenu.cpp" />
     <ClCompile Include="TTest2.cpp" />
+    <ClCompile Include="TTrace.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ASDLLTrace\ASDLLTraceSources\ASTrace.h" />

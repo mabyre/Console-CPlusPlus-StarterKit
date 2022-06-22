@@ -292,7 +292,7 @@ static pmbool Input_Numeric(char* aPrompt, pmuint32* aValue, pmbool afDefault, p
 
 /*---------------------------------------------------------------------------*/
 
-pmbool Input_UInt32(char* aPrompt, pmuint32* aValue, pmbool afDefault, pmuint32 aDefaultValue, pmbool afCancel)
+pmbool Input_UInt32(const char* aPrompt, pmuint32* aValue, pmbool afDefault, pmuint32 aDefaultValue, pmbool afCancel)
 {
    return Input_Numeric(aPrompt, aValue, afDefault, aDefaultValue, afCancel, sizeof(pmuint32));
 }

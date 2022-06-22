@@ -24,21 +24,21 @@
 
 #  include "cStdArg.h"
 
-   void TRACE0_T( char* aFormat, ... );
+   void TRACE0_T( const char* aFormat, ... );
    void TRACE0_TL( const char* aFormat, ... );
-   void TRACE0_B( char* aFormat, ... );
+   void TRACE0_B( const char* aFormat, ... );
 
-   void TRACE1_T( char* aFormat, ... );
-   void TRACE1_TL( char* aFormat, ... );
-   void TRACE1_B( char* aFormat, ... );
+   void TRACE1_T( const char* aFormat, ... );
+   void TRACE1_TL( const char* aFormat, ... );
+   void TRACE1_B( const char* aFormat, ... );
 
-   void TRACE2_T( char* aFormat, ... );
-   void TRACE2_TL( char* aFormat, ... );
-   void TRACE2_B( char* aFormat, ... );
+   void TRACE2_T( const char* aFormat, ... );
+   void TRACE2_TL( const char* aFormat, ... );
+   void TRACE2_B( const char* aFormat, ... );
 
-   void TRACE3_T( char* aFormat, ... );
-   void TRACE3_TL( char* aFormat, ... );
-   void TRACE3_B( char* aFormat, ... );
+   void TRACE3_T( const char* aFormat, ... );
+   void TRACE3_TL( const char* aFormat, ... );
+   void TRACE3_B( const char* aFormat, ... );
 
 #  define PM_TRACE0(X) TRACE0_ ## X
 #  define PM_TRACE1(X) TRACE1_ ## X

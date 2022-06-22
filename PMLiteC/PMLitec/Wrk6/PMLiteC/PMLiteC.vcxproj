@@ -167,7 +167,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\Common\cCore.h" />
     <ClInclude Include="..\..\Common\cMemory.h" />
-    <ClInclude Include="..\..\Common\cTrace.h" />
     <ClInclude Include="..\..\Common\cTypes.h" />
     <ClInclude Include="..\..\Common\cXBorder.h" />
     <ClInclude Include="..\..\Common\cXCore.h" />

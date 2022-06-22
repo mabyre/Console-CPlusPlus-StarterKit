@@ -89,7 +89,7 @@ pmbool  Input_UInt16(char* aPrompt, pmuint16* aValue, pmbool afDefault, pmuint16
  * If 'afCancel' is true, the user can cancel the input.    
  * Returns false only if the user has cancelled input.
 \*---------------------------------------------------------------------------*/
-pmbool  Input_UInt32(char* aPrompt, pmuint32* aValue, pmbool afDefault, pmuint32 aDefaultValue, pmbool afCancel);
+pmbool  Input_UInt32(const char* aPrompt, pmuint32* aValue, pmbool afDefault, pmuint32 aDefaultValue, pmbool afCancel);
 
 /*---------------------------------------------------------------------------*/
 

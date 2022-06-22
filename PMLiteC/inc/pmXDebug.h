@@ -97,20 +97,20 @@
 
 #  include "cStdArg.h"
 
-   void DEBUG0_T( char* aFormat, ... );
-   void DEBUG0_TL( char* aFormat, ... );
+   void DEBUG0_T( const char* aFormat, ... );
+   void DEBUG0_TL( const char* aFormat, ... );
    void DEBUG0_B( pmbyte* aBuffer, size_t aBufferLen );
 
-   void DEBUG1_T( char* aFormat, ... );
-   void DEBUG1_TL( char* aFormat, ... );
+   void DEBUG1_T( const char* aFormat, ... );
+   void DEBUG1_TL( const char* aFormat, ... );
    void DEBUG1_B( pmbyte* aBuffer, size_t aBufferLen );
 
-   void DEBUG2_T( char* aFormat, ... );
-   void DEBUG2_TL( char* aFormat, ... );
+   void DEBUG2_T( const char* aFormat, ... );
+   void DEBUG2_TL( const char* aFormat, ... );
    void DEBUG2_B( pmbyte* aBuffer, size_t aBufferLen );
 
-   void DEBUG3_T( char* aFormat, ... );
-   void DEBUG3_TL( char* aFormat, ... );
+   void DEBUG3_T( const char* aFormat, ... );
+   void DEBUG3_TL( const char* aFormat, ... );
    void DEBUG3_B( pmbyte* aBuffer, size_t aBufferLen );
 
 #  define PM_DEBUG0(X) DEBUG0_ ## X

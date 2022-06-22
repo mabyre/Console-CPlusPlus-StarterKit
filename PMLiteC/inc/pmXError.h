@@ -69,21 +69,21 @@
 
 #  include "cStdArg.h"
 
-   void ERROR0_T( char* aFormat, ... );
-   void ERROR0_TL( char* aFormat, ... );
-   void ERROR0_B( char* aFormat, ... );
+   void ERROR0_T( const char* aFormat, ... );
+   void ERROR0_TL( const char* aFormat, ... );
+   void ERROR0_B( const char* aFormat, ... );
 
-   void ERROR1_T( char* aFormat, ... );
-   void ERROR1_TL( char* aFormat, ... );
-   void ERROR1_B( char* aFormat, ... );
+   void ERROR1_T( const char* aFormat, ... );
+   void ERROR1_TL( const char* aFormat, ... );
+   void ERROR1_B( const char* aFormat, ... );
 
-   void ERROR2_T( char* aFormat, ... );
-   void ERROR2_TL( char* aFormat, ... );
-   void ERROR2_B( char* aFormat, ... );
+   void ERROR2_T( const char* aFormat, ... );
+   void ERROR2_TL( const char* aFormat, ... );
+   void ERROR2_B( const char* aFormat, ... );
 
-   void ERROR3_T( char* aFormat, ... );
-   void ERROR3_TL( char* aFormat, ... );
-   void ERROR3_B( char* aFormat, ... );
+   void ERROR3_T( const char* aFormat, ... );
+   void ERROR3_TL( const char* aFormat, ... );
+   void ERROR3_B( const char* aFormat, ... );
 
 #  define PM_ERROR0(X) ERROR0_ ## X
 #  define PM_ERROR1(X) ERROR1_ ## X

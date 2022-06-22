@@ -227,9 +227,6 @@
     <ClInclude Include="..\..\Common\cMemory.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Common\cTrace.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Common\cTypes.h">
       <Filter>Common</Filter>
     </ClInclude>
