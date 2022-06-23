@@ -6,7 +6,7 @@ PM mean Protocol or Protable Machinery.
 
 # Features #
 
-- To masterise your code for multi-plateform
+- Masterise your code for multi-plateform devlopment in C++
 - Driven by console in a smart menu system
 - Powerfull functions for memory management
  
