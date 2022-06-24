@@ -15,6 +15,7 @@ PMMENU_DECLARE( Input );
 PMMENU_DECLARE( Mem );
 PMMENU_DECLARE( Test2 );
 PMMENU_DECLARE( Cplusplus );
+PMMENU_DECLARE( Containers );
 
 /*--------------------------------------------------------------------------*/
 void NT_TestMain(void)
@@ -30,6 +31,7 @@ void NT_TestMain(void)
    PMMENU_USE( Mem );
    PMMENU_USE( Test2 );
    PMMENU_USE( Cplusplus );
+   PMMENU_USE( Containers );
 
    PMMenu_ExecuteMainMenu();
 
