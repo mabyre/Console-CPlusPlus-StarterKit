@@ -16,6 +16,9 @@
     <Filter Include="WinNT">
       <UniqueIdentifier>{b4077965-890c-4a03-b441-0983cc590286}</UniqueIdentifier>
     </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{67eb3c6e-becc-4403-8fdd-19d9ca63560b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Common\Stream\cB64Dec.c">
@@ -301,6 +304,15 @@
     </ClInclude>
     <ClInclude Include="..\..\WinNT\pmXEnv.h">
       <Filter>WinNT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\inc\cXTrace.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\inc\cXTypes.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\inc\pmTrace.h">
+      <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

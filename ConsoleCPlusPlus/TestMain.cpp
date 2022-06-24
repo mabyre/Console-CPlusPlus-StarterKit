@@ -28,8 +28,8 @@ void NT_TestMain(void)
    PMMENU_USE( Trace );
    PMMENU_USE( Input );
    PMMENU_USE( Mem );
-   PMMENU_USE( Cplusplus );
    PMMENU_USE( Test2 );
+   PMMENU_USE( Cplusplus );
 
    PMMenu_ExecuteMainMenu();
 
