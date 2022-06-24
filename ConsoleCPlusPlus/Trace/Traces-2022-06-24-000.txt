@@ -1,0 +1,18 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:2df4:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000001:2df4:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000001:2df4:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000001:2df4:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00008814:2df4:TRACE0:system time: ce CString est une énorme daube
+00008814:2df4:TRACE0:system time: encore une grosse daube
+00008814:2df4:TRACE0:system time: 2022-06-24 09:49:05.697
+00008814:2df4:TRACE0:system time: 2022-06-24 09:49:05.697
+00013248:2df4:ERROR0:--------------
+00013248:2df4:ERROR0:Memory report:
+00013248:2df4:ERROR0:Blocks allocated: 46
+00013248:2df4:ERROR0:Peak allocated: 836
+00013248:2df4:ERROR0:Total allocated: 836
+00013248:2df4:ERROR0:--------------
+00013249:2df4:ERROR0:No memory leak. Well done.
+00013249:2df4:ERROR0:--------------

@@ -63,7 +63,6 @@ void DoSystemTime( void )
 {
     SYSTEMTIME st;
     string sMessage = "encore une grosse daube";
-    wchar_t *sWchart;
     
     GetSystemTime( &st );
 
@@ -80,7 +79,7 @@ void DoSystemTime( void )
         st.wMilliseconds );
 
     //std::cout << "System time = " << strMessage << std::endl;
-    pm_trace0( "system time: %s", "ce String est une énorme daube" );
+    pm_trace0( "system time: %s", "ce CString est une énorme daube" );
     pm_trace0( "system time: %s", sMessage.c_str() );
     
     CStringA charstr( cstrMessage );

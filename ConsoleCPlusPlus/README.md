@@ -1,4 +1,28 @@
-## Trace
+## TCplusplus
+
+Tests in C++ 
+
+### DoSystemTime
+
+Show you how to get System Time and to convert a **Ctring** into a **const char** to display System Time. 
+
+
+## TMem
+
+Understand the trace memory management, and the stack memory management
+
+## TInput
+
+Tells you how makre intercation with user demanding to enter values
+
+
+## TMenu
+
+Testing the smart Menu system in PMLite TraceReporter.
+
+Look at this code to understand how to make a smart menu for your console application. 
+
+## TTrace
 
 This directory contains Trace's files execution's result in **ASReporter**. 
 
@@ -19,7 +43,7 @@ Open Console Window
 
 Set title in Debug or Release
 
-Set position
+Set console window position
 
 Init Traces and call NT_TestMain
 
@@ -27,15 +51,19 @@ Init Traces and call NT_TestMain
 
 Depending on wich plateform you run call sub program
 
-Declare Menu
+Declare Menus
 
 Set memory Usage
 
-### TTestx.cpp
+### TMyTest.cpp
 
-Another Test file name should begin with T be be reconized by PM_MENU system
+Another Test file you add for TESTS.
 
-### Adding a new Test
+The name of a test file should begin with **T** be be reconized by PM_MENU system
+
+----------
+
+# Adding your own new Test
 
 Add a file like TMyTest.cpp : your code
 
@@ -43,7 +71,7 @@ Add a line PMMENU_DECLARE( MyTest ); in TestMain.cpp
 
 Add a line PMMENU_USE( MyTest ) into NT_TestMain function (NT is for Windows NT...)
 
-that is all
+That's All Folks
 
 
 
