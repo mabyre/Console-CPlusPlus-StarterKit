@@ -73,10 +73,10 @@ static void DoTestBEGIN_PROC( void )
 /*--------------------------------------------------------------------------*/
 
 PMMENU_BEGIN( Mem, "Memory" )
-PMMENU_ITEM_EX( 1, "Set max mem", DoSetMaxMem )
-PMMENU_ITEM_EX( 2, "Allocate block", DoAllocBlock )
-PMMENU_ITEM_EX( 3, "Test CheckMem", DoTestCheckMem )
-PMMENU_ITEM_EX( 4, "Test PM_BEGIN_PROC", DoTestBEGIN_PROC )
+    PMMENU_ITEM_EX( 1, "Set max mem", DoSetMaxMem )
+    PMMENU_ITEM_EX( 2, "Allocate block", DoAllocBlock )
+    PMMENU_ITEM_EX( 3, "Test CheckMem", DoTestCheckMem )
+    PMMENU_ITEM_EX( 4, "Test PM_BEGIN_PROC", DoTestBEGIN_PROC )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/
