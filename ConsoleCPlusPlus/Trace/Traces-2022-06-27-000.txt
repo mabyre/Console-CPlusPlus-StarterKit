@@ -1,0 +1,20 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:2704:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000001:2704:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000001:2704:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000001:2704:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00004140:2704:ERROR0:begining of the message following part of the message endding
+00004140:2704:ERROR0:Verify you add message from PMLite Core
+00004140:2704:TRACE0:integ: 123
+00004140:2704:TRACE0:integ: 1
+00004141:2704:TRACE0:auto i: 1
+00004141:2704:TRACE0:string iStr: 1
+00007516:2704:ERROR0:--------------
+00007516:2704:ERROR0:Memory report:
+00007516:2704:ERROR0:Blocks allocated: 54
+00007516:2704:ERROR0:Peak allocated: 984
+00007516:2704:ERROR0:Total allocated: 984
+00007517:2704:ERROR0:--------------
+00007517:2704:ERROR0:No memory leak. Well done.
+00007517:2704:ERROR0:--------------

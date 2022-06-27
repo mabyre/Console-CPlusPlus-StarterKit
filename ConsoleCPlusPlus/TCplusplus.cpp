@@ -153,7 +153,7 @@ void DoLambdaExpressions( void )
 
 /*--------------------------------------------------------------------------*/
 
-PMMENU_BEGIN( Cplusplus, "Test Cplus Plus" )
+PMMENU_BEGIN( Cplusplus, "Cplus Plus" )
     PMMENU_ITEM_EX( 1, "Init Console", InitConsole )
     PMMENU_ITEM_EX( 2, "Test", DoTest )
     PMMENU_ITEM_EX( 3, "Struct", DoStruct )

@@ -1,9 +1,13 @@
 /*--------------------------------------------------------------------------*\
  * Copyright (c) 1998-2000 AbyreSoft. Written by Bruno Raby.
  *--------------------------------------------------------------------------*
- * TTrace.c - Differentes facons de faire des traces
+ * TTrace.c - Differents wais to make traces
+ *--------------------------------------------------------------------------*
+ * Play with Filters in ASTraceReporter
+ * - DoTraceTrace
+ * - DoTraceError
+ * - DoTraceDebug
 \*--------------------------------------------------------------------------*/
-
 #include "cMenu.h"
 #include "cInput.h"
 
@@ -15,11 +19,28 @@
 #include "pmXTrace.h"
 #include "pmXDebug.h"
 
+#include <string>
+
 /*--------------------------------------------------------------------------*/
 
 static void DoTrace( void )
 {
+    int integ = 123;
+    auto i = 1;
+
+    c_trace( T( pmT_Core, "%s", "begining of the message "));
+    c_trace( T( pmT_Core, "%s", "following part of the message " ) );
+    c_trace( TL( pmT_Core, "%s", "endding" ) );
+
     c_trace( TL( pmT_Core, "Verify you add message from PMLite Core"));
+
+    pm_trace0( "integ: %d", integ );
+    pm_trace0( "integ: %d", i );
+
+    pm_trace0( "auto i: %s", std::to_string( i ).c_str() );
+
+    std::string iStr = std::to_string( i );
+    pm_trace0( "string iStr: %s", iStr.c_str() );
 }
 
 /*--------------------------------------------------------------------------*/
@@ -142,7 +163,7 @@ static void DoTestTraceFloat( void )
     pm_trace0( "", -theDouble, 1 );
     pm_trace0( "%020.10f", -theDouble, 1 );
 
-    /* Affichage :
+    /* Display :
     356.3000003.141593.141593
     -2.100000-3.0
     -3.141593
@@ -248,7 +269,7 @@ static void DoTestIToA(void)
 
 /*--------------------------------------------------------------------------*/
 
-PMMENU_BEGIN( Trace, "Trace - Tests" )
+PMMENU_BEGIN( Trace, "Trace" )
 PMMENU_ITEM_EX( 1, "c_trace", DoTrace )
 PMMENU_ITEM_EX( 2, "module Error", DoTraceError )
 PMMENU_ITEM_EX( 3, "module Trace", DoTraceTrace )
