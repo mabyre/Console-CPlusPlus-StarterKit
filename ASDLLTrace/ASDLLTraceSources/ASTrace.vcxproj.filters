@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{869c845e-8282-4d5f-b159-6a9f3423ea5e}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ASTrace.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSWinInc.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrFac.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrHelp.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrInit.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrTFile.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrTStdEr.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrTTCP.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ASTrace.c" />
+    <ClCompile Include="TrFac.c" />
+    <ClCompile Include="TrHelp.c" />
+    <ClCompile Include="TrInit.c" />
+    <ClCompile Include="TrTFile.c" />
+    <ClCompile Include="TrTStdEr.c" />
+    <ClCompile Include="TrTTCP.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ASTrace.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ASTrace.txt" />
+  </ItemGroup>
+</Project>
