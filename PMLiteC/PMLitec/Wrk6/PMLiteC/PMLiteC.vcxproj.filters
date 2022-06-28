@@ -314,5 +314,11 @@
     <ClInclude Include="..\..\..\inc\pmTrace.h">
       <Filter>inc</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\inc\pmTypes.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\inc\pmXTrace.h">
+      <Filter>inc</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
