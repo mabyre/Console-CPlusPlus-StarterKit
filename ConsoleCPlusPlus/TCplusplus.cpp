@@ -107,11 +107,16 @@ void DoSystemTime( void )
 
 /*--------------------------------------------------------------------------*\
  * Use of "cout" to print unformatted data otherwise it's not possible
+ * What does auto&& tell us?
+ * https://stackoverflow.com/questions/13230480/what-does-auto-tell-us
+ * By using auto&& var = <initializer> you are saying: I will accept any 
+ * initializer regardless of whether it is an lvalue or rvalue expression 
+ * and I will preserve its constness. 
 \*--------------------------------------------------------------------------*/
 void DoLambdaExpressions( void )
 {
     // generic lambda, operator() is a template with two parameters
-    auto glambda = []( auto a, auto &&b ) { return a < b; };
+    auto glambda = []( auto a, auto&& b ) { return a < b; };
     bool b1 = glambda( 3, 3.14 ); // ok
     bool b2 = glambda( 4, 3.14 ); // false
 
@@ -128,10 +133,12 @@ void DoLambdaExpressions( void )
             return [=] { printer( ts... ); }; // nullary lambda (takes no parameters)
         };
     };
+
     auto p = vglambda( []( auto v1, auto v2, auto v3 ) { std::cout << v1 << v2 << v3 << endl; } );
-    auto q = p( 1, 'a', 3.14 ); // outputs 1a3.14
-    q();
-    auto q2 = p( 1, 'a', "3.14" ); // outputs 1a3.14
+
+    auto q = p( 1, 'a', 3.14 );     // outputs 1a3.14
+    q();                            // outputs 1a3.14
+    auto q2 = p( 1, 'a', "3.14" );  // outputs 1a3.14
 }
 
 /*--------------------------------------------------------------------------*/
