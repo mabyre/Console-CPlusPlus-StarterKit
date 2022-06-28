@@ -31,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ASDLLTrace\ASDLLTraceSources\ASTrace.h" />
+    <ClInclude Include="MyMacros.h" />
     <ClInclude Include="pmEnv.h" />
     <ClInclude Include="pmInterface.h" />
   </ItemGroup>

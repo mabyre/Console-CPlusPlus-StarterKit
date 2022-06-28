@@ -16,9 +16,11 @@ using namespace std;
 
 #include "cMenu.h"
 #include "pmTrace.h"
+#include "MyMacros.h"
 #include <iostream>
 #include <array>
 #include <vector>
+#include <string>
 
 /*--------------------------------------------------------------------------*/
 
@@ -79,8 +81,10 @@ void DoContainerArrayVerifyCompatibility( void )
     for ( const auto &it : a1 )
     {
         std::cout << " " << it;
+        PM_TRACE0( T( " %s", std::to_string( it ).c_str() ) );
     }
     std::cout << std::endl;
+    TRACE0_ENDL();
 
     // sorted array's elements does not work !
     //std::sort( a1.begin(), a1.end() );
@@ -112,8 +116,10 @@ void DoContainerArraySwap( void )
     for ( const auto &it : c0 )
     {
         std::cout << " " << it;
+        PM_TRACE0( T( " %s", std::to_string( it ).c_str() ) );
     }
     std::cout << std::endl;
+    TRACE0_ENDL();
 
     std::swap( c0, c1 );
 
@@ -121,12 +127,16 @@ void DoContainerArraySwap( void )
     for ( const auto &it : c0 )
     {
         std::cout << " " << it;
+        PM_TRACE0( T( " %s", std::to_string( it ).c_str() ) );
+
     }
     std::cout << std::endl;
+    TRACE0_ENDL();
 }
 
-/*--------------------------------------------------------------------------*/
-
+/*--------------------------------------------------------------------------*\
+ * does not work
+\*--------------------------------------------------------------------------*/
 int compare( const void *arg1, const void *arg2 )
 {
     /* Compare all of both strings: */
@@ -139,13 +149,41 @@ void DoContainerArraySort( void )
 
     MyArrayType::const_pointer ptr = &*c2.begin();
 
-    std::qsort( (void*)*ptr, c2.size(), 1, compare);
+    // does not work !
+    std::qsort( (void *)ptr, c2.size(), 1, compare);
 
     for ( const auto &it : c2 )
     {
         std::cout << " " << it;
     }
     std::cout << std::endl;
+}
+
+/*--------------------------------------------------------------------------*/
+
+void DoArrayIterator( void )
+{
+    MyArrayType c0 = { 0, 1, 2, 3 };
+
+    // display contents " 0 1 2 3"
+    for ( const auto &it : c0 )
+    {
+        PM_TRACE0( T( " %s", STR( it ) ) );
+    }
+    TRACE0_ENDL();
+
+    // display first element " 0"
+    MyArrayType::iterator it2 = c0.begin();
+    std::cout << " " << *it2;
+    std::cout << std::endl;
+
+    
+    std::cout << "it1:";
+    for ( MyArrayType::iterator it1 = c0.begin(); it1 != c0.end(); ++it1 )
+    {
+        PM_TRACE0( T( " %s", STR( *it1 ) ) );
+    }
+    TRACE0_ENDL();
 }
 
 /*--------------------------------------------------------------------------*/
@@ -160,11 +198,11 @@ void DoUseVector( void )
     v.push_back( 13 );
 
     // Print out the vector
-    std::cout << "v = { ";
+    PM_TRACE0( T( "%s", "v = { " ) );
     for ( int n : v ) {
-        std::cout << n << ", ";
+        PM_TRACE0( T( " %s,", STR(n) ) );
     }
-    std::cout << "}; \n";
+    PM_TRACE0( TL( "%s", " }" ) );
 }
 
 /*--------------------------------------------------------------------------*/
@@ -173,7 +211,8 @@ PMMENU_BEGIN( Containers, "Test Containers" )
     PMMENU_ITEM_EX( 1, "Declare Array", DoContainerArrayVerifyCompatibility )
     PMMENU_ITEM_EX( 2, "Swap Array", DoContainerArraySwap )
     PMMENU_ITEM_EX( 3, "Sort Array", DoContainerArraySort )
-    PMMENU_ITEM_EX( 4, "Use Vector", DoUseVector )
+    PMMENU_ITEM_EX( 4, "Iterator", DoArrayIterator )
+    PMMENU_ITEM_EX( 5, "Use Vector", DoUseVector )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/

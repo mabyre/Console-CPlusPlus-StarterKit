@@ -53,6 +53,9 @@
     <ClInclude Include="..\ASDLLTrace\ASDLLTraceSources\ASTrace.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="MyMacros.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\ASDLLTrace\ASDLLTraceSources\Debug\astrace.lib" />
