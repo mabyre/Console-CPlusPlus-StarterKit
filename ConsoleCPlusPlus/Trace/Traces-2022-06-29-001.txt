@@ -1,0 +1,22 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:3094:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000002:3094:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000002:3094:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000002:3094:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00006446:3094:TRACE0:   foo vector[0]: 2
+00006446:3094:TRACE0:global_vector[0]: 1
+00006446:3094:TRACE0:   foo vector[0]: 2
+00006447:3094:TRACE0:global_vector[0]: 2
+00006447:3094:TRACE0:  foo1 vector[0]: 3
+00006447:3094:TRACE0:global_vector[0]: 2
+00006447:3094:TRACE0:  foo1 vector[0]: 3
+00006447:3094:TRACE0:global_vector[0]: 2
+00052417:3094:ERROR0:--------------
+00052417:3094:ERROR0:Memory report:
+00052417:3094:ERROR0:Blocks allocated: 59
+00052417:3094:ERROR0:Peak allocated: 1072
+00052417:3094:ERROR0:Total allocated: 1072
+00052417:3094:ERROR0:--------------
+00052417:3094:ERROR0:No memory leak. Well done.
+00052417:3094:ERROR0:--------------
