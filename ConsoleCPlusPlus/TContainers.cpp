@@ -17,6 +17,7 @@ using namespace std;
 #include "cMenu.h"
 #include "pmTrace.h"
 #include "MyMacros.h"
+#include "MyMacros.h"
 #include <iostream>
 #include <array>
 #include <vector>
@@ -205,14 +206,73 @@ void DoUseVector( void )
     PM_TRACE0( TL( "%s", " }" ) );
 }
 
+/*--------------------------------------------------------------------------*\
+ * Demonstrate the spectacular use of auto&&
+\*--------------------------------------------------------------------------*/
+
+std::vector<int> global_vector{ 1, 2, 3, 4 };
+
+template <typename T>
+T get_vector()
+{
+    return global_vector;
+}
+
+template <typename T>
+void foo()
+{
+    auto &&vec = get_vector<T>(); // using auto&&
+    auto i = std::begin( vec );
+
+    (*i)++;
+
+    pm_trace0( "   foo vector[0]: %s", STR( vec[ 0 ] ) ); 
+    //std::cout << vec[ 0 ] << std::endl;
+}
+
+/*
+ * replace auto &&, by auto
+ */ 
+template <typename T>
+void foo1()
+{
+    auto vec = get_vector<T>(); // not using &&
+    auto i = std::begin( vec );
+
+    (*i)++;
+
+    pm_trace0( "  foo1 vector[0]: %s", STR( vec[ 0 ] ) );
+    //std::cout << vec[ 0 ] << std::endl;
+}
+
+void DoUseVector2()
+{
+    foo<std::vector<int>>();
+    pm_trace0( "global_vector[0]: %s", STR( global_vector[ 0 ] ) );
+
+    // by passing the address, std::begin( vec ) is modified to next that is 2
+    foo<std::vector<int> &>();
+    pm_trace0( "global_vector[0]: %s", STR( global_vector[ 0 ] ) );
+
+    /* 
+     * redo with foo1(), without auto&& 
+     */
+    foo1<std::vector<int>>();
+    pm_trace0( "global_vector[0]: %s", STR( global_vector[ 0 ] ) );
+
+    foo1<std::vector<int> &>();
+    pm_trace0( "global_vector[0]: %s", STR( global_vector[ 0 ] ) );
+}
+
 /*--------------------------------------------------------------------------*/
 
-PMMENU_BEGIN( Containers, "Test Containers" )
+PMMENU_BEGIN( Containers, "Containers" )
     PMMENU_ITEM_EX( 1, "Declare Array", DoContainerArrayVerifyCompatibility )
     PMMENU_ITEM_EX( 2, "Swap Array", DoContainerArraySwap )
     PMMENU_ITEM_EX( 3, "Sort Array", DoContainerArraySort )
     PMMENU_ITEM_EX( 4, "Iterator", DoArrayIterator )
     PMMENU_ITEM_EX( 5, "Use Vector", DoUseVector )
+    PMMENU_ITEM_EX( 6, "Vector auto&&", DoUseVector2 )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/
