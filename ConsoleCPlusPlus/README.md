@@ -1,3 +1,13 @@
+## TContainers
+
+Use of containers like array, vector
+
+### DoUseVector2
+
+Demonstrate the use of auto&&
+
+[Stackoverflow - What does auto&& tell us?](https://stackoverflow.com/questions/13230480/what-does-auto-tell-us)
+
 ## TCplusplus
 
 Tests in C++ 
@@ -65,13 +75,13 @@ The name of a test file should begin with **T** be be reconized by PM_MENU syste
 
 # Adding your own new Test
 
-Add a file like TMyTest.cpp : your code
+Add a file like **TMyTest.cpp** and write your code
 
-Add a line PMMENU_DECLARE( MyTest ); in TestMain.cpp
+Add a line PMMENU_DECLARE( MyTest ); in **TestMain.cpp**
 
-Add a line PMMENU_USE( MyTest ) into NT_TestMain function (NT is for Windows NT...)
+Add a line PMMENU_USE( MyTest ) into **NT_TestMain** function (NT is for Windows NT...)
 
-That's All Folks
+**That's All Folks**
 
 
 

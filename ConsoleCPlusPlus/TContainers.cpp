@@ -203,11 +203,13 @@ void DoUseVector( void )
     for ( int n : v ) {
         PM_TRACE0( T( " %s,", STR(n) ) );
     }
-    PM_TRACE0( TL( "%s", " }" ) );
+    TRACE0_ENDL();
 }
 
 /*--------------------------------------------------------------------------*\
  * Demonstrate the spectacular use of auto&&
+ * 
+ * https://stackoverflow.com/questions/13230480/what-does-auto-tell-us
 \*--------------------------------------------------------------------------*/
 
 std::vector<int> global_vector{ 1, 2, 3, 4 };
