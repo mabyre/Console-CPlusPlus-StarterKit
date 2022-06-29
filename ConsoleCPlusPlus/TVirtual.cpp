@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------------*\
  * Copyright (c) 1998-2022 SoDevLog. Written by Mabyre.
  *--------------------------------------------------------------------------*
- * TVirtual.c - Use Virtual function for polymorphisme
+ * TVirtual.c - Use Virtual function for polymorphism
 \*--------------------------------------------------------------------------*/
 using namespace std;
 
@@ -46,7 +46,7 @@ public:
 
 MySquare::MySquare( int side )
 {
-    pm_trace0( "square side %d", side );
+    pm_trace0( "square's side %d", side );
 }
 
 float MySquare::perimeter()
@@ -63,14 +63,16 @@ void DoTestVirtual( void )
     MySquare s( 30 );
     MyRectangle *ptr1;
 
-    ptr1 = &r;
-    pm_trace0( "call to %f", ptr1->perimeter() );
-
-    ptr1 = &s;
-    pm_trace0( "call to %f", ptr1->perimeter() );
     // call to 'perimeter' from 'MySquare'
     // or 'MyRectangle' depending
 
+    // ptr1 can take a rectangle
+    ptr1 = &r;
+    pm_trace0( "call to %f", ptr1->perimeter() );
+
+    // but also can take square this is polymorphism
+    ptr1 = &s;
+    pm_trace0( "call to %f", ptr1->perimeter() );
 }
 
 /*--------------------------------------------------------------------------*/

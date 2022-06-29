@@ -1,0 +1,20 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:0df0:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000002:0df0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000002:0df0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000002:0df0:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00009017:0df0:TRACE0:rectangle's width: 100 height: 50
+00009017:0df0:TRACE0:square's side 30
+00009017:0df0:TRACE0:rectangle's perimeter
+00009017:0df0:TRACE0:call to 0.000000
+00009017:0df0:TRACE0:square's perimeter
+00009017:0df0:TRACE0:call to 0.000000
+00015690:0df0:ERROR0:--------------
+00015690:0df0:ERROR0:Memory report:
+00015690:0df0:ERROR0:Blocks allocated: 58
+00015690:0df0:ERROR0:Peak allocated: 1052
+00015690:0df0:ERROR0:Total allocated: 1052
+00015690:0df0:ERROR0:--------------
+00015690:0df0:ERROR0:No memory leak. Well done.
+00015690:0df0:ERROR0:--------------
