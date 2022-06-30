@@ -158,6 +158,93 @@ void DoLambdaExpressions( void )
 //    };
 //}
 
+/*--------------------------------------------------------------------------*\
+ * - Codingame tests
+ *
+ * The question is what is the value of i ?
+ */
+void DoTestFor(void )
+{
+
+    int i;
+    for ( i = 0; i < 10; i++ );
+
+    cout << i; // you think about 9 but the wright answer is 10
+}
+
+/*--------------------------------------------------------------------------*\
+ * - Codingame tests
+ * 
+ * If you say the answer is : ab 
+ * it's wrong, you forget the evaluation made by if ( s1.a() && s2.a() )
+ * The right answer is then : abaabmain3
+ */ 
+
+struct _s1 {
+
+    int a() { cout << "a"; return 0; };
+    int b = 0;
+} s1;
+
+struct _s2 {
+
+    int a() { cout << "b"; return 1; };
+    int b = 1;
+} s2;
+
+void DoDisplayStruct( void )
+{
+    s1.a();
+    s2.a();
+
+    // a
+    if ( s1.a() && s2.a() )
+    {
+        cout << "main1" << endl;
+    }
+
+    // ab
+    if ( s1.a() & s2.a() )
+    {
+        cout << "main2" << endl;
+    }
+
+    if ( s1.b | s2.b )
+    {
+        cout << "main3" << endl;
+    }
+}
+
+/*--------------------------------------------------------------------------*\
+ * it's always difficult to play with bit
+ * code the function that return the value of a bit in an unsigned
+ * exemple :
+ * 5 = 0101 the bit at position 0 is 1
+ * getBit( 5, 0 ) return 1
+ */
+
+int getBit( unsigned value, int position )
+{
+    unsigned int mask = 1 << position;
+
+    return (value & mask) >> position;
+}
+
+void DoGetBit( void )
+{
+    pm_trace0( "getBit( 5, 0 ): %d ", getBit( 5, 0 ) );
+    pm_trace0( "getBit( 5, 1 ): %d ", getBit( 5, 1 ) );
+    pm_trace0( "getBit( 5, 2 ): %d ", getBit( 5, 2 ) );
+    pm_trace0( "getBit( 5, 3 ): %d ", getBit( 5, 3 ) );
+}
+
+/* TRACES
+00023486:3294:TRACE0:getBit( 5, 0 ): 1
+00037340:3294:TRACE0:getBit( 5, 1 ): 0
+00040393:3294:TRACE0:getBit( 5, 2 ): 1
+00043097:3294:TRACE0:getBit( 5, 3 ): 0 
+*/
+
 /*--------------------------------------------------------------------------*/
 
 PMMENU_BEGIN( Cplusplus, "Cplus Plus" )
@@ -166,6 +253,9 @@ PMMENU_BEGIN( Cplusplus, "Cplus Plus" )
     PMMENU_ITEM_EX( 3, "Struct", DoStruct )
     PMMENU_ITEM_EX( 4, "System Time", DoSystemTime )
     PMMENU_ITEM_EX( 5, "Lambda expressions", DoLambdaExpressions )
+    PMMENU_ITEM_EX( 6, "Test for", DoTestFor )
+    PMMENU_ITEM_EX( 7, "Display Struct", DoDisplayStruct )
+    PMMENU_ITEM_EX( 8, "Get bit", DoGetBit )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/
