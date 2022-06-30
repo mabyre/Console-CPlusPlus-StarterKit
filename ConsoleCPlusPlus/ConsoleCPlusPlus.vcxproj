@@ -26,6 +26,8 @@
     <ClCompile Include="TCplusplus.cpp" />
     <ClCompile Include="TestMain.cpp" />
     <ClCompile Include="TMenu.cpp" />
+    <ClCompile Include="TPolymorphism.cpp" />
+    <ClCompile Include="TPolymorphism2.cpp" />
     <ClCompile Include="TTest2.cpp" />
     <ClCompile Include="TTrace.cpp" />
     <ClCompile Include="TVirtual.cpp" />

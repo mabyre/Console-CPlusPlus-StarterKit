@@ -17,6 +17,8 @@ PMMENU_DECLARE( Test2 );
 PMMENU_DECLARE( Cplusplus );
 PMMENU_DECLARE( Containers );
 PMMENU_DECLARE( Virtual );
+PMMENU_DECLARE( Polymorphism );
+PMMENU_DECLARE( Polymorphism2 );
 
 /*--------------------------------------------------------------------------*/
 void NT_TestMain(void)
@@ -34,6 +36,8 @@ void NT_TestMain(void)
    PMMENU_USE( Cplusplus );
    PMMENU_USE( Containers );
    PMMENU_USE( Virtual );
+   PMMENU_USE( Polymorphism );
+   PMMENU_USE( Polymorphism2 );
 
    PMMenu_ExecuteMainMenu();
 

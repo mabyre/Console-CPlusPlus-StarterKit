@@ -1,0 +1,20 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:1bf8:ERROR1:Stack_P_GetDir(): Stack is [Up-Down]
+00000002:1bf8:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000002:1bf8:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000002:1bf8:ERROR1:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00008253:1bf8:TRACE0:ppoly1: 20
+00008254:1bf8:TRACE0:ppoly2: 10
+00010622:1bf8:TRACE0:polygon area: 20
+00010623:1bf8:TRACE0:polygon area: 10
+00017005:1bf8:TRACE0:polygon area: 20
+00017005:1bf8:TRACE0:polygon area: 10
+00023679:1bf8:ERROR0:--------------
+00023679:1bf8:ERROR0:Memory report:
+00023679:1bf8:ERROR0:Blocks allocated: 66
+00023679:1bf8:ERROR0:Peak allocated: 1188
+00023679:1bf8:ERROR0:Total allocated: 1188
+00023679:1bf8:ERROR0:--------------
+00023679:1bf8:ERROR0:No memory leak. Well done.
+00023679:1bf8:ERROR0:--------------
