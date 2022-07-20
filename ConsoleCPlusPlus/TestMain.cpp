@@ -28,16 +28,16 @@ void NT_TestMain(void)
 
    PMMenu_InitializeMainMenu();
 
-   PMMENU_USE( Menu );
-   PMMENU_USE( Trace );
-   PMMENU_USE( Input );
-   PMMENU_USE( Mem );
-   PMMENU_USE( Test2 );
+   //PMMENU_USE( Menu );
+   //PMMENU_USE( Trace );
+   //PMMENU_USE( Input );
+   //PMMENU_USE( Mem );
+   //PMMENU_USE( Test2 );
    PMMENU_USE( Cplusplus );
-   PMMENU_USE( Containers );
-   PMMENU_USE( Virtual );
-   PMMENU_USE( Polymorphism );
-   PMMENU_USE( Polymorphism2 );
+   //PMMENU_USE( Containers );
+   //PMMENU_USE( Virtual );
+   //PMMENU_USE( Polymorphism );
+   //PMMENU_USE( Polymorphism2 );
 
    PMMenu_ExecuteMainMenu();
 

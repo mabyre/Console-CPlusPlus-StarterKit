@@ -198,7 +198,7 @@ void DoDisplayStruct( void )
     s2.a();
 
     // a
-    if ( s1.a() && s2.a() )
+    if ( s1.a() || s2.a() )
     {
         cout << "main1" << endl;
     }
@@ -247,6 +247,62 @@ void DoGetBit( void )
 
 /*--------------------------------------------------------------------------*/
 
+bool isTwin( string s1, string s2 )
+{
+    size_t count = s1.size();
+    bool found;
+
+    char *p1 = const_cast<char *>(s1.c_str());
+    char *p2 = const_cast<char *>(s2.c_str());
+
+    if ( count != s2.size() )
+    {
+        return false;
+    }
+
+    for ( int i = 0; i < count; i++ )
+    {
+        found = false;
+
+        for ( int j = 0; j < count; j++ )
+        {
+            if ( std::tolower(p1[ i ]) == std::tolower(p2[ j ]) )
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if ( found == false )
+        {
+            return false;
+        }
+    }
+
+    return found;
+}
+
+void DoTestIsTwin( void )
+{
+    string s1 = "Romain";
+    string s2 = "Marion";
+
+    pm_trace0( "isTwin( Romain, Marion) : %s ", isTwin(s1,s2) == true ? "True" : "False");
+
+    s1 = "Romano";
+    s2 = "Marinz";
+
+    pm_trace0( "isTwin( Romain, Marion) : %s ", isTwin( s1, s2 ) == true ? "True" : "False" );
+
+
+    s1 = "Romano";
+    s2 = "Nomaro";
+
+    pm_trace0( "isTwin( Romain, Marion) : %s ", isTwin( s1, s2 ) == true ? "True" : "False" );
+}
+
+/*--------------------------------------------------------------------------*/
+
 PMMENU_BEGIN( Cplusplus, "Cplus Plus" )
     PMMENU_ITEM_EX( 1, "Init Console", InitConsole )
     PMMENU_ITEM_EX( 2, "Test", DoTest )
@@ -256,6 +312,7 @@ PMMENU_BEGIN( Cplusplus, "Cplus Plus" )
     PMMENU_ITEM_EX( 6, "Test for", DoTestFor )
     PMMENU_ITEM_EX( 7, "Display Struct", DoDisplayStruct )
     PMMENU_ITEM_EX( 8, "Get bit", DoGetBit )
+    PMMENU_ITEM_EX( 9, "Is Twin", DoTestIsTwin )
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/
