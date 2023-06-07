@@ -39,12 +39,12 @@
     <ClInclude Include="pmInterface.h" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\ASDLLTrace\ASDLLTraceSources\Debug\astrace.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PMLiteC\PMLitec\Wrk6\PMLiteC\PMLiteC.vcxproj">
       <Project>{bc2c8fc7-914e-4ae8-9e11-785bc6314a7b}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Debug\ASTrace.lib" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

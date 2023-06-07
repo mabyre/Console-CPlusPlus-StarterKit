@@ -43,6 +43,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -86,6 +87,11 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Debug\ASTrace.lib" "$(ProjectDir)..\..\ConsoleCPlusPlus\Debug" /Y /F /C
+xcopy "$(ProjectDir)Debug\ASTrace.dll" "$(ProjectDir)..\..\ConsoleCPlusPlus\Debug" /Y /F /C</Command>
+      <Message>Delivery DLL</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

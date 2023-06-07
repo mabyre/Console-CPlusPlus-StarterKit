@@ -67,6 +67,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\ASDLLTrace\ASDLLTraceSources\Debug\astrace.lib" />
+    <Library Include="Debug\ASTrace.lib" />
   </ItemGroup>
 </Project>
