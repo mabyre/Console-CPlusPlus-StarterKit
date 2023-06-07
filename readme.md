@@ -1,36 +1,120 @@
 # Console C++ Starter Kit #
 
-For developers vho want to totaly masterise thier developments in C++.
+For developers vho want to totaly masterise thier developments in C/C++. It's a huge project in tree parts hard to take in hands but if you do so you will be very able to mastrerise all your source codes.
 
-PM mean Protocol or Protable Machinery.
+Terms:
 
-# Features #
+***PM*** mean Protocol or Protable Machinery for multiplatform.
 
-- Masterise your code for multi-plateform devlopment in C++
+***AS*** is for AbyreSoft the beginnings of SoDevLog
+
+## Features ##
+
+- Masterise your code for multi-plateform development in C/C++
 - Driven by console in a smart menu system
 - Powerfull functions for memory management
  
-# Requirements #
+## Requirements ##
 
 Fully portable core software in C language so you can pickup some C sources to another plateform.
 
-Any IDE that can make a reference to a library. Here it's Visual Studio Community
+Any IDE that can make a reference to a library. Here it's ***Visual Studio Community*** but there are many exemples of porting the solution under Eclipse for Linux.
 
-## Want to know more
+## Summary ##
 
-There is a long time a wanted to bring this project to the light. A wanted to make it for Visual Studio Community to develop in C++. This is it.
+- [Generate](#Generate) generation is required
+- [ASReporter](#ASReporter) or Reporter is a windows application that display traces
+- [ASDLLTrace](#ASDLLTrace) the Communication DLL between your code and the Reporter
 
-[Trace Reporter](https://trace-reporter.sodevlog.com/ "Based on TraceReporter")
 
+## Want to know more ##
+
+I have wanted to bring to light this project for a long time. I wanted to do this so I could develop with Visual Studio Community to enhence my C++. That's it.
+
+Here is a dedicated blog to ***Trace Reporter***:
+
+- [Blog TraceReporter](https://trace-reporter.sodevlog.com/ "Based on TraceReporter")
+
+Another GitHub project with a Console MinGW that can help:
+
+- [ConsoleMinGW TraceReporter](https://github.com/mabyre/TraceReporter "ConsoleMinGW with TraceReporter")
 
 ## For little story ##
 
-Successfully rebuilding project for **Visual Studio Community 2019**
+One day I made it, I rebuilding this project with ***Visual Studio Community 2019***
+
+I unearthed it from a very old computer for an ***IoT*** project that I had to develop.
+
+For my notes:
 
 \Mabyre\Visual Studio\CPlusPlus\ConsoleCPlusPlusStarterKit\PMLiteC\PMLitec\Wrk6\PMLiteC
 
-exhumation of a very old project **Protocol Machinery Lite** from :
+Exhumation of a very old project **Protocol Machinery Lite** from :
 
 \Oracle Virtual Box\Windows 7 Ineo 000\Partage\Visual C++ 6.0\Console
-from a very old computer :
+
+From a very old computer named:
 \\Mabyre\SouthOfFrance\Visual C++ 6.0
+
+Now it's ready for thousands of years.
+
+## Generate ##
+
+- Clone the repository
+
+If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln) it will not work.
+
+- Generate ASDLLTrace 
+
+First of all generate ASDLLTrace open [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
+
+Verify you are well in configuration Debug x86 click on Generate
+
+- Open Solution [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln)
+
+<img style="margin: 10px" src="Images/2023-06-07_12h36_41.png" alt="Open Solution ConsoleCPlusPlus" />
+
+Inside you have two projects:
+
+ConsoleCPlusPlus and PMLiteC
+
+First of all verify you are in configuration x86:
+
+<img style="margin: 10px" src="Images/2023-06-07_12h42_00.png" alt="Verify you are in x86 configuration" />
+
+- Generate PMLiteC
+
+<img style="margin: 10px" src="Images/2023-06-07_12h45_46.png" alt="Generate PMLiteC" />
+
+- Generate ConsoleCPlusPlus
+
+<img style="margin: 10px" src="Images/2023-06-07_12h47_21.png" alt="Generate ConsoleCplusPlus" />
+
+You are now ready to develop your source code in ConsoleCplusPlus and make Traces.
+
+First of All run the Reporter:
+
+Click On Reporter.exe you will find in \ASReporter\Release
+
+<img style="margin: 10px" src="Images/2023-06-07_11h21_48.png" alt="The Reporter hear ConsoleCplusPlus" />
+
+The reporter is now listening to traces coming from your application.
+
+At each time you will need to execute the Reporter before your project therefor the Reporter will listen on sockets to Traces that may come in.
+
+### ASDLLTrace ###
+
+The communication DLL for Traces using socket TCP/IP
+
+### ASReporter ###
+
+The application that display Traces
+
+### PMLiteC ###
+
+The Protocole Machinery adapted to your project
+
+### ConsoleCPlusPlus ###
+
+Your project, your code under tests under Traces
+
