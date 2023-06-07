@@ -1,0 +1,16 @@
+LIBRARY ASTRACE
+DESCRIPTION "AbyreSoft's traces engine and standard tracers."
+EXPORTS
+	as_trace_init	@1
+	as_trace_close	@2
+
+	as_trace_T		@3
+	as_trace_TL		@4
+	as_trace_VT		@5
+	as_trace_VTL	@6
+	as_trace_B		@7
+
+	as_trace_create_instance	@8
+	as_trace_destroy_instance	@9
+
+	as_trace_STR @10
