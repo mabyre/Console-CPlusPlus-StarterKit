@@ -66,9 +66,16 @@ If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Consol
 
 - Generate ASDLLTrace 
 
-First of all generate ASDLLTrace open [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
+First of all generate ASDLLTrace open solution [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
 
-Verify you are well in configuration Debug x86 click on Generate
+Verify you are well in configuration ***Debug x86*** right-click on the project ASTrace:
+
+<img style="margin: 10px" src="Images/2023-06-07_16h46_16.png" alt="Open Solution ASTrace.sln" />
+
+ Choose Generate:
+
+<img style="margin: 10px" src="Images/2023-06-07_16h52_07.png" alt="Open Solution ASTrace.sln" />
+ 
 
 - Open Solution [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln)
 
@@ -100,6 +107,8 @@ Click On Reporter.exe you will find in \ASReporter\Release
 
 The reporter is now listening to traces coming from your application.
 
+> Have a look to the "Tip of the day" : The Reporer can also receive on your desktop traces emited by your application running at one of your client Office during Beta-Testing stage. This imrpoves greatly bugs tracking.
+
 At each time you will need to execute the Reporter before your project therefor the Reporter will listen on sockets to Traces that may come in.
 
 ### ASDLLTrace ###
@@ -117,4 +126,8 @@ The Protocole Machinery adapted to your project
 ### ConsoleCPlusPlus ###
 
 Your project, your code under tests under Traces
+
+Once you will run your project you can get the following result :
+
+<img style="margin: 10px" src="Images/2023-06-07_16h59_00.png" alt="The Reporter hear ConsoleCplusPlus" />
 
