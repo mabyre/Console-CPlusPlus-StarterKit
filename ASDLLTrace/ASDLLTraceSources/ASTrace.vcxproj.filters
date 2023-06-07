@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Include Files">
-      <UniqueIdentifier>{869c845e-8282-4d5f-b159-6a9f3423ea5e}</UniqueIdentifier>
+      <UniqueIdentifier>{85ae4ee4-cf5e-495a-ac48-057327aeade9}</UniqueIdentifier>
       <Extensions>.h</Extensions>
     </Filter>
   </ItemGroup>
