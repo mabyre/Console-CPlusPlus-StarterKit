@@ -1,6 +1,5 @@
 ﻿*.obj
 *.user
-*.def
 ASReporter/ASReporterSources/Debug/*
 ASReporter/ASReporterSources/Release/*
 ASDLLTrace/ASDLLTraceSources/Debug/*
