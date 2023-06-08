@@ -550,7 +550,7 @@ PMStrRef PMStr::ReplaceCharSetByChar(const PMCharSet &aCharSet, char aChar)
 PMStrRef PMStr::ReplaceCharByChar(char aChar, char aReplace)
 {	
 		// optimize if the char is not part of the string
-	char	*thePtr = ::pm_strchr(itsData, aChar);
+	char	*thePtr = ::pm_strchr(const_cast<char*>(itsData), aChar);
 	
 	if (thePtr==0)
 		return this;
@@ -646,7 +646,7 @@ size_t PMStr::FindChar(char aChar, size_t aStart)
 
 	PM_ASSERT(aStart < itsLen || aStart == pmnpos, TL("PMStr::FindChar() bad start"));
 	
-	char	*thePtr = ::pm_strchr(itsData + aStart + 1, aChar);
+	char	*thePtr = ::pm_strchr(const_cast<char*>(itsData + aStart + 1), aChar);
 	if (!thePtr)
 		return pmnpos;
 		
@@ -659,7 +659,7 @@ size_t PMStr::FindStr(const PMStrRef& aStr, size_t aStart)
 {	
 	PM_ASSERT(aStart <= itsLen || aStart == pmnpos, TL("PMStr::FindStr() bad start"));
 	
-	char	*thePtr = ::pm_strstr(itsData + aStart + 1, aStr->c_str());
+	char	*thePtr = ::pm_strstr(const_cast<char*>(itsData + aStart + 1), aStr->c_str());
 	if (!thePtr)
 		return pmnpos;
 		

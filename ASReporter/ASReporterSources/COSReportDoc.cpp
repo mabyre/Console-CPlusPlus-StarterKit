@@ -511,7 +511,7 @@ void COSReportDoc::DumpTraceBlock(COSReportView* aView, PMBufferRef aTrace)
 				break;
 			theChar = *thePtr2;
 			*thePtr2 = 0;
-			theString += thePtr;
+			theString += (char)thePtr;
 			if (theChar < ' ')
 				theString += sCtrlChars[(size_t)theChar];
 			else
@@ -520,7 +520,7 @@ void COSReportDoc::DumpTraceBlock(COSReportView* aView, PMBufferRef aTrace)
 			thePtr = thePtr2 + 1;
 		}
 		if (*thePtr != 0)
-			theString += thePtr;
+			theString += (char)thePtr;
 
 		/* theString += (char*)theParam.itsParam.itsData; */
 		itsfStartOfLine = (theParam.itsParam.itsKind == PMTrace_kKindEOT);
