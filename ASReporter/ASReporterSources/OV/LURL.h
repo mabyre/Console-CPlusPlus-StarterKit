@@ -37,7 +37,7 @@ protected:
 
 	static UINT LaunchBrowser(LPVOID aParam); // May be a Thread Func
 
-	afx_msg UINT	OnNcHitTest(CPoint aPoint);
+	afx_msg LRESULT	OnNcHitTest(CPoint aPoint);
 	afx_msg void	OnLButtonUp(UINT aFlags, CPoint aPoint);
 	afx_msg BOOL	OnSetCursor(CWnd* aWnd, UINT aHitTest, UINT aMessage);
 	afx_msg HBRUSH	CtlColor(CDC* aDC, UINT aCtlColor);

@@ -19,7 +19,7 @@ BEGIN_MESSAGE_MAP(LURL, LStatic)
 	ON_WM_SETCURSOR()
 	ON_WM_CTLCOLOR_REFLECT()
 	ON_WM_LBUTTONUP()
-//	ON_WM_NCHITTEST()
+	ON_WM_NCHITTEST()
 END_MESSAGE_MAP()
 
 //-----------------------------------------------------------------------
@@ -139,7 +139,7 @@ HBRUSH LURL::CtlColor(CDC* aDC, UINT aCtlColor)
 //-----------------------------------------------------------------------
 // LStatic::OnNcHitTest always replies HTTRANSPARENT that 
 // prevents control to receive mouse messages
-UINT LURL::OnNcHitTest(CPoint)
+LRESULT LURL::OnNcHitTest(CPoint)
 {
 	return HTCLIENT;
 }
