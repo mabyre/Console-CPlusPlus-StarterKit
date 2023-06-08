@@ -70,7 +70,7 @@
 #define noPMF_NO_TRACE
 
 	/**	If PMF_NO_TYPEINFO is defined, no RTTI-related functions will be used.	*/
-#define PMF_NO_TYPEINFO
+#define noPMF_NO_TYPEINFO
 
 // ===========================================================================
 //	PMFinalRelease
@@ -105,7 +105,7 @@
 #include "PMStub.h"
 
 #ifndef PMF_NO_TYPEINFO
-	#include <typeinfo.h>
+	#include <typeinfo>
 #endif
 
 // ===========================================================================
