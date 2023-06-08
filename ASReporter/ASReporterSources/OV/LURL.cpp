@@ -4,7 +4,6 @@
 //=======================================================================
 
 #include "LURL.h"
-
 #include "LOVUtils.h"
 
 //-----------------------------------------------------------------------
@@ -20,7 +19,7 @@ BEGIN_MESSAGE_MAP(LURL, LStatic)
 	ON_WM_SETCURSOR()
 	ON_WM_CTLCOLOR_REFLECT()
 	ON_WM_LBUTTONUP()
-	ON_WM_NCHITTEST()
+//	ON_WM_NCHITTEST()
 END_MESSAGE_MAP()
 
 //-----------------------------------------------------------------------
