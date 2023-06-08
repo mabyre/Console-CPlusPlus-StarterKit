@@ -252,14 +252,21 @@ int COSReportApp::ExitInstance()
 	// For memory leaks only
 	_AFX_THREAD_STATE* pThreadState = ::AfxGetThreadState();
 
-	CToolTipCtrl* pToolTip = pThreadState->m_pToolTip;
-	if (pToolTip != NULL)
+	CWnd* pWnd = CWnd::FromHandle(pThreadState->m_hWndInit);
+	if (pWnd != NULL)
 	{
-		pToolTip->DestroyWindow();
-		delete pToolTip;
-		pThreadState->m_pToolTip = NULL;
-		pToolTip = NULL;
+		pWnd->DestroyWindow();
+		delete pWnd;
 	}
+
+	//CToolTipCtrl* pToolTip = pThreadState->m_pToolTip;
+	//if (pToolTip != NULL)
+	//{
+	//	pToolTip->DestroyWindow();
+	//	delete pToolTip;
+	//	pThreadState->m_pToolTip = NULL;
+	//	pToolTip = NULL;
+	//}
 
 	SaveStdProfileSettings();
 	if (m_pRecentFileList != NULL)

@@ -56,13 +56,21 @@ void LOVUtils::Draw3DFrame(CDC& aDC, CRect& aRect)
 void LOVUtils::DestroyCToolTipCtrl(HWND aHwnd)
 {
 	_AFX_THREAD_STATE* pThreadState = AfxGetThreadState();
-	CToolTipCtrl* pToolTip = pThreadState->m_pToolTip;
-	if (pToolTip != NULL && pToolTip->GetOwner()->GetSafeHwnd() == aHwnd)
+
+	CWnd* pWnd = CWnd::FromHandle(pThreadState->m_hWndInit);
+	if (pWnd != NULL)
 	{
-		pToolTip->DestroyWindow();
-		delete pToolTip;
-		pThreadState->m_pToolTip = NULL;
+		pWnd->DestroyWindow();
+		delete pWnd;
 	}
+
+	//CToolTipCtrl* pToolTip = pThreadState->m_pToolTip;
+	//if (pToolTip != NULL && pToolTip->GetOwner()->GetSafeHwnd() == aHwnd)
+	//{
+	//	pToolTip->DestroyWindow();
+	//	delete pToolTip;
+	//	pThreadState->m_pToolTip = NULL;
+	//}
 }
 
 //-----------------------------------------------------------------------
