@@ -1,47 +1,19 @@
 /*--------------------------------------------------------------------------*\
  * Copyright (c) 1998-2000 AbyreSoft. Written by Bruno Raby.
  *--------------------------------------------------------------------------*
- * TTrace.c - Differents wais to make traces
- *--------------------------------------------------------------------------*
- * Play with Filters in ASTraceReporter
- * - DoTraceTrace
- * - DoTraceError
- * - DoTraceDebug
+ * TTrace.c - Differentes facons de faire des traces
 \*--------------------------------------------------------------------------*/
+
 #include "cMenu.h"
 #include "cInput.h"
 
-#include "cXTrace.h"
 #include "cCore.h"
+#include "cTrace.h"
 
-#include "pmTrace.h"
 #include "pmXError.h"
 #include "pmXTrace.h"
 #include "pmXDebug.h"
-
-#include <string>
-
-/*--------------------------------------------------------------------------*/
-
-static void DoTrace( void )
-{
-    int integ = 123;
-    auto i = 1;
-
-    c_trace( T( pmT_Core, "%s", "begining of the message "));
-    c_trace( T( pmT_Core, "%s", "following part of the message " ) );
-    c_trace( TL( pmT_Core, "%s", "endding" ) );
-
-    c_trace( TL( pmT_Core, "Verify you add message from PMLite Core"));
-
-    pm_trace0( "integ: %d", integ );
-    pm_trace0( "integ: %d", i );
-
-    pm_trace0( "auto i: %s", std::to_string( i ).c_str() );
-
-    std::string iStr = std::to_string( i );
-    pm_trace0( "string iStr: %s", iStr.c_str() );
-}
+#include "pmTrace.h"
 
 /*--------------------------------------------------------------------------*/
 
@@ -67,30 +39,53 @@ static void DoTraceTrace(void)
 
 static void DoTraceDebug(void)
 {
-    size_t      i;
-    pmbyte      theBuffer[ 256 ];
-
     PM_DEBUG0(TL("DEBUG 0 - Error tres grave"));
     PM_DEBUG1(TL("DEBUG 1 - Error grave"));
     PM_DEBUG2(TL("DEBUG 2 - Error faible"));
     PM_DEBUG3(TL("DEBUG 3 - Error tres faible"));
-
-    for ( i = 0; i < 256; i++ )
-        theBuffer[ i ] = (pmbyte)i;
-    
-    PM_DEBUG3(TL( "This is a buffer:" ));
-    PM_DEBUG3(B(theBuffer, (size_t) 256));
-
 }
 
 /*--------------------------------------------------------------------------*/
 
-static void DoTestPM_CODE( void )
+static void DoSetMaxMem(void)
 {
-    /* Macro pour inserer ou retirer du code de debug */
-    PM_CODE0( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 0" ) ); );
-    PM_CODE1( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 1" ) ); );
-    PM_CODE2( PM_DEBUG0( TL( "Ce code est actif si DEBUG_LEVEL > 2" ) ); );
+    pmuint32 theValue;
+
+    if (Input_UInt32("Enter max memory", &theValue, pmfalse, 0, pmtrue))
+        c_xmemdbg_set_max(theValue);
+}
+
+/*--------------------------------------------------------------------------*/
+
+static void DoAllocBlock(void)
+{
+    pmuint32 theValue;
+
+    if ( Input_UInt32("Enter block size", &theValue, pmfalse, 0, pmtrue) )
+    {
+        if (c_malloc(theValue) == 0)
+            c_printf("Allocation failed.\n");
+    }
+}
+
+/*--------------------------------------------------------------------------*/
+
+static void DoTestCheckMem(void)
+{
+    char* theStr = (char*) c_malloc(100);
+
+    if (theStr != 0)
+    {
+            /*  Write after the block end.  */
+        theStr[100] = 0;
+        
+            /*  Check memory status.    */
+        c_xmemdbg_check();
+
+        c_free(theStr);
+    }
+    else
+        c_printf("Not enough memory to perform the test\n");
 }
 
 /*--------------------------------------------------------------------------*/
@@ -101,85 +96,64 @@ static void DoTestTrace(void)
     pmuint32    theUInt32 = 0xFEDC1234;
     pmuint16    theUInt16 = 0xFE12;
     int         theInt = (int) 0xFE12FE12;
+    pmbyte      theBuffer[256];
+    size_t      i;
     
-    pm_trace0("This is an int32:");
-    pm_trace0("  unsigned [4275835444]=[%lu]", theUInt32);
-    pm_trace0("  signed   [-19131852]=[%ld]", theUInt32);
-    pm_trace0("  hexa     [fedc1234]=[%lx]", theUInt32);
+    // !!! some not supported
+    c_trace(TL(pmM_Test, "This is an int32:"));
+    c_trace(TL(pmM_Test, "  unsigned [4275835444]=[%lu]", theUInt32));
+    c_trace(TL(pmM_Test, "  signed   [-19131852]=[%ld]", theUInt32));
+    c_trace(TL(pmM_Test, "  hexa     [fedc1234]=[%lx]", theUInt32));
     
-    pm_trace0("This is an int16:");
-    pm_trace0("  unsigned [65042]=[%hu]", theUInt16);
-    pm_trace0("  signed   [-494]=[%hd]", theUInt16);
-    pm_trace0("  hexa     [FE12]=[%hX]", theUInt16);
+    c_trace(TL(pmM_Test, "This is an int16:"));
+    c_trace(TL(pmM_Test, "  unsigned [65042]=[%hu]", theUInt16));
+    c_trace(TL(pmM_Test, "  signed   [-494]=[%hd]", theUInt16));
+    c_trace(TL(pmM_Test, "  hexa     [FE12]=[%hX]", theUInt16));
     
-    pm_trace0("This is an int:");
+    c_trace(TL(pmM_Test, "This is an int:"));
     if (sizeof(int) == sizeof(pmint16))
     {
-        pm_trace0("  unsigned [65042]=[%u]", theInt);
-        pm_trace0("  signed   [-494]=[%d]", theInt);
-        pm_trace0("  hexa     [fe12]=[%x]", theInt);
+        c_trace(TL(pmM_Test, "  unsigned [65042]=[%u]", theInt));
+        c_trace(TL(pmM_Test, "  signed   [-494]=[%d]", theInt));
+        c_trace(TL(pmM_Test, "  hexa     [fe12]=[%x]", theInt));
     }
     else
     {
-        pm_trace0("  unsigned [4262657554]=[%u]", theInt);
-        pm_trace0("  signed   [-32309742]=[%d]", theInt);
-        pm_trace0("  hexa     [fe12fe12]=[%x]", theInt);
+        c_trace(TL(pmM_Test, "  unsigned [4262657554]=[%u]", theInt));
+        c_trace(TL(pmM_Test, "  signed   [-32309742]=[%d]", theInt));
+        c_trace(TL(pmM_Test, "  hexa     [fe12fe12]=[%x]", theInt));
     }
     
-    pm_trace0("This is a string [Hello world]=[%s]", "Hello world");
-    pm_trace0("This is a char [A]=[%c]", 'A');
+    c_trace(TL(pmM_Test, "This is a string [Hello world]=[%s]", "Hello world"));
+    c_trace(TL(pmM_Test, "This is a char [A]=[%c]", 'A'));
 
-    pm_trace0("This is a string [Hello]=[%5s]", "Hello world");
+    c_trace(TL(pmM_Test, "This is a string [Hello]=[%5s]", "Hello world"));
     
-    pm_trace0("This is a int16  [    0x41]=[%#8hx]", (pmuint16) 0x41);
-    pm_trace0("This is an int32 [  0x4141]=[%#8lx]", (pmuint32) 0x4141);
+    c_trace(TL(pmM_Test, "This is a int16  [    0x41]=[%#8hx]", (pmuint16) 0x41));
+    c_trace(TL(pmM_Test, "This is an int32 [  0x4141]=[%#8lx]", (pmuint32) 0x4141));
     
-    pm_trace0("This is a int16  [0x41    ]=[%#-8hx]", (pmuint16) 0x41);
-    pm_trace0("This is an int32 [0x4141  ]=[%#-8lx]", (pmuint32) 0x4141);
+    c_trace(TL(pmM_Test, "This is a int16  [0x41    ]=[%#-8hx]", (pmuint16) 0x41));
+    c_trace(TL(pmM_Test, "This is an int32 [0x4141  ]=[%#-8lx]", (pmuint32) 0x4141));
 
-    pm_trace0("This is an int32 [+20000]=[%#+2ld]", (pmuint32) 20000);
+    c_trace(TL(pmM_Test, "This is an int32 [+20000]=[%#+2ld]", (pmuint32) 20000));
     
-    pm_trace0("These are strange characters [\\t\\b\\n\\r]=[\t\b\n\r]");
+    c_trace(TL(pmM_Test, "These are strange characters [\\t\\b\\n\\r]=[\t\b\n\r]"));
     
-    pm_trace0("This is a line");
-    pm_trace0("break");
+    c_trace(TL(pmM_Test, "This is a line"));
+    c_trace(TL(pmM_Test, "break"));
     
-    pm_trace0("This is a percent sign [%%]=[%%]"); 
-}
-
-/*---------------------------------------------------------------------------*/
-
-static void DoTestTraceFloat( void )
-{
-    double theDouble;
-
-    theDouble = 3.14159265358979;
-
-    pm_trace0( "%1.5f", theDouble, 0 );
-    pm_trace0( "%5.20F", theDouble, 1 );
-    pm_trace0( "%5F", -2.1, 0 );
-    pm_trace0( "%1.1f", -3.0, 1 );
-    pm_trace0( "%5.5F", -theDouble, 1 );
-    pm_trace0( "%020.10f", -theDouble, 1 );
-
-    /* Display :
-    00024677:3.14159
-    00024677:3.14159265358979000737
-    00024677:-2.100000
-    00024677:-3.0
-    00024677:-3.14159
-    00024677:-00000003.1415926536
-     */
-
+    c_trace(TL(pmM_Test, "This is a percent sign [%%]=[%%]"));
+    
+    for (i = 0 ; i < 256 ; i++)
+        theBuffer[i] = (pmbyte) i;
+    c_trace(TL(pmM_Test, "This is a buffer:"));
+    c_trace(B(pmM_Test, theBuffer, (size_t) 256));
 }
 
 /*--------------------------------------------------------------------------*/
 
 static void DoTestStrings(void)
 {
-    char s_abcde[] = "ABCDE";
-    char s_abcd[] = "ABCD";
-
     /* ----- strcmp ----- */
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
     c_printf("LIBC  : strcmp(\"AAA\", \"AA\") = %d\n", strcmp("AAA", "AA"));
@@ -218,32 +192,32 @@ static void DoTestStrings(void)
     /* ----- strnicmp ----- */
     c_printf("\n");
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strnicmp(\"AAA\", \"aA\", 2) = %d\n", _strnicmp("AAA", "aA", 2));
+    c_printf("LIBC  : _strnicmp(\"AAA\", \"aA\", 2) = %d\n", strnicmp("AAA", "aA", 2));
 #endif
     c_printf("PMLITE: c_xstrnicmp(\"AAA\", \"AA\", 2) = %d\n", c_xstrnicmp("AAA", "AA", 2));
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strnicmp(\"AAA\", \"AA\", 3) = %d\n", _strnicmp("AAA", "AA", 3));
+    c_printf("LIBC  : _strnicmp(\"AAA\", \"AA\", 3) = %d\n", strnicmp("AAA", "AA", 3));
 #endif
     c_printf("PMLITE: c_xstrnicmp(\"AAA\", \"AA\", 3) = %d\n", c_xstrnicmp("AAA", "AA", 3));
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strnicmp(\"AAA\", \"aaa\", 4) = %d\n", _strnicmp("AAA", "aaa", 4));
+    c_printf("LIBC  : _strnicmp(\"AAA\", \"aaa\", 4) = %d\n", strnicmp("AAA", "aaa", 4));
 #endif
     c_printf("PMLITE: c_xstrnicmp(\"AAA\", \"aaa\", 4) = %d\n", c_xstrnicmp("AAA", "aaa", 4));
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strnicmp(\"A\", \"B\", 4) = %d\n", _strnicmp("A", "B", 0));
+    c_printf("LIBC  : _strnicmp(\"A\", \"B\", 4) = %d\n", strnicmp("A", "B", 0));
 #endif
     c_printf("PMLITE: c_xstrnicmp(\"A\", \"B\", 4) = %d\n", c_xstrnicmp("A", "B", 0));
 
     /* ----- strrev ----- */
     c_printf("\n");
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strrev(\"ABCDE\") = %s\n", _strrev( s_abcde ));
+    c_printf("LIBC  : _strrev(\"ABCDE\") = %s\n", strrev("ABCDE"));
 #endif
-    c_printf("PMLITE: c_xstrrev_imp(\"ABCDE\") = %s\n", c_xstrrev( s_abcde ));
+    c_printf("PMLITE: c_xstrrev_imp(\"ABCDE\") = %s\n", c_xstrrev("ABCDE"));
 #ifdef PMLITE_USE_LIBC_FOR_TESTS
-    c_printf("LIBC  : _strrev(\"ABCD\") = %s\n", _strrev( s_abcd ));
+    c_printf("LIBC  : _strrev(\"ABCD\") = %s\n", strrev("ABCD"));
 #endif
-    c_printf("PMLITE: c_xstrrev_imp(\"ABCD\") = %s\n", c_xstrrev( s_abcd ));
+    c_printf("PMLITE: c_xstrrev_imp(\"ABCD\") = %s\n", c_xstrrev("ABCD"));
 }
 
 /*--------------------------------------------------------------------------*/
@@ -270,20 +244,20 @@ static void DoTestIToA(void)
 
 /*--------------------------------------------------------------------------*/
 
-PMMENU_BEGIN( Trace, "Trace - Tests" )
-PMMENU_ITEM_EX( 1, "c_trace", DoTrace )
-PMMENU_ITEM_EX( 2, "module Error", DoTraceError )
-PMMENU_ITEM_EX( 3, "module Trace", DoTraceTrace )
-PMMENU_ITEM_EX( 4, "module Debug", DoTraceDebug )
-PMMENU_ITEM_SEPARATOR( "-----------------" )
-PMMENU_ITEM_EX( 5, "trace a float", DoTestTraceFloat )
-PMMENU_ITEM_EX( 6, "PM CODE", DoTestPM_CODE )
-PMMENU_ITEM_SEPARATOR( "-----------------" )
-PMMENU_ITEM_EX( 7, "Formated traces test", DoTestTrace )
-PMMENU_ITEM_EX( 8, "Strings", DoTestStrings )
-PMMENU_ITEM_EX( 9, "itoa", DoTestIToA )
+PMMENU_BEGIN(Trace, "Trace - Tests")
+    PMMENU_ITEM_EX(1, "Test du module Error", DoTraceError )
+    PMMENU_ITEM_EX(2, "Test du module Trace", DoTraceTrace )
+    PMMENU_ITEM_EX(3, "Test du module Debug", DoTraceDebug )
+    PMMENU_ITEM_SEPARATOR("-----------------")
+    PMMENU_ITEM_EX(4, "Set max mem", DoSetMaxMem)
+    PMMENU_ITEM_EX(5, "Allocate block", DoAllocBlock)
+    PMMENU_ITEM_EX(6, "Test CheckMem", DoTestCheckMem)
+    PMMENU_ITEM_SEPARATOR("-----------------")
+    PMMENU_ITEM_EX(7, "Traces test", DoTestTrace)
+    PMMENU_ITEM_EX(8, "Strings", DoTestStrings)
+    PMMENU_ITEM_EX(9, "itoa", DoTestIToA)
 PMMENU_END()
 
 /*--------------------------------------------------------------------------*/
 
-PMMENU_DEFAULT_HANDLER( Trace )
+PMMENU_DEFAULT_HANDLER(Trace)

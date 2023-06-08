@@ -29,7 +29,7 @@ void NT_TestMain(void)
    PMMenu_InitializeMainMenu();
 
    //PMMENU_USE( Menu );
-   //PMMENU_USE( Trace );
+   PMMENU_USE( Trace );
    //PMMENU_USE( Input );
    //PMMENU_USE( Mem );
    //PMMENU_USE( Test2 );

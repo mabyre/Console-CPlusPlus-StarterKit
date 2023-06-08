@@ -1,0 +1,18 @@
+Welcome to Reporter (C) 1998 SoDevLog
+
+00000000:Stack_P_GetDir(): Stack is [Up-Down]
+00000001:c_stack_dump_usage(): Stack maximum depth reached: (52) in [c_malloc_dbg_imp]
+00000001:c_stack_dump_usage(): Stack maximum depth reached: (76) in [c_malloc_dbg_imp]
+00000001:c_stack_dump_usage(): Stack maximum depth reached: (128) in [c_malloc_dbg_imp]
+00013348:begining of the message following part of the message endding
+00013348:Verify you add message from PMLite Core
+00013348:integ: 123
+00013348:integ: 1
+00013349:auto i: 1
+00013349:string iStr: 1
+00024677:3.14159
+00024677:3.14159265358979000737
+00024677:-2.100000
+00024677:-3.0
+00024677:-3.14159
+00024677:-00000003.1415926536
