@@ -44,7 +44,4 @@
   <ItemGroup>
     <None Include="ASTrace.def" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="ASTrace.txt" />
-  </ItemGroup>
 </Project>
