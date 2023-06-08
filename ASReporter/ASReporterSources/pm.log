@@ -16,3 +16,121 @@ Creating entry [TRACE2] for code [1002ffff]
 Creating entry [TRACE3] for code [1003ffff]
 Listening thread started successfully.
 PMWinSock11::PumpMessages(): Waiting...
+PMWinSock11::WaitForConnection(): Accepting connection from: 127.0.0.1 port 55459
+COSReportDoc::OnNewDocument(): Format thread (16004) started successfully.
+CEditView::OnInitialUpdate()
+COSReportApp::NewSocket(): Reader thread (10500) started successfully.
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 4
+COSReportView::DumpText(): TextLen (312), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (41), SelStart (41), SelEnd(41).
+COSReportView::DumpText(): EditLen final (353).
+PMWinSock11::InternalDispatchMessage(): Notified with error: 10057
+COSReportApp::OSRReadThreadProc(): Reader thread (10500) terminated.
+COSReportApp::OSRReadThreadProc(): Format thread (16004) terminated.
+PMWinSock11::WaitForConnection(): Accepting connection from: 127.0.0.1 port 55481
+COSReportDoc::OnNewDocument(): Format thread (15268) started successfully.
+CEditView::OnInitialUpdate()
+COSReportApp::NewSocket(): Reader thread (4064) started successfully.
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 4
+COSReportView::DumpText(): TextLen (312), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (41), SelStart (41), SelEnd(41).
+COSReportView::DumpText(): EditLen final (353).
+PMWinSock11::InternalDispatchMessage(): Notified with error: 10057
+COSReportApp::OSRReadThreadProc(): Reader thread (4064) terminated.
+COSReportApp::OSRReadThreadProc(): Format thread (15268) terminated.
+PMWinSock11::WaitForConnection(): Accepting connection from: 127.0.0.1 port 55482
+COSReportDoc::OnNewDocument(): Format thread (6240) started successfully.
+CEditView::OnInitialUpdate()
+COSReportApp::NewSocket(): Reader thread (20540) started successfully.
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 4
+COSReportView::DumpText(): TextLen (312), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (41), SelStart (41), SelEnd(41).
+COSReportView::DumpText(): EditLen final (353).
+PMWinSock11::InternalDispatchMessage(): Notified with error: 10057
+COSReportApp::OSRReadThreadProc(): Reader thread (20540) terminated.
+COSReportApp::OSRReadThreadProc(): Format thread (6240) terminated.
+PMWinSock11::WaitForConnection(): Accepting connection from: 127.0.0.1 port 55484
+COSReportDoc::OnNewDocument(): Format thread (17168) started successfully.
+CEditView::OnInitialUpdate()
+COSReportApp::NewSocket(): Reader thread (19292) started successfully.
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 4
+COSReportView::DumpText(): TextLen (312), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (41), SelStart (41), SelEnd(41).
+COSReportView::DumpText(): EditLen final (353).
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportView::DumpText(): TextLen (18), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (353), SelStart (353), SelEnd(353).
+COSReportView::DumpText(): EditLen final (371).
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportView::DumpText(): TextLen (15), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (371), SelStart (371), SelEnd(371).
+COSReportView::DumpText(): EditLen final (386).
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportView::DumpText(): TextLen (31), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (386), SelStart (386), SelEnd(386).
+COSReportView::DumpText(): EditLen final (417).
+PMWinSock11::InternalDispatchMessage(): Notified with error: 10057
+COSReportApp::OSRReadThreadProc(): Reader thread (19292) terminated.
+COSReportApp::OSRReadThreadProc(): Format thread (17168) terminated.
+PMWinSock11::WaitForConnection(): Accepting connection from: 127.0.0.1 port 55501
+COSReportDoc::OnNewDocument(): Format thread (21064) started successfully.
+CEditView::OnInitialUpdate()
+COSReportApp::NewSocket(): Reader thread (6156) started successfully.
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 4
+COSReportView::DumpText(): TextLen (312), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (41), SelStart (41), SelEnd(41).
+COSReportView::DumpText(): EditLen final (353).
+PMSocket::Read(): sizeMax = 0
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 8
+COSReportView::DumpText(): TextLen (207), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (353), SelStart (353), SelEnd(353).
+COSReportView::DumpText(): EditLen final (560).
+PMSocket::Read(): sizeMax = 0
+PMSocket::Read(): sizeMax = 0
+PMWinSock11::PumpMessages(): Waiting...
+COSReportDoc::DoNewTrace(): Pending count: 6
+COSReportView::DumpText(): TextLen (136), MaxEditSize (262144).
+COSReportView::DumpText(): EditLen (560), SelStart (560), SelEnd(560).
+COSReportView::DumpText(): EditLen final (696).
+PMWinSock11::InternalDispatchMessage(): Notified with error: 10057
+COSReportApp::OSRReadThreadProc(): Reader thread (6156) terminated.
+COSReportApp::OSRReadThreadProc(): Format thread (21064) terminated.
+Reader thread (10500) stopped successfully.
+Format thread (16004) stopped successfully.
+Reader thread (4064) stopped successfully.
+Format thread (15268) stopped successfully.
+Reader thread (20540) stopped successfully.
+Format thread (6240) stopped successfully.
+Reader thread (19292) stopped successfully.
+Format thread (17168) stopped successfully.
+Reader thread (6156) stopped successfully.
+Format thread (21064) stopped successfully.
+PMWinSock11::InternalDispatchMessage(): Aborted
+COSReportApp::Listen(): Acceptor aborted.
+Listening thread stopped successfully.
+Win32 stub closed.
