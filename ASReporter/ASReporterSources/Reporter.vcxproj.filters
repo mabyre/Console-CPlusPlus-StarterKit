@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ObjectSet">
+      <UniqueIdentifier>{3ad4ed4b-5344-4ad4-8ab4-65fa276d60f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectSet\Include Files">
+      <UniqueIdentifier>{7273d621-2355-4aa9-b3d6-f3e52f531f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectSet Visual">
+      <UniqueIdentifier>{3d110fa6-844d-497e-8329-c187f0f5f091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectSet Visual\Include Files No. 1">
+      <UniqueIdentifier>{d1c9eb4c-da5a-4919-97c0-1448fa004367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reporter">
+      <UniqueIdentifier>{225bffe7-336a-4a63-972d-de190a6eecea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reporter\Header Files">
+      <UniqueIdentifier>{dbda7e50-4e87-477c-953e-0a1ecb042b33}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Reporter\Resource Files">
+      <UniqueIdentifier>{302db908-888d-4df0-87f6-11a1987b21a3}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="OS\PMANSIFM.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMArray.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMBuffer.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMCharS.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMCriSec.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMData.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMDebug.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMError.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMFileTr.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMHTbl.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMMedia.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMMemVC4.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMMoniCB.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMMonit.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMOSHelp.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMPrintf.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMPushB.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMRC.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMSVC4.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMScan.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMSocket.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMStr.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMStream.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMStub.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMTCPSoc.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMTLS.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMTrace.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMW32Hlp.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMWFilTr.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMWSoc11.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMWTCPTr.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OS\PMXTrace.cpp">
+      <Filter>ObjectSet</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LBitmap.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LButton.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LContain.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LControl.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LDialog.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LDoc.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LFlatBar.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LHLine.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LImgList.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LMDICWnd.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LMSWnd.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LMultDoc.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LOVReg.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LOVUtils.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LPPage.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LSizable.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LStatic.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LTab.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LTipInfo.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="OV\LURL.cpp">
+      <Filter>ObjectSet Visual</Filter>
+    </ClCompile>
+    <ClCompile Include="CAboutDlg.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CChildFrame.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CFiltersDlg.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CFiltersPP.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CGotoDlg.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CMainFrm.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="COSRThreads.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="COSReportDoc.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="COSReportView.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CTipDlg.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="CTrGroups.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="OSReport.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Reporter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OS\PMANSIFM.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMArray.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMAstExc.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMBuffer.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMCharS.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMCriSec.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMData.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMDebug.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMDefVC4.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMDefs.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMError.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMFileTr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMHTbl.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMMedia.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMMemSt.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMMemVC4.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMMoniCB.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMMonit.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMOSHelp.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMPrintf.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMPushB.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMRC.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMSVC4.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMScan.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMSocket.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMStr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMStream.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMStub.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMTCPSoc.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMTCPTr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMTLS.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMTrace.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMTypes.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMW32Hlp.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMWErr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMWFilTr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMWSoc11.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMWTCPTr.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMWinInc.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OS\PMXTrace.h">
+      <Filter>ObjectSet\Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LBitmap.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LButton.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LContain.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LControl.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LDefines.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LDialog.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LDoc.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LFlatBar.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LHLine.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LImgList.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LMSWnd.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LMultDoc.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LOVReg.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LOVUtils.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LPPage.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LSizable.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LStatic.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LTab.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LTipInfo.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="OV\LURL.h">
+      <Filter>ObjectSet Visual\Include Files No. 1</Filter>
+    </ClInclude>
+    <ClInclude Include="CAboutDlg.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CChildFrame.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CFiltersDlg.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CFiltersPP.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CGotoDlg.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMainFrm.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COSRThreads.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COSReportDoc.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COSReportView.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTipDlg.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrGroups.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OSReport.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Res\Resource.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Reporter\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Res\ASTarget.rc">
+      <Filter>Reporter\Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="Res\Reporter.rc">
+      <Filter>Reporter\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\ReportDoc.ico">
+      <Filter>Reporter\Resource Files</Filter>
+    </Image>
+    <Image Include="Res\Reporter.ico">
+      <Filter>Reporter\Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Reporter\Resource Files</Filter>
+    </Image>
+    <Image Include="res\litebulb.bmp">
+      <Filter>Reporter\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\Reporter.rc2">
+      <Filter>Reporter\Resource Files</Filter>
+    </None>
+    <None Include="res\lurl.cur">
+      <Filter>Reporter\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Version.lib" />
+  </ItemGroup>
+</Project>
