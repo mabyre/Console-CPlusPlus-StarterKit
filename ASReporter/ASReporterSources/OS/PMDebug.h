@@ -70,7 +70,7 @@
 #define noPMF_NO_TRACE
 
 	/**	If PMF_NO_TYPEINFO is defined, no RTTI-related functions will be used.	*/
-#define noPMF_NO_TYPEINFO
+#define PMF_NO_TYPEINFO
 
 // ===========================================================================
 //	PMFinalRelease
