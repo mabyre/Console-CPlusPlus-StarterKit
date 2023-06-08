@@ -502,6 +502,7 @@ void COSReportDoc::DumpTraceBlock(COSReportView* aView, PMBufferRef aTrace)
 		BYTE	theChar;
 		BYTE	*thePtr, *thePtr2;
 		thePtr = (BYTE*)theParam.itsParam.itsData;
+		CStringA cStr(reinterpret_cast<char*>(thePtr));
 		while (1)
 		{
 			thePtr2 = thePtr;
@@ -511,7 +512,7 @@ void COSReportDoc::DumpTraceBlock(COSReportView* aView, PMBufferRef aTrace)
 				break;
 			theChar = *thePtr2;
 			*thePtr2 = 0;
-			theString += (char)thePtr;
+			theString += cStr.GetString();
 			if (theChar < ' ')
 				theString += sCtrlChars[(size_t)theChar];
 			else
@@ -520,7 +521,7 @@ void COSReportDoc::DumpTraceBlock(COSReportView* aView, PMBufferRef aTrace)
 			thePtr = thePtr2 + 1;
 		}
 		if (*thePtr != 0)
-			theString += (char)thePtr;
+			theString += cStr.GetString();
 
 		/* theString += (char*)theParam.itsParam.itsData; */
 		itsfStartOfLine = (theParam.itsParam.itsKind == PMTrace_kKindEOT);
