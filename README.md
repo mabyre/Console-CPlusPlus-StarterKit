@@ -43,9 +43,7 @@ Another GitHub project with a Console MinGW that can help:
 
 ## For little story ##
 
-One day I made it, I rebuilding this project with ***Visual Studio Community 2019***
-
-I unearthed it from a very old computer for an ***IoT*** project that I had to develop.
+One day I made it, I rebuilding this project with ***Visual Studio Community 2019***. I unearthed it from a very old computer for an ***IoT*** project that I had to develop.
 
 For my notes:
 
@@ -64,7 +62,7 @@ Now it's ready for thousands of years.
 
 - Clone the repository
 
-> If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln) and run, it will not work.
+> :warning: If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln) and run, it will not work.
 
 - Generate [ASDLLTrace](#ASDLLTrace) 
 
@@ -148,3 +146,8 @@ The tracing system by recording the traces allows you to do non-regression simpl
 
 [Trace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ConsoleCPlusPlus/Trace)
 
+Last thing, have a look to the source code you can find here. This one is to test your machine byte ordering depending on the type platform you are running on: LITTLE INDIAN or BIG INDIAN:
+
+[TBOrder.c](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/PMLiteC/PMLitec/Test/TBOrder.c)
+
+Have fun and don't forget it's only software!
