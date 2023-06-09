@@ -9,21 +9,13 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Template|Win32">
-      <Configuration>Template</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <SccProjectName />
     <SccLocalPath />
-    <ProjectGuid>{BC2C8FC7-914E-4AE8-9E11-785BC6314A7B}</ProjectGuid>
+    <ProjectGuid>{621BCC55-F581-40F6-916E-B11A2EA0A8DD}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
@@ -38,9 +30,6 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -94,12 +83,12 @@
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <DebugInformationFormat>None</DebugInformationFormat>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\..\..\PMLiteC\Common;..\..\..\PMLiteC\WinNT;..\..\..\PMLiteC\Common\Stream;..;..\..\WinNT;..\..\..\PMLiteC\Common\Serial;..\..\..\PMLiteC\Common\Socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
@@ -165,13 +154,9 @@
     <ClCompile Include="..\..\WinNT\pmXTrace.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\inc\cXTrace.h" />
-    <ClInclude Include="..\..\..\inc\cXTypes.h" />
-    <ClInclude Include="..\..\..\inc\pmTrace.h" />
-    <ClInclude Include="..\..\..\inc\pmTypes.h" />
-    <ClInclude Include="..\..\..\inc\pmXTrace.h" />
     <ClInclude Include="..\..\Common\cCore.h" />
     <ClInclude Include="..\..\Common\cMemory.h" />
+    <ClInclude Include="..\..\Common\cTrace.h" />
     <ClInclude Include="..\..\Common\cTypes.h" />
     <ClInclude Include="..\..\Common\cXBorder.h" />
     <ClInclude Include="..\..\Common\cXCore.h" />

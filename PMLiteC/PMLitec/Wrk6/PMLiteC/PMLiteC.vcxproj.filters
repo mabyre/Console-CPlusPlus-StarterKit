@@ -2,22 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Common">
-      <UniqueIdentifier>{a298ae0a-00b8-4362-b0eb-683d7947d8da}</UniqueIdentifier>
+      <UniqueIdentifier>{29cd5219-ebb2-45e9-b439-19a1633a64e5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common\Stream">
-      <UniqueIdentifier>{1e174bf7-fefc-4ce4-9e61-86aaae836dd4}</UniqueIdentifier>
+      <UniqueIdentifier>{dae07dbe-c630-425d-a302-ae4f572dc8e2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common\Socket">
-      <UniqueIdentifier>{bc64608e-8700-4ae3-ba0d-fe485a8455ac}</UniqueIdentifier>
+      <UniqueIdentifier>{0561eb44-217d-4e0d-9215-169426ab63e7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common\Serial">
-      <UniqueIdentifier>{ae4c7fa8-50a5-482f-9818-5ffb2d2799ea}</UniqueIdentifier>
+      <UniqueIdentifier>{756b53af-0460-4e8d-8629-0c69a292e395}</UniqueIdentifier>
     </Filter>
     <Filter Include="WinNT">
-      <UniqueIdentifier>{b4077965-890c-4a03-b441-0983cc590286}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="inc">
-      <UniqueIdentifier>{67eb3c6e-becc-4403-8fdd-19d9ca63560b}</UniqueIdentifier>
+      <UniqueIdentifier>{70858cad-6597-43cd-85ef-cfb62ba5b401}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +227,9 @@
     <ClInclude Include="..\..\Common\cMemory.h">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Common\cTrace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Common\cTypes.h">
       <Filter>Common</Filter>
     </ClInclude>
@@ -304,21 +304,6 @@
     </ClInclude>
     <ClInclude Include="..\..\WinNT\pmXEnv.h">
       <Filter>WinNT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\inc\cXTrace.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\inc\cXTypes.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\inc\pmTrace.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\inc\pmTypes.h">
-      <Filter>inc</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\inc\pmXTrace.h">
-      <Filter>inc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
