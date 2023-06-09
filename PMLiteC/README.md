@@ -48,7 +48,7 @@ At this level you are in pure C Langage for portable reasons mentionned above. F
 
 You cans open the solution:
 
-[Wrk6.sln]https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/PMLiteC/PMLitec/Wrk6/Wrk6.sln
+[TPMLite.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/PMLiteC/PMLitec/Wrk6/TPMLite.sln)
 
 You will be in front of two projects:
 
