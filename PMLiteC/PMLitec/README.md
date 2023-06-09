@@ -1,9 +1,9 @@
 ## 05/07/2002 - Mabyre
 Je viens de trouver le moyen de tracer des flottants en me servant de la fonction vsprintf.
-Le Reporter poss�de maintenant 3 types de traces TRACE, ERROR et DEBUG.
+Le Reporter possède maintenant 3 types de traces TRACE, ERROR et DEBUG.
 Pour chacun de ces trois type il y a 4 niveaux de traces.
-Les traces en flottants sont implement�es au dessus des modules DEBUG et TRACE
-Ces fonctions sont implemant�es dans les modules pmTrace.c et pmDebug.c
+Les traces en flottants sont implementées au dessus des modules DEBUG et TRACE
+Ces fonctions sont implemantées dans les modules pmTrace.c et pmDebug.c
 	 
 ## 27/12/2000 - Mabyre
 DEBUGx functions added to be compible with unix style debug
