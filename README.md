@@ -4,11 +4,9 @@ For developers vho want to totaly masterise thier developments in C/C++.
 
 It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be very able to mastrerise all your source codes.
 
-> #### Terms
->
-> - **PM** mean Protocol or Protable Machinery for multiplatform development.
->
-> - **AS** is for AbyreSoft the beginnings of SoDevLog.
+#### Terms:
+- **PM** mean Protocol or Protable Machinery for multiplatform development.
+- **AS** is for AbyreSoft the beginnings of SoDevLog.
 
 ## Features ##
 
@@ -29,6 +27,7 @@ Any IDE that can make a reference to a library. Here it's ***Visual Studio Commu
 - [ASReporter](#ASReporter) or Reporter is a windows application that display traces
 - [PMLiteC](#PMLiteC) code adapted to your platform for Traces communication
 - [ConsoleCPlusPlus](#ConsoleCPlusPlus) your project under test using your code in C/C++
+- [Conclusion](#Conclusion) a new world opens in front of your eyes
 
 ## Want to know more ##
 
@@ -138,4 +137,14 @@ Your project, your code under tests under Traces
 Once you will run your project you can get the following result :
 
 <img style="margin: 10px" src="Images/2023-06-07_16h59_00.png" alt="The Reporter hear ConsoleCplusPlus" />
+
+## Conclusion ##
+
+I hope that you will open this new world in front of you, this world of development in C and C++ language appeased by the total control of your sources code.
+
+Indeed the TraceReporter allows you to develop in a serene way by adding a total control of the functionalities that you develop.
+
+The tracing system by recording the traces allows you to do non-regression simply by including the results files you will realize your errors:
+
+[Trace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ConsoleCPlusPlus/Trace)
 
