@@ -2,7 +2,7 @@
 
 For developers vho want to totaly masterise thier developments in C/C++. 
 
-It's a very huge project, in tree parts, hard to take in hands. But if you do so, you will be very able to mastrerise all your source codes.
+It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be very able to mastrerise all your source codes.
 
 Terms:
 
@@ -25,9 +25,10 @@ Any IDE that can make a reference to a library. Here it's ***Visual Studio Commu
 ## Summary ##
 
 - [Generate](#Generate) generation is required
-- [ASReporter](#ASReporter) or Reporter is a windows application that display traces
 - [ASDLLTrace](#ASDLLTrace) the Communication DLL between your code and the Reporter
-
+- [ASReporter](#ASReporter) or Reporter is a windows application that display traces
+- [PMLiteC](#PMLiteC) code adapted to your platform for Traces communication
+- [ConsoleCPlusPlus](#ConsoleCPlusPlus) your project under test using your code in C/C++
 
 ## Want to know more ##
 
@@ -64,11 +65,11 @@ Now it's ready for thousands of years.
 
 - Clone the repository
 
-If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln) it will not work.
+> If you directly open the [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln) and run, it will not work.
 
-- Generate ASDLLTrace 
+- Generate [ASDLLTrace](#ASDLLTrace) 
 
-First of all generate ASDLLTrace open solution [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
+First of all generate ASDLLTrace, open the first solution [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
 
 Verify you are well in configuration ***Debug x86*** right-click on the project ASTrace:
 
@@ -77,33 +78,32 @@ Verify you are well in configuration ***Debug x86*** right-click on the project 
  Choose Generate:
 
 <img style="margin: 10px" src="Images/2023-06-07_16h52_07.png" alt="Open Solution ASTrace.sln" />
- 
 
-- Open Solution [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln)
+Open the second solution [ConsoleCPlusPlus.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ConsoleCPlusPlus/ConsoleCPlusPlus.sln)
+
+Inside you have two projects, it's your code under test with ConsoleCPlusPlus and PMLiteC
 
 <img style="margin: 10px" src="Images/2023-06-07_12h36_41.png" alt="Open Solution ConsoleCPlusPlus" />
-
-Inside you have two projects:
-
-ConsoleCPlusPlus and PMLiteC
 
 First of all verify you are in configuration x86:
 
 <img style="margin: 10px" src="Images/2023-06-07_12h42_00.png" alt="Verify you are in x86 configuration" />
 
-- Generate PMLiteC
+- Generate [PMLiteC](#PMLiteC)
 
 <img style="margin: 10px" src="Images/2023-06-07_12h45_46.png" alt="Generate PMLiteC" />
 
-- Generate ConsoleCPlusPlus
+- Generate [ConsoleCPlusPlus](#ConsoleCPlusPlus)
 
 <img style="margin: 10px" src="Images/2023-06-07_12h47_21.png" alt="Generate ConsoleCplusPlus" />
 
-You are now ready to develop your source code in ConsoleCplusPlus and make Traces.
+You are now ready to develop your source code in ConsoleCplusPlus and make Traces to the Reporter.
+
+- Run your project
 
 First of All run the Reporter:
 
-Click On Reporter.exe you will find in \ASReporter\Release
+Click On Reporter.exe you will find in directory \ASReporter\Release\
 
 <img style="margin: 10px" src="Images/2023-06-07_11h21_48.png" alt="The Reporter hear ConsoleCplusPlus" />
 
@@ -115,15 +115,21 @@ At each time you will need to execute the Reporter before your project therefor 
 
 ### ASDLLTrace ###
 
-The communication DLL for Traces using socket TCP/IP
+The communication DLL for Traces using socket TCP/IP, used by the Reporter and your project to emite Traces.
+
+Source Code: [ASDLLTrace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASDLLTrace)
 
 ### ASReporter ###
 
-The application that display Traces
+The application that display Traces in a non-MFC windows application
+
+Source Code! [ASReporter](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASReporter)
 
 ### PMLiteC ###
 
 The Protocole Machinery adapted to your project
+
+Source Code: [PMLiteC](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/PMLiteC)
 
 ### ConsoleCPlusPlus ###
 
