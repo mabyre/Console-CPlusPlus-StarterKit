@@ -33,6 +33,9 @@
     <ClCompile Include="..\..\Test\TXCore.c">
       <Filter>Test</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Test\TInput.c">
+      <Filter>Test</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\..\..\ASDLLTrace\ASDLLTraceSources\Debug\ASTrace.lib" />

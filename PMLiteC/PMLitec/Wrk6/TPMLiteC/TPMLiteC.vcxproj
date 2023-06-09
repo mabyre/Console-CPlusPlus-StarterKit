@@ -141,6 +141,7 @@
     <ClCompile Include="..\..\Test\TCore.c" />
     <ClCompile Include="..\..\Test\TDLList.c" />
     <ClCompile Include="..\..\Test\TestMain.c" />
+    <ClCompile Include="..\..\Test\TInput.c" />
     <ClCompile Include="..\..\Test\TMenu.c" />
     <ClCompile Include="..\..\Test\TStack.c" />
     <ClCompile Include="..\..\Test\TTrace.c" />

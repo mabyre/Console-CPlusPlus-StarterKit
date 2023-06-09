@@ -9,32 +9,34 @@
 
 /*---------------------------------------------------------------------------*/
 
-PMMENU_DECLARE(BOrder);
-PMMENU_DECLARE(Core);
-PMMENU_DECLARE(DLList);
-PMMENU_DECLARE(Menu);
-PMMENU_DECLARE(Stack);
-PMMENU_DECLARE(XCore);
+PMMENU_DECLARE( BOrder );
+PMMENU_DECLARE( Core );
+PMMENU_DECLARE( DLList );
+PMMENU_DECLARE( Menu );
+PMMENU_DECLARE( Input );
+PMMENU_DECLARE( Stack );
+PMMENU_DECLARE( XCore );
 
 /*---------------------------------------------------------------------------*/
-void NT_TestMain(void)
+void NT_TestMain( void )
 {
-   /* c_xstack_reset_usage(); */
-   c_xthread_init();
+    /* c_xstack_reset_usage(); */
+    c_xthread_init();
 
-   PMMenu_InitializeMainMenu();
+    PMMenu_InitializeMainMenu();
 
-   PMMENU_USE(BOrder);
-   PMMENU_USE(Core);
-   PMMENU_USE(DLList);
-   PMMENU_USE(Menu);
-   PMMENU_USE(Stack);
-   PMMENU_USE(XCore);
-   
-   PMMenu_ExecuteMainMenu();
+    PMMENU_USE( BOrder );
+    PMMENU_USE( Core );
+    PMMENU_USE( DLList );
+    PMMENU_USE( Menu );
+    PMMENU_USE( Input );
+    PMMENU_USE( Stack );
+    PMMENU_USE( XCore );
 
-   PMMenu_DeleteMainMenu();
+    PMMenu_ExecuteMainMenu();
 
-   c_xmemdbg_dump_state();
-   c_xthread_term();
+    PMMenu_DeleteMainMenu();
+
+    c_xmemdbg_dump_state();
+    c_xthread_term();
 }
