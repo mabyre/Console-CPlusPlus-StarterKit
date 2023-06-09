@@ -1,0 +1,615 @@
+Welcome to Trace Reporter v2.0 (C)1990 Tracer AbyreSoft
+
+00000000:Stack_P_GetDir(): Stack is [Up-Down]
+00000001:c_stack_dump_usage(): Stack maximum depth reached: (204) in [c_malloc_dbg_imp]
+00000002:c_stack_dump_usage(): Stack maximum depth reached: (228) in [c_malloc_dbg_imp]
+00000002:c_stack_dump_usage(): Stack maximum depth reached: (432) in [c_malloc_dbg_imp]
+00002982:BEGIN 5
+00002984:c_stack_dump_usage(): Stack maximum depth reached: (600) in [FcqInit]
+00002984:OS : creating mutex (132)
+00002984:c_stack_dump_usage(): Stack maximum depth reached: (608) in [FcqNew]
+00002986:FCQ allocating q 0
+00002993:c_stack_dump_usage(): Stack maximum depth reached: (704) in [FcqSetName]
+00002993:FCQ allocating q 1
+00002993:FCQ allocating q 2
+00003011:FCQ allocating q 3
+00003028:FCQ allocating q 4
+00003028:FCQ allocating q 5
+00003028:OS : creating mutex (140)
+00003028:OS : creating mutex (148)
+00003037:OS : creating mutex (156)
+00003054:OS : creating mutex (164)
+00003055:OS : creating mutex (172)
+00003055:OS : creating mutex (180)
+00003147:OS : Waiting for mutex (132)
+00003149:OS : Mutex (132) acquired
+00003150:FCQ disabling q L2E0
+00003150:OS : Releasing mutex (132)
+00003234:OS : Waiting for mutex (132)
+00003234:OS : Mutex (132) acquired
+00003236:FCQ enabling q L2E0
+00003237:OS : Releasing mutex (132)
+00003253:OS_EventMask 136: begin wait
+00003257:OS : Waiting for mutex (132)
+00003258:OS : Mutex (132) acquired
+00003259:FCQ disabling q L2E0
+00003259:OS : Releasing mutex (132)
+00003344:OS : Waiting for mutex (132)
+00003344:OS : Mutex (132) acquired
+00003345:FCQ enabling q L2E0
+00003347:OS : Releasing mutex (132)
+00003363:OS : Waiting for mutex (132)
+00003363:OS : Mutex (132) acquired
+00003363:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003367:OS : Waiting for mutex (132)
+00003382:FCQ putting msg onto q L3E0
+00003382:FCQ putting q L3E0 on ready list 1
+00003382:FCQ Wakeup!
+00003382:OS : Waiting for mutex (140)
+00003454:OS : Waiting for mutex (132)
+00003454:OS : Mutex (140) acquired
+00003545:OS : Releasing mutex (140)
+00003545:OS_EventMask 136: signalling
+00003545:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003540:OS : Waiting for mutex (132)
+00003620:OS : Waiting for mutex (132)
+00003620:OS_EventMask 136: end wait
+00003675:OS : Waiting for mutex (140)
+00003620:FCQ putting msg onto q L3E0
+00003678:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003678:FCQ putting msg onto q L3E0
+00003678:OS : Releasing mutex (132)
+00003675:OS : Waiting for mutex (132)
+00003677:OS : Mutex (140) acquired
+00003680:OS : Mutex (132) acquired
+00003682:FCQ disabling q L2E0
+00003682:OS : Releasing mutex (132)
+00003684:OS : Releasing mutex (140)
+00003682:OS_EventMask 144: begin wait
+00003685:OS : Mutex (132) acquired
+00003685:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003685:OS : Waiting for mutex (132)
+00003687:FCQ putting msg onto q L3E1
+00003688:FCQ putting q L3E1 on ready list 1
+00003688:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003690:FCQ putting msg onto q L3E1
+00003691:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003691:FCQ putting msg onto q L3E1
+00003691:OS : Releasing mutex (132)
+00003692:OS_EventMask 152: begin wait
+00003694:OS : Mutex (132) acquired
+00003694:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003694:FCQ putting msg onto q L3E2
+00003695:FCQ putting q L3E2 on ready list 1
+00003697:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003697:FCQ putting msg onto q L3E2
+00003697:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003698:FCQ putting msg onto q L3E2
+00003700:OS : Releasing mutex (132)
+00003700:OS_EventMask 160: begin wait
+00003700:OS : Mutex (132) acquired
+00003700:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003702:FCQ putting msg onto q L3E3
+00003703:FCQ putting q L3E3 on ready list 1
+00003703:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003703:FCQ putting msg onto q L3E3
+00003704:OS : Waiting for mutex (132)
+00003706:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003706:FCQ putting msg onto q L3E3
+00003706:OS : Releasing mutex (132)
+00003707:OS : Mutex (132) acquired
+00003709:FCQ enabling q L2E0
+00003709:OS : Releasing mutex (132)
+00003709:OS_EventMask 168: begin wait
+00003709:OS : Mutex (132) acquired
+00003710:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003712:FCQ putting msg onto q L3E4
+00003712:FCQ putting q L3E4 on ready list 1
+00003712:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003713:FCQ putting msg onto q L3E4
+00003715:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003715:FCQ putting msg onto q L3E4
+00003715:OS : Releasing mutex (132)
+00003716:OS_EventMask 176: begin wait
+00003717:OS : Mutex (132) acquired
+00003718:FCQ running q L3E0 priority 1
+00003718:FCQ getting msg from q L3E0
+00003719:FCQ putting msg onto q L2E0
+00003720:FCQ putting q L2E0 on ready list 1
+00003720:FCQ getting msg from q L3E0
+00003721:OS : Waiting for mutex (148)
+00003722:OS : Mutex (148) acquired
+00003723:OS : Releasing mutex (148)
+00003723:OS_EventMask 144: signalling
+00003723:FCQ putting msg onto q L2E0
+00003725:OS_EventMask 144: end wait
+00003726:OS : Waiting for mutex (148)
+00003726:OS : Mutex (148) acquired
+00003726:OS : Releasing mutex (148)
+00003727:OS : Waiting for mutex (132)
+00003725:FCQ getting msg from q L3E0
+00003729:OS : Waiting for mutex (132)
+00003729:FCQ putting msg onto q L2E0
+00003730:FCQ running q L3E1 priority 1
+00003731:FCQ getting msg from q L3E1
+00003732:FCQ putting msg onto q L2E0
+00003732:FCQ getting msg from q L3E1
+00003732:OS : Waiting for mutex (156)
+00003734:OS : Mutex (156) acquired
+00003735:OS : Releasing mutex (156)
+00003735:OS_EventMask 152: signalling
+00003735:FCQ putting msg onto q L2E0
+00003737:OS_EventMask 152: end wait
+00003738:OS : Waiting for mutex (156)
+00003738:OS : Mutex (156) acquired
+00003739:OS : Releasing mutex (156)
+00003739:OS : Waiting for mutex (132)
+00003737:FCQ getting msg from q L3E1
+00003741:FCQ putting msg onto q L2E0
+00003741:FCQ running q L3E2 priority 1
+00003742:FCQ q L3E2 waiting on q L2E0
+00003743:FCQ running q L3E3 priority 1
+00003744:FCQ q L3E3 waiting on q L2E0
+00003745:FCQ running q L3E4 priority 1
+00003745:FCQ q L3E4 waiting on q L2E0
+00003746:FCQ running q L2E0 priority 1
+00003747:FCQTEST Got packet : "Appli 0 message 1 : L3 entity 0"
+00003747:FCQ getting msg from q L2E0
+00003747:Packet : Packet release
+00003749:FCQTEST Got packet : "Appli 0 message 2 : L3 entity 0"
+00003750:FCQ getting msg from q L2E0
+00003750:Packet : Packet release
+00003750:FCQTEST Got packet : "Appli 0 message 3 : L3 entity 0"
+00003752:FCQ getting msg from q L2E0
+00003753:FCQ q L3E2 stops waiting on q L2E0
+00003753:FCQ putting q L3E2 on ready list 1
+00003753:FCQ q L3E3 stops waiting on q L2E0
+00003755:FCQ putting q L3E3 on ready list 1
+00003756:FCQ q L3E4 stops waiting on q L2E0
+00003756:FCQ putting q L3E4 on ready list 1
+00003756:Packet : Packet release
+00003757:FCQTEST Got packet : "Appli 1 message 1 : L3 entity 1"
+00003759:FCQ getting msg from q L2E0
+00003759:Packet : Packet release
+00003759:FCQTEST Got packet : "Appli 1 message 2 : L3 entity 1"
+00003760:FCQ getting msg from q L2E0
+00003761:Packet : Packet release
+00003762:FCQTEST Got packet : "Appli 1 message 3 : L3 entity 1"
+00003762:FCQ getting msg from q L2E0
+00003763:Packet : Packet release
+00003764:FCQ running q L3E2 priority 1
+00003764:FCQ getting msg from q L3E2
+00003765:FCQ putting msg onto q L2E0
+00003766:FCQ putting q L2E0 on ready list 1
+00003767:FCQ getting msg from q L3E2
+00003767:OS : Waiting for mutex (164)
+00003767:OS : Mutex (164) acquired
+00003768:OS : Releasing mutex (164)
+00003769:OS_EventMask 160: signalling
+00003770:FCQ putting msg onto q L2E0
+00003770:FCQ getting msg from q L3E2
+00003770:FCQ putting msg onto q L2E0
+00003772:OS_EventMask 160: end wait
+00003773:OS : Waiting for mutex (164)
+00003773:OS : Mutex (164) acquired
+00003773:OS : Releasing mutex (164)
+00003773:OS : Waiting for mutex (132)
+00003772:FCQ running q L3E3 priority 1
+00003776:FCQ getting msg from q L3E3
+00003776:FCQ putting msg onto q L2E0
+00003776:FCQ getting msg from q L3E3
+00003778:OS : Waiting for mutex (172)
+00003779:OS : Mutex (172) acquired
+00003779:OS : Releasing mutex (172)
+00003779:OS_EventMask 168: signalling
+00003779:FCQ putting msg onto q L2E0
+00003781:OS_EventMask 168: end wait
+00003782:OS : Waiting for mutex (172)
+00003782:OS : Mutex (172) acquired
+00003782:OS : Releasing mutex (172)
+00003782:OS : Waiting for mutex (132)
+00003781:FCQ getting msg from q L3E3
+00003785:FCQ putting msg onto q L2E0
+00003785:FCQ running q L3E4 priority 1
+00003785:FCQ q L3E4 waiting on q L2E0
+00003787:FCQ running q L2E0 priority 1
+00003788:FCQTEST Got packet : "Appli 2 message 1 : L3 entity 2"
+00003788:FCQ getting msg from q L2E0
+00003788:Packet : Packet release
+00003790:FCQTEST Got packet : "Appli 2 message 2 : L3 entity 2"
+00003791:FCQ getting msg from q L2E0
+00003791:Packet : Packet release
+00003791:FCQTEST Got packet : "Appli 2 message 3 : L3 entity 2"
+00003793:FCQ getting msg from q L2E0
+00003794:FCQ q L3E4 stops waiting on q L2E0
+00003794:FCQ putting q L3E4 on ready list 1
+00003794:Packet : Packet release
+00003796:FCQTEST Got packet : "Appli 3 message 1 : L3 entity 3"
+00003797:FCQ getting msg from q L2E0
+00003797:Packet : Packet release
+00003797:FCQTEST Got packet : "Appli 3 message 2 : L3 entity 3"
+00003799:FCQ getting msg from q L2E0
+00003800:Packet : Packet release
+00003800:FCQTEST Got packet : "Appli 3 message 3 : L3 entity 3"
+00003800:FCQ getting msg from q L2E0
+00003802:Packet : Packet release
+00003803:FCQ running q L3E4 priority 1
+00003803:FCQ getting msg from q L3E4
+00003803:FCQ putting msg onto q L2E0
+00003804:FCQ putting q L2E0 on ready list 1
+00003806:FCQ getting msg from q L3E4
+00003806:OS : Waiting for mutex (180)
+00003806:OS : Mutex (180) acquired
+00003806:OS : Releasing mutex (180)
+00003807:OS_EventMask 176: signalling
+00003809:FCQ putting msg onto q L2E0
+00003809:FCQ getting msg from q L3E4
+00003809:FCQ putting msg onto q L2E0
+00003810:OS_EventMask 176: end wait
+00003811:OS : Waiting for mutex (180)
+00003812:OS : Mutex (180) acquired
+00003812:OS : Releasing mutex (180)
+00003812:OS : Waiting for mutex (132)
+00003810:FCQ running q L2E0 priority 1
+00003815:FCQTEST Got packet : "Appli 4 message 1 : L3 entity 4"
+00003815:FCQ getting msg from q L2E0
+00003815:Packet : Packet release
+00003816:FCQTEST Got packet : "Appli 4 message 2 : L3 entity 4"
+00003817:FCQ getting msg from q L2E0
+00003817:Packet : Packet release
+00003818:FCQTEST Got packet : "Appli 4 message 3 : L3 entity 4"
+00003819:FCQ getting msg from q L2E0
+00003820:Packet : Packet release
+00003820:OS : Releasing mutex (132)
+00003821:OS : Mutex (132) acquired
+00003821:FCQ disabling q L2E0
+00003822:OS : Releasing mutex (132)
+00003823:OS_EventMask 136: begin wait
+00003823:OS : Mutex (132) acquired
+00003824:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003825:FCQ putting msg onto q L3E0
+00003826:FCQ putting q L3E0 on ready list 1
+00003826:FCQ Wakeup!
+00003826:OS : Waiting for mutex (140)
+00003827:OS : Mutex (140) acquired
+00003828:OS : Releasing mutex (140)
+00003829:OS_EventMask 136: signalling
+00003829:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003829:FCQ putting msg onto q L3E0
+00003831:OS_EventMask 136: end wait
+00003832:OS : Waiting for mutex (140)
+00003832:OS : Mutex (140) acquired
+00003832:OS : Releasing mutex (140)
+00003833:OS : Waiting for mutex (132)
+00003831:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003835:FCQ putting msg onto q L3E0
+00003835:OS : Releasing mutex (132)
+00003835:OS_EventMask 144: begin wait
+00003837:OS : Mutex (132) acquired
+00003838:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003838:FCQ putting msg onto q L3E1
+00003838:FCQ putting q L3E1 on ready list 1
+00003840:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003841:FCQ putting msg onto q L3E1
+00003841:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003841:FCQ putting msg onto q L3E1
+00003842:OS : Releasing mutex (132)
+00003844:OS : Waiting for mutex (132)
+00003844:OS : Mutex (132) acquired
+00003844:FCQ enabling q L2E0
+00003844:OS : Releasing mutex (132)
+00003846:OS_EventMask 152: begin wait
+00003847:OS : Mutex (132) acquired
+00003847:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003847:FCQ putting msg onto q L3E2
+00003849:FCQ putting q L3E2 on ready list 1
+00003850:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003850:FCQ putting msg onto q L3E2
+00003850:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003852:FCQ putting msg onto q L3E2
+00003853:OS : Releasing mutex (132)
+00003853:OS_EventMask 160: begin wait
+00003853:OS : Mutex (132) acquired
+00003853:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003855:FCQ putting msg onto q L3E3
+00003856:FCQ putting q L3E3 on ready list 1
+00003856:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003856:FCQ putting msg onto q L3E3
+00003858:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003859:FCQ putting msg onto q L3E3
+00003859:OS : Releasing mutex (132)
+00003859:OS_EventMask 168: begin wait
+00003861:OS : Mutex (132) acquired
+00003862:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003862:FCQ putting msg onto q L3E4
+00003862:FCQ putting q L3E4 on ready list 1
+00003864:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003865:FCQ putting msg onto q L3E4
+00003865:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003865:FCQ putting msg onto q L3E4
+00003867:OS : Waiting for mutex (132)
+00003868:OS : Releasing mutex (132)
+00003868:OS : Mutex (132) acquired
+00003868:FCQ disabling q L2E0
+00003868:OS : Releasing mutex (132)
+00003870:OS_EventMask 176: begin wait
+00003871:OS : Mutex (132) acquired
+00003871:FCQ running q L3E0 priority 1
+00003871:FCQ getting msg from q L3E0
+00003873:FCQ putting msg onto q L2E0
+00003874:FCQ getting msg from q L3E0
+00003874:OS : Waiting for mutex (148)
+00003874:OS : Mutex (148) acquired
+00003874:OS : Releasing mutex (148)
+00003876:OS_EventMask 144: signalling
+00003877:FCQ putting msg onto q L2E0
+00003877:FCQ getting msg from q L3E0
+00003877:FCQ putting msg onto q L2E0
+00003878:OS_EventMask 144: end wait
+00003880:OS : Waiting for mutex (148)
+00003880:OS : Mutex (148) acquired
+00003880:OS : Releasing mutex (148)
+00003880:OS : Waiting for mutex (132)
+00003879:FCQ running q L3E1 priority 1
+00003883:FCQ getting msg from q L3E1
+00003883:FCQ putting msg onto q L2E0
+00003883:FCQ getting msg from q L3E1
+00003884:OS : Waiting for mutex (156)
+00003886:OS : Mutex (156) acquired
+00003886:OS : Releasing mutex (156)
+00003886:OS_EventMask 152: signalling
+00003886:FCQ putting msg onto q L2E0
+00003887:OS_EventMask 152: end wait
+00003889:OS : Waiting for mutex (156)
+00003889:OS : Mutex (156) acquired
+00003889:OS : Releasing mutex (156)
+00003889:OS : Waiting for mutex (132)
+00003887:FCQ getting msg from q L3E1
+00003890:OS : Waiting for mutex (132)
+00003892:FCQ putting msg onto q L2E0
+00003892:FCQ running q L3E2 priority 1
+00003893:FCQ q L3E2 waiting on q L2E0
+00003895:FCQ running q L3E3 priority 1
+00003895:FCQ q L3E3 waiting on q L2E0
+00003895:FCQ running q L3E4 priority 1
+00003896:FCQ q L3E4 waiting on q L2E0
+00003897:OS : Releasing mutex (132)
+00003897:OS : Mutex (132) acquired
+00003898:FCQ enabling q L2E0
+00003898:FCQ putting q L2E0 on ready list 1
+00003899:FCQ Wakeup!
+00003900:OS : Waiting for mutex (140)
+00003901:OS : Mutex (140) acquired
+00003901:OS : Releasing mutex (140)
+00003901:OS_EventMask 136: signalling
+00003902:OS : Releasing mutex (132)
+00003904:OS : Waiting for mutex (140)
+00003904:OS : Mutex (140) acquired
+00003904:OS : Releasing mutex (140)
+00003904:OS : Waiting for mutex (132)
+00003905:OS : Mutex (132) acquired
+00003907:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003907:FCQ putting msg onto q L3E0
+00003907:FCQ putting q L3E0 on ready list 1
+00003908:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003910:FCQ putting msg onto q L3E0
+00003910:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003910:FCQ putting msg onto q L3E0
+00003911:OS : Releasing mutex (132)
+00003913:OS_EventMask 144: begin wait
+00003913:OS : Mutex (132) acquired
+00003913:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003914:FCQ putting msg onto q L3E1
+00003915:FCQ putting q L3E1 on ready list 1
+00003916:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003916:FCQ putting msg onto q L3E1
+00003917:Packet : Packet Allocate, size requested[200], total allocated[235]
+00003921:FCQ putting msg onto q L3E1
+00003921:OS : Releasing mutex (132)
+00003921:OS_EventMask 152: begin wait
+00003922:OS : Mutex (132) acquired
+00003924:OS : Waiting for mutex (132)
+00003924:FCQ running q L2E0 priority 1
+00003924:FCQTEST Got packet : "Appli 0 message 4 : L3 entity 0"
+00003925:FCQ getting msg from q L2E0
+00003926:Packet : Packet release
+00003927:FCQTEST Got packet : "Appli 0 message 5 : L3 entity 0"
+00003927:FCQ getting msg from q L2E0
+00003928:Packet : Packet release
+00003929:FCQTEST Got packet : "Appli 0 message 6 : L3 entity 0"
+00003929:FCQ getting msg from q L2E0
+00003930:FCQ q L3E2 stops waiting on q L2E0
+00003931:FCQ putting q L3E2 on ready list 1
+00003932:FCQ q L3E3 stops waiting on q L2E0
+00003932:FCQ putting q L3E3 on ready list 1
+00003932:FCQ q L3E4 stops waiting on q L2E0
+00003934:FCQ putting q L3E4 on ready list 1
+00003935:Packet : Packet release
+00003935:FCQTEST Got packet : "Appli 1 message 4 : L3 entity 1"
+00003935:FCQ getting msg from q L2E0
+00003937:Packet : Packet release
+00003938:FCQTEST Got packet : "Appli 1 message 5 : L3 entity 1"
+00003938:FCQ getting msg from q L2E0
+00003938:Packet : Packet release
+00003939:FCQTEST Got packet : "Appli 1 message 6 : L3 entity 1"
+00003941:FCQ getting msg from q L2E0
+00003941:Packet : Packet release
+00003941:FCQ running q L3E0 priority 1
+00003941:FCQ getting msg from q L3E0
+00003942:FCQ putting msg onto q L2E0
+00003944:FCQ putting q L2E0 on ready list 1
+00003944:FCQ getting msg from q L3E0
+00003944:OS : Waiting for mutex (148)
+00003945:OS : Mutex (148) acquired
+00003946:OS : Releasing mutex (148)
+00003946:OS_EventMask 144: signalling
+00003947:FCQ putting msg onto q L2E0
+00003948:OS_EventMask 144: end wait
+00003949:OS : Waiting for mutex (148)
+00003949:OS : Mutex (148) acquired
+00003949:OS : Releasing mutex (148)
+00003950:OS : Waiting for mutex (132)
+00003948:FCQ getting msg from q L3E0
+00003952:FCQ putting msg onto q L2E0
+00003952:FCQ running q L3E1 priority 1
+00003952:FCQ getting msg from q L3E1
+00003954:FCQ putting msg onto q L2E0
+00003955:FCQ getting msg from q L3E1
+00003955:OS : Waiting for mutex (156)
+00003955:OS : Mutex (156) acquired
+00003956:OS : Releasing mutex (156)
+00003957:OS_EventMask 152: signalling
+00003959:FCQ putting msg onto q L2E0
+00003959:FCQ getting msg from q L3E1
+00003959:FCQ putting msg onto q L2E0
+00003960:OS_EventMask 152: end wait
+00003961:OS : Waiting for mutex (156)
+00003962:OS : Mutex (156) acquired
+00003962:OS : Releasing mutex (156)
+00003962:OS : Waiting for mutex (132)
+00003960:FCQ running q L3E2 priority 1
+00003964:FCQ q L3E2 waiting on q L2E0
+00003965:FCQ running q L3E3 priority 1
+00003965:FCQ q L3E3 waiting on q L2E0
+00003966:FCQ running q L3E4 priority 1
+00003967:FCQ q L3E4 waiting on q L2E0
+00003967:FCQ running q L2E0 priority 1
+00003967:FCQTEST Got packet : "Appli 0 message 7 : L3 entity 0"
+00003969:FCQ getting msg from q L2E0
+00003970:Packet : Packet release
+00003970:FCQTEST Got packet : "Appli 0 message 8 : L3 entity 0"
+00003970:FCQ getting msg from q L2E0
+00003972:Packet : Packet release
+00003973:FCQTEST Got packet : "Appli 0 message 9 : L3 entity 0"
+00003973:FCQ getting msg from q L2E0
+00003973:FCQ q L3E2 stops waiting on q L2E0
+00003975:FCQ putting q L3E2 on ready list 1
+00003976:FCQ q L3E3 stops waiting on q L2E0
+00003976:FCQ putting q L3E3 on ready list 1
+00003976:FCQ q L3E4 stops waiting on q L2E0
+00003978:FCQ putting q L3E4 on ready list 1
+00003979:Packet : Packet release
+00003979:FCQTEST Got packet : "Appli 1 message 7 : L3 entity 1"
+00003979:FCQ getting msg from q L2E0
+00003981:Packet : Packet release
+00003982:FCQTEST Got packet : "Appli 1 message 8 : L3 entity 1"
+00003982:FCQ getting msg from q L2E0
+00003982:Packet : Packet release
+00003984:FCQTEST Got packet : "Appli 1 message 9 : L3 entity 1"
+00003985:FCQ getting msg from q L2E0
+00003985:Packet : Packet release
+00003985:FCQ running q L3E2 priority 1
+00003985:FCQ getting msg from q L3E2
+00003987:FCQ putting msg onto q L2E0
+00003988:FCQ putting q L2E0 on ready list 1
+00003988:FCQ getting msg from q L3E2
+00003988:OS : Waiting for mutex (164)
+00003989:OS : Mutex (164) acquired
+00003990:OS : Releasing mutex (164)
+00003991:OS_EventMask 160: signalling
+00003991:FCQ putting msg onto q L2E0
+00003992:OS_EventMask 160: end wait
+00003993:OS : Waiting for mutex (164)
+00003993:OS : Mutex (164) acquired
+00003994:OS : Releasing mutex (164)
+00003994:OS : Waiting for mutex (132)
+00003992:FCQ getting msg from q L3E2
+00003996:FCQ putting msg onto q L2E0
+00003996:FCQ running q L3E3 priority 1
+00003997:FCQ getting msg from q L3E3
+00003998:FCQ putting msg onto q L2E0
+00003999:FCQ getting msg from q L3E3
+00003999:OS : Waiting for mutex (172)
+00003999:OS : Mutex (172) acquired
+00003999:OS : Releasing mutex (172)
+00004001:OS_EventMask 168: signalling
+00004002:FCQ putting msg onto q L2E0
+00004003:FCQ getting msg from q L3E3
+00004003:FCQ putting msg onto q L2E0
+00004004:OS_EventMask 168: end wait
+00004005:OS : Waiting for mutex (172)
+00004005:OS : Mutex (172) acquired
+00004006:OS : Releasing mutex (172)
+00004006:OS : Waiting for mutex (132)
+00004004:FCQ running q L3E4 priority 1
+00004008:FCQ q L3E4 waiting on q L2E0
+00004008:FCQ running q L2E0 priority 1
+00004009:FCQTEST Got packet : "Appli 2 message 4 : L3 entity 2"
+00004010:FCQ getting msg from q L2E0
+00004012:Packet : Packet release
+00004012:FCQTEST Got packet : "Appli 2 message 5 : L3 entity 2"
+00004012:FCQ getting msg from q L2E0
+00004013:Packet : Packet release
+00004014:FCQTEST Got packet : "Appli 2 message 6 : L3 entity 2"
+00004014:FCQ getting msg from q L2E0
+00004015:FCQ q L3E4 stops waiting on q L2E0
+00004016:FCQ putting q L3E4 on ready list 1
+00004017:Packet : Packet release
+00004017:FCQTEST Got packet : "Appli 3 message 4 : L3 entity 3"
+00004017:FCQ getting msg from q L2E0
+00004019:Packet : Packet release
+00004020:FCQTEST Got packet : "Appli 3 message 5 : L3 entity 3"
+00004020:FCQ getting msg from q L2E0
+00004020:Packet : Packet release
+00004022:FCQTEST Got packet : "Appli 3 message 6 : L3 entity 3"
+00004023:FCQ getting msg from q L2E0
+00004023:Packet : Packet release
+00004023:FCQ running q L3E4 priority 1
+00004023:FCQ getting msg from q L3E4
+00004025:FCQ putting msg onto q L2E0
+00004026:FCQ putting q L2E0 on ready list 1
+00004026:FCQ getting msg from q L3E4
+00004026:OS : Waiting for mutex (180)
+00004027:OS : Mutex (180) acquired
+00004029:OS : Releasing mutex (180)
+00004029:OS_EventMask 176: signalling
+00004029:FCQ putting msg onto q L2E0
+00004030:OS_EventMask 176: end wait
+00004032:OS : Waiting for mutex (180)
+00004032:OS : Mutex (180) acquired
+00004032:OS : Releasing mutex (180)
+00004032:OS : Waiting for mutex (132)
+00004030:FCQ getting msg from q L3E4
+00004035:FCQ putting msg onto q L2E0
+00004035:FCQ running q L2E0 priority 1
+00004035:FCQTEST Got packet : "Appli 4 message 4 : L3 entity 4"
+00004036:FCQ getting msg from q L2E0
+00004037:Packet : Packet release
+00004038:FCQTEST Got packet : "Appli 4 message 5 : L3 entity 4"
+00004038:FCQ getting msg from q L2E0
+00004039:Packet : Packet release
+00004040:FCQTEST Got packet : "Appli 4 message 6 : L3 entity 4"
+00004040:FCQ getting msg from q L2E0
+00004040:Packet : Packet release
+00004055:OS : Releasing mutex (132)
+00004056:OS : Mutex (132) acquired
+00004056:FCQ disabling q L2E0
+00004056:OS : Releasing mutex (132)
+00004060:OS_EventMask 136: begin wait
+00004061:OS : Mutex (132) acquired
+00004080:OS : destroying mutex (148)
+00004337:OS : destroying mutex (156)
+00004338:OS : destroying mutex (164)
+00004338:OS : destroying mutex (172)
+00004391:OS : destroying mutex (180)
+00004446:OS : destroying mutex (140)
+00004446:FCQ freeing q L3E0
+00004446:c_stack_dump_usage(): Stack maximum depth reached: (736) in [FcqFlush]
+00004501:c_stack_dump_usage(): Stack maximum depth reached: (828) in [FcqGetMsg]
+00004556:c_stack_dump_usage(): Stack maximum depth reached: (920) in [DLL_RemHead]
+00004556:FCQ freeing q L3E1
+00004556:FCQ freeing q L3E2
+00004562:FCQ freeing q L3E3
+00004563:FCQ freeing q L3E4
+00004563:FCQ freeing q L2E0
+00004563:OS : destroying mutex (132)
+00004564:  END 5
+00004565:FCQTEST 36 total messages received
+00007635:--------------
+00007637:Memory report:
+00007637:Blocks allocated: 43
+00007637:Peak allocated: 5051
+00007637:Total allocated: 8576
+00007646:--------------
+00007657:No memory leak. Well done.
+00007657:--------------

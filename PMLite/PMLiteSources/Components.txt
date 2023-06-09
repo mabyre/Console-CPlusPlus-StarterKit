@@ -1,0 +1,35 @@
+**** Dlli
+Double Linked List implementation
+
+**** Border
+Bit Ordering : fonction d'accès au données qui permettent de s'affranchir
+de l'odre des octets en memoire
+
+**** Console
+Maitriser une implementation de la fonction "printf"
+et une fonction d'entree de chaines en interface avec l'utilisateur
+
+**** XCore
+Implementation des fonctions de traitement de chaines
+
+**** Core
+Implementation des fonctions classique de la librairie C
+pour s'en passer ou développer une implementation spécifique
+le cas echeant
+
+**** MemDbg
+Utilise les fonctions d'allocation classique pour surdevelopper
+des moyens de debug ainsi on va pister les depassementS ou les
+nons allocations
+
+**** Stack
+Implemente les fonctions qui permettent de pister l'utilisation de
+la pile systeme en mémoire, permet de détecter le pic d'utilisation maximum par
+une application. Utilisé par le projet TStack.
+
+**** Report
+Les fonctions de traces liees au reporter
+
+**** Menu
+permet de derouler les menus utilisateurs
+

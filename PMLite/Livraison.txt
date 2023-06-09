@@ -1,0 +1,13 @@
+Les répertoires \inc et \lib constituent une livraison pour utilisation de la PMLite
+
+Le répertoire PMLiteC contient sources de la PM et une console qui sert pour tous 
+les tests spécifiques à la PMLiteC. Dans ce workspace il y a un projet qui permet de
+générer la PMliteC.lib
+
+Lorsqu'un fichier .h est modifié il doit être placé dans "inc" la librairie générée doit être 
+placé dans "lib"
+
+Pour utiliser la PMLiteC, Deux solutions :
+Ajouter la lib \PMLiteC\lib\Debug\PMLiteC.lib au projet (on n'a
+Ajouter le projet \PMLitec\Wrk6\PMLiteC\PMLiteC.dsp au workspace et cocher la case PMLiteC dans
+les dependencies

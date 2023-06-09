@@ -1,0 +1,8 @@
+**** Properties
+Développé pour l'history ce composent propose des fonctions de setting
+de properties.
+
+**** SLList
+Développé par Tom Keel c'est une simple list chainées, les doubles liste
+chainées ne lui convenaient pas, trop compliquées pour ce qu'il y avait à
+faire.
