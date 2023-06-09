@@ -4,11 +4,11 @@ For developers vho want to totaly masterise thier developments in C/C++.
 
 It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be very able to mastrerise all your source codes.
 
-Terms:
-
-***PM*** mean Protocol or Protable Machinery for multiplatform development.
-
-***AS*** is for AbyreSoft the beginnings of SoDevLog.
+> #### Terms
+>
+> - **PM** mean Protocol or Protable Machinery for multiplatform development.
+>
+> - **AS** is for AbyreSoft the beginnings of SoDevLog.
 
 ## Features ##
 
