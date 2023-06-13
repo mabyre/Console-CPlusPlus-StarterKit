@@ -72,7 +72,7 @@ will be used (implemented in ASTrace.dll itself).
 ------------------------------------------------------------------------------
                           Traces Customization
 ------------------------------------------------------------------------------
-PMReport traces provides a way to use your own tracer instead of using
+ASReport traces provides a way to use your own tracer instead of using
 standard tracers.
 In order to do this, you must provide a DLL with 2 standard entry points:
 as_trace_create_instance and as_trace_destroy_instance.
