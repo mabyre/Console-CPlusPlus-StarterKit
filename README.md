@@ -1,8 +1,8 @@
 # Console C++ Starter Kit #
 
-For developers vho want to totaly masterise thier developments in C/C++. 
+For you developers vho want to totaly masterise thier developments in C/C++.
 
-It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be very able to mastrerise all your source codes.
+It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be able to mastrerise all your source codes.
 
 #### Terms:
 - **PM** mean Protocol or Protable Machinery for multiplatform development.
@@ -26,6 +26,7 @@ Any IDE that can make a reference to a library. Here it's ***Visual Studio Commu
 - [ASDLLTrace](#ASDLLTrace) the Communication DLL between your code and the Reporter
 - [ASReporter](#ASReporter) or Reporter is a windows application that display traces
 - [PMLiteC](#PMLiteC) code adapted to your platform for Traces communication
+- [PMLite](#PMLite) more tests in language C
 - [ConsoleCPlusPlus](#ConsoleCPlusPlus) your project under test using your code in C/C++
 - [Conclusion](#Conclusion) a new world opens in front of your eyes
 
@@ -114,19 +115,25 @@ At each time you will need to execute the Reporter before your project therefor 
 
 The communication DLL for Traces using socket TCP/IP, used by the Reporter and your project to emite Traces.
 
-Source Code: [ASDLLTrace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASDLLTrace)
+Sources Code: [ASDLLTrace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASDLLTrace)
 
 ### ASReporter ###
 
 The application that display Traces in a non-MFC windows application
 
-Source Code! [ASReporter](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASReporter)
+Sources Code: [ASReporter](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ASReporter)
+
+### PMLite ###
+
+More Tests in language C
+
+Sources Code: [PMLite](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/PMLite/PMLiteSources/TPMLiteC)
 
 ### PMLiteC ###
 
 The Protocole Machinery adapted to your project
 
-Source Code: [PMLiteC](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/PMLiteC)
+Sources Code: [PMLiteC](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/PMLiteC)
 
 ### ConsoleCPlusPlus ###
 
@@ -135,6 +142,8 @@ Your project, your code under tests under Traces
 Once you will run your project you can get the following result :
 
 <img style="margin: 10px" src="Images/2023-06-07_16h59_00.png" alt="The Reporter hear ConsoleCplusPlus" />
+
+Sources Code: [ConsoleCPlusPlus](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ConsoleCPlusPlus)
 
 ## Conclusion ##
 
@@ -145,6 +154,10 @@ Indeed the TraceReporter allows you to develop in a serene way by adding a total
 The tracing system by recording the traces allows you to do non-regression simply by including the results files you will realize your errors:
 
 [Trace](https://github.com/mabyre/Console-CPlusPlus-StarterKit/tree/master/ConsoleCPlusPlus/Trace)
+
+Samples in C:
+
+[Double Linked List](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/PMLiteC/PMLitec/Test/TDLList.c)
 
 Last thing, have a look to the source code you can find here. This one is to test your machine byte ordering depending on the type platform you are running on: LITTLE INDIAN or BIG INDIAN:
 
