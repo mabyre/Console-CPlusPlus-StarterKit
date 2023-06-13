@@ -73,7 +73,7 @@ Now it's ready for thousands of years.
 
 First of all generate ASDLLTrace, open the first solution [ASTrace.sln](https://github.com/mabyre/Console-CPlusPlus-StarterKit/blob/master/ASDLLTrace/ASDLLTraceSources/ASTrace.sln)
 
-Verify you are well in configuration ***Debug x86*** right-click on the project ASTrace:
+Verify you are well in configuration **Debug x86** right-click on the project ASTrace:
 
 <img style="margin: 10px" src="Images/2023-06-07_16h46_16.png" alt="Open Solution ASTrace.sln" />
 
@@ -87,7 +87,7 @@ Inside you have two projects, it's your code under test with ConsoleCPlusPlus an
 
 <img style="margin: 10px" src="Images/2023-06-07_12h36_41.png" alt="Open Solution ConsoleCPlusPlus" />
 
-First of all verify you are in configuration x86:
+First of all verify you are in configuration **Debug x86**:
 
 <img style="margin: 10px" src="Images/2023-06-07_12h42_00.png" alt="Verify you are in x86 configuration" />
 
