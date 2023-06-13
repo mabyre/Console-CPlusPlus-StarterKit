@@ -38,9 +38,13 @@ Here is a dedicated blog to ***Trace Reporter***:
 
 - [Blog TraceReporter](https://trace-reporter.sodevlog.com/ "Based on TraceReporter")
 
-Another GitHub project with a Console MinGW that can help:
+Another GitHub project with a Console [MinGW](https://sourceforge.net/projects/mingw/) and the TraceReporter that can help:
 
 - [ConsoleMinGW TraceReporter](https://github.com/mabyre/TraceReporter "ConsoleMinGW with TraceReporter")
+
+A modern MFC Project in C++ that use the Trace Reporter:
+
+- [MFC-CPlusPlus-StarterKit](https://github.com/mabyre/MFC-CPlusPlus-StarterKit)
 
 ## For little story ##
 
