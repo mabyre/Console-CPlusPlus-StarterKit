@@ -4,7 +4,7 @@ Copyright (C) 1990 - 1996 AbyreSoft - All rights reserved. Revised 2004
 ------------------------------------------------------------------------------
 
 Cette version v2.0 de la DLL de trace communique avec le Reporter v2.0
-La version v3.0 est définit par l'utilisation dans Visual.NET en C#
+La version v3.0 est dÃ©finit par l'utilisation dans Visual.NET en C#
 
 ------------------------------------------------------------------------------
                           Utilisation des Traces en C
@@ -12,7 +12,7 @@ La version v3.0 est définit par l'utilisation dans Visual.NET en C#
 
 Pour utiliser les traces il faut :
 - inclure "ASTrace.h"
-- appeler une fois as_trace_init() au démarrage de l'application
+- appeler une fois as_trace_init() au dÃ©marrage de l'application
   avant d'appeler une fonction de trace
 - appeler as_trace_close() avant de fermer l'application
 - rendre accessible astrace.dll depuis l'application
@@ -30,20 +30,20 @@ DLL, astrace.dll
                           Configuration des Traces 
 ------------------------------------------------------------------------------
 La configuration des traces se fait par la base de registre.
-Lorsqu'une application utilise les traces, sa configuration est stockée dans
+Lorsqu'une application utilise les traces, sa configuration est stockÃ©e dans
 la clef de registre suivante :
 HKEY_CURRENT_USER\Software\{Company Name}\{App name}\OSSettings
 
 {Company Name}
-Le nom de la compagnie est chargé par l'application dans ses resources
+Le nom de la compagnie est chargÃ© par l'application dans ses resources
 a partir de : string table ID 0xE004.
-(ce qui est compatible avec les MFC). Si cette ressource n'est pas trouvée 
+(ce qui est compatible avec les MFC). Si cette ressource n'est pas trouvÃ©e 
 dans l'application, AbyreSoft is used.
 
 {App name}
-Le nom de l'application est chargé est chargé à partir de la ressource
+Le nom de l'application est chargÃ© Ã  partir de la ressource
 string table ID 0xE000
-Si cette ressource n'est pas trouvée le nom de l'exécutable est utilisé.
+Si cette ressource n'est pas trouvÃ©e le nom de l'exÃ©cutable est utilisÃ©.
 
 Under this key, you will find several value.
 You can create these values by hand or execute the application once
