@@ -1,6 +1,6 @@
 # Console C++ Starter Kit #
 
-For you developers vho want to totaly masterise thier developments in C/C++.
+For you developers who want to totaly masterise there developments in C/C++.
 
 It's a very huge project, in tree parts, hard to take in hands but if you do so, you will be able to mastrerise all your source codes.
 
